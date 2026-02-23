@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout do código do repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Node compatível com o projeto
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # Instala deps exatamente como travadas no package-lock.json
+      - name: Install
+        run: npm ci
+
+      # Valida JSONs de lição contra o schema (falha cedo)
+      - name: Validate content
+        run: npm run validate-content
+
+      # Lint do código
+      - name: Lint
+        run: npm run lint
+
+      # Typecheck (noEmit)
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Build do Next (também roda validate-content via prebuild)
+      - name: Build
+        run: npm run build

@@ -3,10 +3,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # basePath é definido no build do Next (path-based routing no proxy)
+      args:
+        NEXT_PUBLIC_BASE_PATH: ${NEXT_PUBLIC_BASE_PATH:-/alemao}
     container_name: deutschbruecke
     environment:
       - NODE_ENV=production
       - DB_DATA_DIR=/app/data
+      # Mantém explícito qual basePath foi usado (útil para debug)
+      - NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH:-/alemao}
     volumes:
       - ./data:/app/data
     ports:
@@ -19,3 +24,4 @@ networks:
   perguntas_default:
     external: true
     name: perguntas_default
+

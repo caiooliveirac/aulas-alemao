@@ -1,0 +1,39 @@
+name: CD (EC2)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Evita deploys concorrentes se você fizer pushes em sequência
+concurrency:
+  group: aulas-alemao-prod
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Deploy via SSH direto na EC2 (CD simples v1)
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
+          script: |
+            set -euo pipefail
+
+            # Repo já clonado no servidor
+            cd /home/ubuntu/aulas-alemao
+
+            # Atualiza código
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Rebuild + restart (usa build args do docker-compose.yml)
+            docker compose up -d --build
+
+            # Limpeza simples de imagens antigas
+            docker image prune -f
