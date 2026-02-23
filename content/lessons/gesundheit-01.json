@@ -1,0 +1,86 @@
+{
+  "id": "gesundheit-01",
+  "title": "Beim Hausarzt",
+  "topic": "Gesundheit",
+  "level": "B1+",
+  "grammarFocus": "Modalverben im Präteritum + Konjunktiv II (könnte, sollte)",
+  "lexicalFocus": "Arztbesuch, Symptome, Ratschläge",
+  "estimatedMinutes": 12,
+  "xpReward": 150,
+  "keywords": ["konnte", "musste", "sollten", "könnten", "Ratschlag"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Leia em blocos. Note Präteritum e Konjunktiv II.",
+      "chunks": [
+        {
+          "text": "Seit einer Woche hat Thomas starke Kopfschmerzen. Er konnte letzte Nacht nicht gut schlafen und musste heute früher von der Arbeit nach Hause gehen.",
+          "glossary": [
+            { "term": "Kopfschmerzen", "de": "Schmerzen im Kopf", "pt": "dor de cabeça" },
+            { "term": "konnte", "de": "Präteritum von ‚können‘", "pt": "podia / conseguia" },
+            { "term": "musste", "de": "Präteritum von ‚müssen‘", "pt": "teve que / precisou" }
+          ]
+        },
+        {
+          "text": "Er geht zum Hausarzt. Die Ärztin fragt: „Seit wann haben Sie die Beschwerden?“ Thomas antwortet: „Seit ungefähr einer Woche. Ich sollte vielleicht weniger am Computer arbeiten.“",
+          "glossary": [
+            { "term": "Hausarzt", "de": "Arzt für Allgemeinmedizin", "pt": "clínico geral" },
+            { "term": "Beschwerden", "de": "gesundheitliche Probleme, die man fühlt", "pt": "queixas / sintomas" },
+            { "term": "ungefähr", "de": "circa, nicht genau", "pt": "aproximadamente" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Warum geht Thomas zum Arzt?",
+      "options": ["Er hat Bauchschmerzen", "Er hat seit einer Woche Kopfschmerzen", "Er hatte einen Unfall", "Er braucht ein Rezept"],
+      "correctIndex": 1,
+      "explanation": "Thomas hat seit einer Woche starke Kopfschmerzen und konnte nicht gut schlafen.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Modalverb im Präteritum — können → ?",
+      "sentence": "Er {___} letzte Nacht nicht gut schlafen.",
+      "options": ["kann", "konnte", "könnte", "gekonnt"],
+      "correct": "konnte",
+      "explanation": "Präteritum von ‚können‘ = konnte.",
+      "srs": {
+        "front": "Er ___ letzte Nacht nicht schlafen. (können, Präteritum)",
+        "back": "konnte",
+        "kind": "cloze",
+        "tags": ["modalverb", "präteritum"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Konjunktiv II — höflicher Ratschlag (Sie-formal)",
+      "sentence": "Sie {___} weniger Kaffee trinken und mehr Wasser.",
+      "options": ["sollte", "sollten", "musste", "soll"],
+      "correct": "sollten",
+      "explanation": "Konjunktiv II von ‚sollen‘: Sie (formal) → sollten.",
+      "srs": {
+        "front": "Sie ___ weniger Kaffee trinken. (sollen, Konj. II, formal)",
+        "back": "sollten",
+        "kind": "cloze",
+        "tags": ["konjunktiv-ii", "ratschlag"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Schreib 1–2 Sätze: Gib einem Freund einen höflichen Ratschlag (könnte/sollte).",
+      "starters": ["Du könntest...", "Du solltest...", "Vielleicht solltest du..."],
+      "keywords": ["könnte", "sollte", "weniger", "mehr", "Pausen", "Wasser"],
+      "exampleAnswer": "Du könntest mehr Wasser trinken. Vielleicht solltest du öfter Pausen machen.",
+      "xp": 15
+    }
+  ]
+}

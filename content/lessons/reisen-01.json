@@ -1,0 +1,104 @@
+{
+  "id": "reisen-01",
+  "title": "Am Bahnhof in Bern",
+  "topic": "Reisen",
+  "level": "B1",
+  "grammarFocus": "Nebensätze mit weil, obwohl, dass",
+  "lexicalFocus": "Reisen, Bahnhof, Verkehr",
+  "estimatedMinutes": 12,
+  "xpReward": 140,
+  "keywords": ["weil", "obwohl", "dass", "Verb am Ende", "Verspätung"],
+  "skillTags": ["reading", "grammar", "writing", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Leia em blocos e observe a ordem do verbo nos Nebensätze.",
+      "chunks": [
+        {
+          "text": "Maria steht am Bahnhof in Bern. Ihr Zug hat Verspätung, weil es auf der Strecke ein Problem gibt.",
+          "glossary": [
+            { "term": "Verspätung", "de": "wenn etwas später kommt als geplant", "pt": "atraso" },
+            { "term": "Strecke", "de": "der Weg, den der Zug fährt", "pt": "trecho / trajeto" }
+          ]
+        },
+        {
+          "text": "Sie ist ein bisschen nervös, weil sie einen wichtigen Termin in Zürich hat. Obwohl sie früh losgefahren ist, wird sie wahrscheinlich zu spät kommen.",
+          "glossary": [
+            { "term": "Termin", "de": "ein geplantes Treffen zu einer bestimmten Zeit", "pt": "compromisso" },
+            { "term": "wahrscheinlich", "de": "es ist sehr möglich, dass es passiert", "pt": "provavelmente" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Warum ist Maria nervös?",
+      "options": [
+        "Weil sie ihren Koffer verloren hat",
+        "Weil sie einen wichtigen Termin hat und der Zug Verspätung hat",
+        "Weil der Bahnhof geschlossen ist",
+        "Weil sie kein Ticket hat"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sie hat einen Termin in Zürich und der Zug kommt zu spät.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Nebensatz mit ‚weil‘ — Verb am Ende",
+      "sentence": "Der Zug hat Verspätung, weil es ein Problem {___}.",
+      "options": ["gibt", "es gibt", "geben", "hat gegeben"],
+      "correct": "gibt",
+      "explanation": "Nach ‚weil‘ steht das konjugierte Verb am Ende: …weil es ein Problem GIBT.",
+      "srs": {
+        "front": "…weil es ein Problem ___. (Verb am Ende)",
+        "back": "gibt",
+        "kind": "cloze",
+        "tags": ["nebensatz", "weil"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Gegensatz — welcher Konnektor passt?",
+      "sentence": "{___} sie früh losgefahren ist, wird sie zu spät kommen.",
+      "options": ["Weil", "Obwohl", "Dass", "Deshalb"],
+      "correct": "Obwohl",
+      "explanation": "‚Obwohl‘ zeigt Gegensatz: früh losgefahren (gut), aber trotzdem zu spät.",
+      "srs": {
+        "front": "___ sie früh los ist, kommt sie zu spät. (Gegensatz)",
+        "back": "Obwohl (= apesar de que)",
+        "kind": "cloze",
+        "tags": ["nebensatz", "obwohl"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "reorder",
+      "instruction": "Bilde einen Satz mit ‚dass‘ (Verb am Ende):",
+      "words": ["Maria", "hofft,", "dass", "der Zug", "bald", "kommt"],
+      "correct": "Maria hofft, dass der Zug bald kommt",
+      "hint": "Im dass-Satz: Verb am Ende!",
+      "srs": {
+        "front": "Ordne: Maria / hofft, / dass / der Zug / bald / kommt",
+        "back": "Maria hofft, dass der Zug bald kommt.",
+        "kind": "reorder",
+        "tags": ["dass", "wortstellung"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Schreib 1–2 Sätze: Was machst du, wenn dein Zug/Bus Verspätung hat? Nutze weil/obwohl/dass.",
+      "starters": ["Wenn mein Zug Verspätung hat, ...", "Ich finde es schlimm, wenn...", "Obwohl ich pünktlich bin, ..."],
+      "keywords": ["weil", "obwohl", "dass", "Verspätung", "warten", "nervös"],
+      "exampleAnswer": "Wenn mein Zug Verspätung hat, werde ich nervös, weil ich pünktlich sein möchte. Obwohl ich immer früh losfahre, komme ich manchmal zu spät.",
+      "xp": 15
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "alltag-01",
+  "title": "Ein neuer Mitbewohner",
+  "topic": "Alltag",
+  "level": "B1",
+  "grammarFocus": "Wechselpräpositionen (Akkusativ/Dativ)",
+  "lexicalFocus": "Wohnung, Möbel, Umzug",
+  "estimatedMinutes": 10,
+  "xpReward": 120,
+  "keywords": ["Wohin", "Wo", "an", "auf", "in", "Dativ", "Akkusativ"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Leia em blocos. Toque nas palavras do glossário.",
+      "chunks": [
+        {
+          "text": "Lukas zieht heute in eine neue Wohngemeinschaft. Er stellt seine Kisten auf den Boden im Flur.",
+          "glossary": [
+            { "term": "Wohngemeinschaft", "de": "wenn mehrere Personen zusammen in einer Wohnung leben", "pt": "república / moradia compartilhada" },
+            { "term": "Kisten", "de": "große Boxen, in die man Sachen packt", "pt": "caixas" },
+            { "term": "Flur", "de": "der Gang in einer Wohnung zwischen den Zimmern", "pt": "corredor" }
+          ]
+        },
+        {
+          "text": "Seine neue Mitbewohnerin heißt Anna. Sie zeigt ihm die Küche und sagt: „Du kannst deine Sachen in den Schrank stellen.“",
+          "glossary": [
+            { "term": "Mitbewohnerin", "de": "eine Person, die mit dir zusammen wohnt", "pt": "colega de apartamento" },
+            { "term": "Schrank", "de": "ein Möbelstück mit Türen, wo man Sachen aufbewahrt", "pt": "armário" }
+          ]
+        },
+        {
+          "text": "Lukas geht in sein Zimmer. Das Bett steht schon an der Wand. Er legt seinen Laptop auf den Schreibtisch und hängt ein Poster an die Wand über dem Bett.",
+          "glossary": [
+            { "term": "Wand", "de": "die vertikale Fläche in einem Zimmer", "pt": "parede" },
+            { "term": "Schreibtisch", "de": "ein Tisch, an dem man arbeitet oder lernt", "pt": "escrivaninha" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Wohin stellt Lukas seine Kisten?",
+      "options": ["In die Küche", "Auf den Boden im Flur", "In sein Zimmer", "Auf den Tisch"],
+      "correctIndex": 1,
+      "explanation": "Im Text steht: „Er stellt seine Kisten auf den Boden im Flur.“ — Wohin? → Akkusativ.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Wechselpräpositionen: Wo? → Dativ",
+      "sentence": "Das Bett steht schon an {___} Wand.",
+      "options": ["der", "die", "dem", "den"],
+      "correct": "der",
+      "explanation": "Wo steht das Bett? → Dativ. Die Wand (fem.) → an DER Wand.",
+      "srs": {
+        "front": "Das Bett steht an ___ Wand. (Wo? feminin)",
+        "back": "der (Dativ feminin)",
+        "kind": "cloze",
+        "tags": ["wechselpräposition", "dativ"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Wechselpräpositionen: Wohin? → Akkusativ",
+      "sentence": "Er legt seinen Laptop auf {___} Schreibtisch.",
+      "options": ["dem", "den", "der", "das"],
+      "correct": "den",
+      "explanation": "Wohin? → Akkusativ. Der Schreibtisch (mask.) → auf DEN Schreibtisch.",
+      "srs": {
+        "front": "Er legt den Laptop auf ___ Schreibtisch. (Wohin? maskulin)",
+        "back": "den (Akkusativ maskulin)",
+        "kind": "cloze",
+        "tags": ["wechselpräposition", "akkusativ"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "reorder",
+      "instruction": "Ordne den Satz richtig:",
+      "words": ["er", "ein Poster", "hängt", "an die Wand"],
+      "correct": "Er hängt ein Poster an die Wand",
+      "hint": "Verb auf Position 2!",
+      "srs": {
+        "front": "Ordne: er / ein Poster / hängt / an die Wand",
+        "back": "Er hängt ein Poster an die Wand.",
+        "kind": "reorder",
+        "tags": ["wortstellung"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Schreib 1–2 Sätze über dein Zimmer. Benutze Wo/Wohin (Dativ/Akkusativ).",
+      "starters": ["In meinem Zimmer steht...", "Mein Bett steht an...", "Auf dem Schreibtisch liegt..."],
+      "keywords": ["steht", "liegt", "hängt", "an der Wand", "auf dem", "neben dem"],
+      "exampleAnswer": "In meinem Zimmer steht das Bett an der Wand. Auf dem Schreibtisch liegt mein Laptop.",
+      "srs": {
+        "front": "Schreibe 1 Satz: Wo/Wohin mit an/auf/in (Dativ/Akkusativ).",
+        "back": "Nutze z.B.: an der Wand (Wo), auf den Tisch (Wohin).",
+        "kind": "guided_write",
+        "tags": ["produktion", "wechselpräposition"]
+      },
+      "xp": 15
+    }
+  ]
+}

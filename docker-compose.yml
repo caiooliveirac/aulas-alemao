@@ -1,0 +1,21 @@
+services:
+  deutschbruecke:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deutschbruecke
+    environment:
+      - NODE_ENV=production
+      - DB_DATA_DIR=/app/data
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "127.0.0.1:8087:3000"
+    networks:
+      - perguntas_default
+    restart: unless-stopped
+
+networks:
+  perguntas_default:
+    external: true
+    name: perguntas_default

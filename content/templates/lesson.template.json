@@ -1,0 +1,81 @@
+{
+  "id": "tema-01",
+  "title": "Título curto",
+  "topic": "Alltag",
+  "level": "B1",
+  "grammarFocus": "Foco gramatical",
+  "lexicalFocus": "Foco lexical (opcional)",
+  "estimatedMinutes": 10,
+  "xpReward": 120,
+  "keywords": ["keyword-1"],
+  "skillTags": ["reading", "grammar", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Leia em blocos e toque no glossário.",
+      "chunks": [
+        {
+          "text": "Texto curto (1–3 frases).",
+          "glossary": [
+            { "term": "Wort", "de": "definição em alemão", "pt": "tradução" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Pergunta de compreensão?",
+      "options": ["Opção A", "Opção B", "Opção C"],
+      "correctIndex": 1,
+      "explanation": "Por que é B.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Complete a lacuna.",
+      "sentence": "Das ist {___} Beispiel.",
+      "options": ["ein", "eine"],
+      "correct": "ein",
+      "explanation": "Breve explicação.",
+      "srs": {
+        "front": "Das ist ___ Beispiel.",
+        "back": "ein",
+        "kind": "cloze",
+        "tags": ["template"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "reorder",
+      "instruction": "Reordene a frase:",
+      "words": ["Ich", "komme", "aus", "Brasilien"],
+      "correct": "Ich komme aus Brasilien",
+      "hint": "Verbo na posição 2.",
+      "srs": {
+        "front": "Ordne: Ich / komme / aus / Brasilien",
+        "back": "Ich komme aus Brasilien",
+        "kind": "reorder",
+        "tags": ["template"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Escreva 1–2 frases com a estrutura alvo.",
+      "starters": ["Ich denke, dass…", "Obwohl…"],
+      "keywords": ["weil", "obwohl"],
+      "exampleAnswer": "Ich denke, dass … Obwohl …",
+      "srs": {
+        "front": "Escreva 1 frase com obwohl (verbo no fim no Nebensatz).",
+        "back": "Checklist: obwohl + verbo no fim; oração principal com verbo na posição 2.",
+        "kind": "guided_write",
+        "tags": ["template"]
+      },
+      "xp": 15
+    }
+  ]
+}
