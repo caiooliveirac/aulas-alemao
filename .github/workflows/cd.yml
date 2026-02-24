@@ -33,7 +33,7 @@ jobs:
             git reset --hard origin/main
 
             # Rebuild + restart (usa build args do docker-compose.yml)
-            docker compose up -d --build
+            docker compose up -d --build --force-recreate --remove-orphans
 
             # Limpeza simples de imagens antigas
             docker image prune -f
