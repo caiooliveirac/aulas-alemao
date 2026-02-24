@@ -1,0 +1,149 @@
+{
+  "id": "reisen-02",
+  "title": "Am Bahnhof: Ticket, Gleis und Anschluss",
+  "topic": "Reisen",
+  "level": "B1",
+  "grammarFocus": "Fragen im Servicekontext + weil/dass",
+  "lexicalFocus": "Bahnhof, Ticket, Gleis, Verspätung",
+  "estimatedMinutes": 13,
+  "xpReward": 155,
+  "keywords": ["reisen", "bahnhof", "ticket", "gleis", "anschluss", "verspaetung"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Lies die Situation am Bahnhof.",
+      "chunks": [
+        {
+          "text": "Marta fährt heute nach Hamburg. Am Bahnhof sieht sie auf der Anzeigetafel, dass ihr Zug zehn Minuten Verspätung hat.",
+          "glossary": [
+            { "term": "die Anzeigetafel", "de": "Tafel mit Reiseinformationen", "pt": "painel de informações" },
+            { "term": "die Verspätung", "de": "später als geplant", "pt": "atraso" }
+          ]
+        },
+        {
+          "text": "Sie ist nervös, weil sie in Hannover nur wenig Zeit zum Umsteigen hat. Deshalb geht sie zum Informationsschalter.",
+          "glossary": [
+            { "term": "nervös", "de": "angespannt, nicht ruhig", "pt": "nervosa" },
+            { "term": "umsteigen", "de": "von einem Zug in einen anderen wechseln", "pt": "fazer baldeação" },
+            { "term": "der Informationsschalter", "de": "Servicepunkt am Bahnhof", "pt": "guichê de informações" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Warum geht Marta zum Informationsschalter?",
+      "options": [
+        "Weil sie ein neues Ticket kaufen möchte.",
+        "Weil sie Angst hat, den Anschluss zu verpassen.",
+        "Weil sie ihr Gepäck verloren hat."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sie hat wenig Zeit zum Umsteigen und ihr Zug hat Verspätung.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Wähle die passende Präposition/Struktur.",
+      "sentence": "Sie hat wenig Zeit {___} Umsteigen.",
+      "options": ["zum", "bei", "mit dem"],
+      "correct": "zum",
+      "explanation": "Im Text steht die feste Verbindung: 'Zeit zum Umsteigen'.",
+      "srs": {
+        "front": "Sie hat wenig Zeit ___ Umsteigen.",
+        "back": "zum",
+        "kind": "cloze",
+        "tags": ["wortverbindung", "reisen"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "reorder",
+      "instruction": "Ordne die Frage am Schalter.",
+      "words": ["Entschuldigung,", "von", "welchem", "Gleis", "fährt", "der", "Zug", "nach", "Hannover", "?"],
+      "correct": "Entschuldigung, von welchem Gleis fährt der Zug nach Hannover ?",
+      "hint": "Verb in Hauptsatz-Frage steht früh: 'fährt'.",
+      "srs": {
+        "front": "Ordne die Frage zum Gleis.",
+        "back": "Entschuldigung, von welchem Gleis fährt der Zug nach Hannover ?",
+        "kind": "reorder",
+        "tags": ["frage", "bahnhof"]
+      },
+      "xpCorrect": 22,
+      "xpWrong": 7
+    },
+    {
+      "type": "reading",
+      "instruction": "Lies das Gespräch weiter.",
+      "chunks": [
+        {
+          "text": "Der Mitarbeiter sagt, dass der Anschlusszug meistens wartet, wenn die Verspätung kurz ist. Er empfiehlt Marta trotzdem, schnell zum Gleis 7 zu gehen.",
+          "glossary": [
+            { "term": "der Mitarbeiter", "de": "Person, die dort arbeitet", "pt": "funcionário" },
+            { "term": "der Anschlusszug", "de": "Zug für die Weiterfahrt", "pt": "trem de conexão" },
+            { "term": "empfehlen", "de": "einen Rat geben", "pt": "recomendar" }
+          ]
+        },
+        {
+          "text": "Marta bedankt sich und fragt noch, ob sie im Zug etwas essen kann. Der Mitarbeiter zeigt ihr den Bordbistro-Wagen auf dem Plan.",
+          "glossary": [
+            { "term": "sich bedanken", "de": "Danke sagen", "pt": "agradecer" },
+            { "term": "das Bordbistro", "de": "kleines Restaurant im Zug", "pt": "bistrô do trem" },
+            { "term": "der Wagen", "de": "Teil des Zugs", "pt": "vagão" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Was empfiehlt der Mitarbeiter?",
+      "options": [
+        "Marta soll einen späteren Zug nehmen.",
+        "Marta soll sofort zum Gleis 7 gehen.",
+        "Marta soll im Bahnhof bleiben und warten."
+      ],
+      "correctIndex": 1,
+      "explanation": "Er empfiehlt ihr, schnell zum Gleis 7 zu gehen.",
+      "xpCorrect": 18,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Ergänze den passenden Konnektor.",
+      "sentence": "Der Anschlusszug wartet oft, {___} die Verspätung kurz ist.",
+      "options": ["weil", "deshalb", "trotzdem"],
+      "correct": "weil",
+      "explanation": "Es geht um den Grund: kurze Verspätung -> Zug wartet oft.",
+      "srs": {
+        "front": "Der Anschlusszug wartet oft, ___ die Verspätung kurz ist.",
+        "back": "weil",
+        "kind": "cloze",
+        "tags": ["konnektor", "grund"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Schreibe 1–2 Sätze: Frage am Bahnhof + Grund.",
+      "starters": [
+        "Entschuldigung, ich möchte wissen, ...",
+        "Ich frage, weil ..."
+      ],
+      "keywords": ["Gleis", "Verspätung", "Anschluss", "weil"],
+      "exampleAnswer": "Entschuldigung, ich möchte wissen, von welchem Gleis mein Zug fährt. Ich frage, weil ich einen wichtigen Anschluss habe.",
+      "srs": {
+        "front": "Formuliere eine höfliche Frage am Bahnhof + 'weil'.",
+        "back": "Nutze: Entschuldigung ... / Ich frage, weil ...",
+        "kind": "guided_write",
+        "tags": ["reisen", "service", "fragen"]
+      },
+      "xp": 18
+    }
+  ]
+}
