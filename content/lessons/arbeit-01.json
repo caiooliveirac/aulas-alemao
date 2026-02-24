@@ -1,0 +1,150 @@
+{
+  "id": "arbeit-01",
+  "title": "Im Büro: Termine und Prioritäten",
+  "topic": "Arbeit",
+  "level": "B1+",
+  "grammarFocus": "dass-Sätze + Prioritäten ausdrücken",
+  "lexicalFocus": "Besprechung, Frist, Aufgabe, Priorität",
+  "estimatedMinutes": 14,
+  "xpReward": 165,
+  "keywords": ["arbeit", "buero", "termin", "frist", "prioritaet", "besprechung"],
+  "skillTags": ["reading", "grammar", "vocab", "writing", "srs"],
+  "steps": [
+    {
+      "type": "reading",
+      "instruction": "Lies den Büroalltag von Lena.",
+      "chunks": [
+        {
+          "text": "Lena beginnt ihren Arbeitstag mit einem Blick in den Kalender. Sie sieht drei Besprechungen und zwei dringende Aufgaben.",
+          "glossary": [
+            { "term": "der Kalender", "de": "Plan mit Terminen", "pt": "calendário/agenda" },
+            { "term": "die Besprechung", "de": "Treffen zum Arbeiten", "pt": "reunião" },
+            { "term": "dringend", "de": "muss schnell gemacht werden", "pt": "urgente" }
+          ]
+        },
+        {
+          "text": "Zuerst beantwortet sie wichtige E-Mails. Danach ruft ihr Chef an und sagt, dass ein Bericht heute noch fertig sein muss.",
+          "glossary": [
+            { "term": "beantworten", "de": "eine Antwort geben", "pt": "responder" },
+            { "term": "der Bericht", "de": "schriftlicher Text über Ergebnisse", "pt": "relatório" },
+            { "term": "fertig sein", "de": "abgeschlossen sein", "pt": "estar pronto" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Was erfährt Lena durch den Anruf ihres Chefs?",
+      "options": [
+        "Eine Besprechung wurde abgesagt.",
+        "Ein Bericht muss heute fertig sein.",
+        "Sie soll früher nach Hause gehen."
+      ],
+      "correctIndex": 1,
+      "explanation": "Der Chef sagt, dass ein Bericht heute noch fertig sein muss.",
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Ergänze die richtige Struktur.",
+      "sentence": "Der Chef sagt, {___} ein Bericht heute fertig sein muss.",
+      "options": ["dass", "weil", "deshalb"],
+      "correct": "dass",
+      "explanation": "Nach 'sagen' folgt hier ein dass-Satz.",
+      "srs": {
+        "front": "Der Chef sagt, ___ ein Bericht heute fertig sein muss.",
+        "back": "dass",
+        "kind": "cloze",
+        "tags": ["dass-satz", "arbeit"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "reorder",
+      "instruction": "Ordne den Satz mit 'dass'.",
+      "words": ["Lena", "merkt,", "dass", "sie", "ihre", "Prioritäten", "ändern", "muss"],
+      "correct": "Lena merkt, dass sie ihre Prioritäten ändern muss",
+      "hint": "Im dass-Satz steht das Verb am Ende.",
+      "srs": {
+        "front": "Ordne: Lena / merkt, / dass / sie / ihre / Prioritäten / ändern / muss",
+        "back": "Lena merkt, dass sie ihre Prioritäten ändern muss",
+        "kind": "reorder",
+        "tags": ["dass", "nebensatz"]
+      },
+      "xpCorrect": 22,
+      "xpWrong": 7
+    },
+    {
+      "type": "reading",
+      "instruction": "Wie organisiert sie den Tag?",
+      "chunks": [
+        {
+          "text": "Lena verschiebt eine weniger wichtige Aufgabe auf morgen. Sie informiert ihr Team kurz, damit alle den neuen Plan kennen.",
+          "glossary": [
+            { "term": "verschieben", "de": "auf einen späteren Zeitpunkt legen", "pt": "adiar" },
+            { "term": "weniger wichtig", "de": "nicht so prioritär", "pt": "menos importante" },
+            { "term": "informieren", "de": "jemandem Informationen geben", "pt": "informar" }
+          ]
+        },
+        {
+          "text": "Am Nachmittag arbeitet sie konzentriert am Bericht. Kurz vor Feierabend sendet sie die Datei und dokumentiert die nächsten Schritte.",
+          "glossary": [
+            { "term": "konzentriert", "de": "mit viel Aufmerksamkeit", "pt": "concentrada" },
+            { "term": "Feierabend", "de": "Ende des Arbeitstags", "pt": "fim do expediente" },
+            { "term": "dokumentieren", "de": "schriftlich festhalten", "pt": "documentar" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Warum informiert Lena ihr Team?",
+      "options": [
+        "Damit alle den neuen Plan kennen.",
+        "Weil sie eine Pause machen möchte.",
+        "Damit jemand anderes den Bericht schreibt."
+      ],
+      "correctIndex": 0,
+      "explanation": "Im Text steht genau dieser Zweck mit 'damit'.",
+      "xpCorrect": 18,
+      "xpWrong": 6
+    },
+    {
+      "type": "cloze",
+      "instruction": "Wähle die passende Option.",
+      "sentence": "Sie informiert das Team, {___} alle den neuen Plan kennen.",
+      "options": ["damit", "weil", "dass"],
+      "correct": "damit",
+      "explanation": "'damit' drückt hier den Zweck aus.",
+      "srs": {
+        "front": "Sie informiert das Team, ___ alle den neuen Plan kennen.",
+        "back": "damit",
+        "kind": "cloze",
+        "tags": ["zweck", "damit"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Schreibe 2 Sätze über einen stressigen Arbeitstag.",
+      "starters": [
+        "Heute musste ich meine Prioritäten ändern, weil ...",
+        "Ich habe meinem Team gesagt, dass ..."
+      ],
+      "keywords": ["Termin", "dringend", "Bericht", "dass", "weil"],
+      "exampleAnswer": "Heute musste ich meine Prioritäten ändern, weil ein dringender Termin dazugekommen ist. Ich habe meinem Team gesagt, dass ich den Bericht zuerst fertig machen muss.",
+      "srs": {
+        "front": "Schreibe 2 Sätze über Prioritäten bei der Arbeit mit 'weil' und 'dass'.",
+        "back": "Achte auf Verb-Endstellung im Nebensatz.",
+        "kind": "guided_write",
+        "tags": ["arbeit", "produktion", "nebensatz"]
+      },
+      "xp": 18
+    }
+  ]
+}
