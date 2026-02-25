@@ -5,12 +5,15 @@ import { createHash } from "node:crypto";
 const COOKIE_NAME = "db_auth";
 const MAX_AGE = 365 * 24 * 60 * 60; // 1 year
 
-function expectedToken(): string {
-  const pin = process.env.AUTH_PIN || "changeme";
+function hashPin(pin: string): string {
   return createHash("sha256").update(`deutschbruecke:${pin}`).digest("hex");
 }
 
-/** POST — validate PIN, set auth cookie */
+/**
+ * POST — hash the PIN, set it as cookie.
+ * Any PIN is valid. The hash becomes the user's identity (progress file ID).
+ * Same PIN on any device = same progress.
+ */
 export async function POST(req: Request) {
   let body: unknown;
   try {
@@ -19,16 +22,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "INVALID_JSON" }, { status: 400 });
   }
 
-  const pin = (body as { pin?: string })?.pin;
-  if (!pin) {
-    return NextResponse.json({ error: "MISSING_PIN" }, { status: 400 });
+  const pin = (body as { pin?: string })?.pin?.trim();
+  if (!pin || pin.length < 4) {
+    return NextResponse.json({ error: "PIN_TOO_SHORT", message: "PIN deve ter pelo menos 4 caracteres." }, { status: 400 });
   }
 
-  if (pin !== (process.env.AUTH_PIN || "changeme")) {
-    return NextResponse.json({ error: "WRONG_PIN" }, { status: 401 });
-  }
-
-  const token = expectedToken();
+  const token = hashPin(pin);
   const jar = await cookies();
   jar.set(COOKIE_NAME, token, {
     httpOnly: true,

@@ -7,7 +7,7 @@ const BASE = typeof window !== "undefined"
   : "";
 
 /**
- * Pull progress from **server**; merge with localStorage if server is empty.
+ * Pull progress from server (identified by auth cookie).
  * Falls back to localStorage if offline.
  */
 export async function pullProgress(): Promise<ProgressState> {
@@ -15,22 +15,21 @@ export async function pullProgress(): Promise<ProgressState> {
 
   try {
     const res = await fetch(`${BASE}/api/progress`, {
-      headers: { "x-client-id": "default" },
       cache: "no-store",
+      credentials: "same-origin",
     });
 
     if (!res.ok) throw new Error("fetch failed");
 
     const { state: remote } = (await res.json()) as { state: ProgressState };
 
-    // If server has data, use it (server is source of truth)
+    // Server has data → use it (server is source of truth)
     if (remote && remote.profile && remote.profile.xp > 0) {
-      // Also save to localStorage as offline cache
       saveLocal("progress", remote);
       return remote;
     }
 
-    // Server is empty but local has data → push local to server (first-time migration)
+    // Server empty but local has data → migrate local to server
     if (local.profile.xp > 0 || local.srsCards.length > 0 || local.lessonRuns.length > 0) {
       await pushProgress(local);
       return local;
@@ -38,29 +37,25 @@ export async function pullProgress(): Promise<ProgressState> {
 
     return defaultProgressState;
   } catch {
-    // Offline fallback
     return local;
   }
 }
 
 /**
  * Push progress to server + localStorage.
+ * User identity comes from the auth cookie (sent automatically).
  */
 export async function pushProgress(state: ProgressState): Promise<void> {
-  // Always save to localStorage as offline cache
   saveLocal("progress", state);
 
   try {
     await fetch(`${BASE}/api/progress`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-client-id": "default",
-      },
+      headers: { "Content-Type": "application/json" },
+      credentials: "same-origin",
       body: JSON.stringify({ state }),
     });
   } catch {
-    // Silently fail — localStorage has the data; will sync next time
     console.warn("[sync] Failed to push progress to server, saved locally.");
   }
 }

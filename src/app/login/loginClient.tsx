@@ -15,20 +15,28 @@ export default function LoginForm() {
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setError("");
+
+    const trimmed = pin.trim();
+    if (trimmed.length < 4) {
+      setError("PIN deve ter pelo menos 4 caracteres.");
+      return;
+    }
+
     setLoading(true);
 
     try {
       const res = await fetch(`${BASE}/api/auth`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pin }),
+        body: JSON.stringify({ pin: trimmed }),
       });
 
       if (res.ok) {
         router.push(`${BASE}/`);
         router.refresh();
       } else {
-        setError("PIN incorreto.");
+        const data = await res.json().catch(() => ({}));
+        setError(data.message || "Erro ao entrar.");
       }
     } catch {
       setError("Erro de conexão.");
@@ -46,28 +54,34 @@ export default function LoginForm() {
         <h1 className="text-xl font-bold tracking-tight">
           <span className="gradient-text">DeutschBrücke</span>
         </h1>
-        <p className="mt-1 text-sm text-foreground/50">Digite o PIN para acessar</p>
+        <p className="mt-1 text-sm text-foreground/50">Alemão B1 → B2 com microtarefas e SRS</p>
       </div>
 
       <label className="block">
-        <span className="text-xs font-medium uppercase tracking-wider text-foreground/40">PIN</span>
+        <span className="text-xs font-medium uppercase tracking-wider text-foreground/40">Seu PIN pessoal</span>
         <input
-          type="password"
+          type="text"
           value={pin}
           onChange={(e) => setPin(e.target.value)}
           autoFocus
           required
-          className="mt-1 w-full rounded-xl border border-[var(--border)] bg-[var(--card-bg)] px-4 py-3 text-base font-medium text-foreground placeholder:text-foreground/30 outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all"
-          placeholder="•••••••"
+          minLength={4}
+          className="mt-1 w-full rounded-xl border border-[var(--border)] bg-[var(--card-bg)] px-4 py-3 text-center text-lg font-bold tracking-[0.3em] text-foreground placeholder:text-foreground/30 placeholder:tracking-normal placeholder:font-normal outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all"
+          placeholder="ex: maria2026"
         />
       </label>
 
+      <p className="mt-2 text-xs text-foreground/40 text-center">
+        Escolha um PIN qualquer. Ele é sua identidade — use o
+        mesmo PIN em qualquer dispositivo para manter seu progresso.
+      </p>
+
       {error && (
-        <p className="mt-3 text-sm font-medium text-[var(--error)]">{error}</p>
+        <p className="mt-3 text-sm font-medium text-[var(--error)] text-center">{error}</p>
       )}
 
       <div className="mt-5">
-        <Button type="submit" fullWidth variant="accent" disabled={loading || !pin}>
+        <Button type="submit" fullWidth variant="accent" disabled={loading || pin.trim().length < 4}>
           {loading ? "Entrando…" : "Entrar"}
         </Button>
       </div>

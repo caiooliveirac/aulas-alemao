@@ -2,37 +2,44 @@ import "server-only";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-const COOKIE_NAME = "db_auth";
+export const COOKIE_NAME = "db_auth";
 
-async function expectedToken(): Promise<string> {
-  const pin = process.env.AUTH_PIN || "changeme";
-  const { createHash } = await import("node:crypto");
-  return createHash("sha256").update(`deutschbruecke:${pin}`).digest("hex");
+/**
+ * A valid token is any 64-char hex string (SHA-256 output).
+ */
+function isValidToken(token: string | undefined): token is string {
+  return !!token && /^[a-f0-9]{64}$/.test(token);
 }
 
 /**
  * Call at the top of any server page/component that requires authentication.
- * Redirects to /login if not authenticated.
- * Note: Next.js automatically prepends basePath to redirect(), so we use bare "/login".
+ * Redirects to /login if no valid session cookie.
+ * Note: Next.js automatically prepends basePath to redirect().
  */
 export async function requireAuth(): Promise<void> {
   const jar = await cookies();
   const token = jar.get(COOKIE_NAME)?.value;
-  const expected = await expectedToken();
 
-  if (token !== expected) {
+  if (!isValidToken(token)) {
     redirect("/login");
   }
 }
 
 /**
- * For API routes — returns true if authenticated, false otherwise.
- * Does NOT redirect (APIs should return 401 instead).
+ * Extract the user's clientId (PIN hash) from the request cookie.
+ * Returns null if not authenticated.
  */
-export async function isAuthenticated(req: Request): Promise<boolean> {
+export function getClientId(req: Request): string | null {
   const cookieHeader = req.headers.get("cookie") || "";
-  const match = cookieHeader.match(new RegExp(`${COOKIE_NAME}=([^;]+)`));
-  const token = match?.[1];
-  const expected = await expectedToken();
-  return token === expected;
+  const match = cookieHeader.match(new RegExp(`${COOKIE_NAME}=([a-f0-9]{64})`));
+  return match?.[1] ?? null;
+}
+
+/**
+ * Extract clientId from server component context (cookies()).
+ */
+export async function getServerClientId(): Promise<string | null> {
+  const jar = await cookies();
+  const token = jar.get(COOKIE_NAME)?.value;
+  return isValidToken(token) ? token : null;
 }
