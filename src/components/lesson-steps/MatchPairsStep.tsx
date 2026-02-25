@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { LessonStep, SrsCardSeed } from "@/content/schema";
 import { Button } from "@/components/ui/Button";
 
@@ -61,11 +61,21 @@ export default function MatchPairsStep({
     [pairMap]
   );
 
-  useEffect(() => {
-    if (selectedLeft && selectedRight) {
-      tryMatch(selectedLeft, selectedRight);
+  const selectLeft = (left: string) => {
+    if (selectedRight) {
+      tryMatch(left, selectedRight);
+    } else {
+      setSelectedLeft(left);
     }
-  }, [selectedLeft, selectedRight, tryMatch]);
+  };
+
+  const selectRight = (right: string) => {
+    if (selectedLeft) {
+      tryMatch(selectedLeft, right);
+    } else {
+      setSelectedRight(right);
+    }
+  };
 
   const finish = () => {
     const perfect = errors === 0;
@@ -96,7 +106,7 @@ export default function MatchPairsStep({
                 disabled={isMatched}
                 onClick={() => {
                   if (isMatched) return;
-                  setSelectedLeft(left);
+                  selectLeft(left);
                 }}
                 className={[
                   "w-full rounded-xl border px-3 py-2.5 text-sm text-left transition-all",
@@ -128,7 +138,7 @@ export default function MatchPairsStep({
                 disabled={isMatched}
                 onClick={() => {
                   if (isMatched) return;
-                  setSelectedRight(right);
+                  selectRight(right);
                 }}
                 className={[
                   "w-full rounded-xl border px-3 py-2.5 text-sm text-left transition-all",

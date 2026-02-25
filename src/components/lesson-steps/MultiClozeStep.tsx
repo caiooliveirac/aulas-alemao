@@ -38,7 +38,7 @@ export default function MultiClozeStep({
   // Parse text into segments — text parts and blank markers
   const segments = useMemo(() => {
     const parts: Array<{ type: "text"; value: string } | { type: "blank"; id: number }> = [];
-    let remaining = step.text;
+    const remaining = step.text;
 
     // Find all markers and split
     const markerRegex = /\{___(\d+)\}/g;
@@ -88,7 +88,7 @@ export default function MultiClozeStep({
       <div className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 text-base leading-8">
         {segments.map((seg, i) => {
           if (seg.type === "text") return <span key={i}>{seg.value}</span>;
-          const blank = step.blanks.find((b) => b.id === seg.id);
+          const _blank = step.blanks.find((b) => b.id === seg.id);
           const answer = answers[seg.id];
           const result = results[seg.id];
           const isActive = activeBlank === seg.id && !submitted;

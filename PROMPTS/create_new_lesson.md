@@ -562,3 +562,247 @@ Skill tags válidos: `reading`, `vocab`, `grammar`, `listening`, `speaking`, `wr
 SRS kinds válidos: `cloze`, `reorder`, `guided_write`, `match`, `translate`, `error_correction`, `vocab_recall`.
 
 ID da lição: apenas `[a-z0-9-]+`.
+
+---
+
+## 12. Lições práticas — dicas de quem já criou 7 lições
+
+> Esta seção documenta armadilhas reais e técnicas que só se aprendem na prática.
+> Se você é uma IA gerando lições, leia isto com a mesma atenção que as regras.
+
+### 12.1 Processo: escreva a narrativa PRIMEIRO
+
+Não comece pelos exercícios. O melhor fluxo de trabalho é:
+
+1. **Escreva o `reading`** — 3 chunks com arco narrativo (setup → interação → resolução)
+2. **Extraia o vocabulário** para `match_pairs` e `vocab_recall`
+3. **Derive as frases dos exercícios** do texto ou do contexto narrativo
+4. **O `error_correction`** deve refletir um erro que o aluno cometeria *baseado no texto que acabou de ler*
+5. **O `translate`** deve testar uma frase que o aluno *já viu estruturalmente no reading*
+
+Isso garante **coerência temática** — todos os exercícios orbitam a mesma narrativa. Evita a sensação de "exercícios desconectados" que é o maior problema de qualidade.
+
+### 12.2 Idiomas: quem fala o quê
+
+| Campo | Idioma | Por quê |
+|---|---|---|
+| `grammar_note.explanation` | **Português** 🇧🇷 | É o momento de ensinar — deve ser na língua nativa |
+| `grammar_note.commonMistake` | **Português** ou mix PT/DE | Explicação do erro com exemplos em alemão |
+| `reading.instruction` | **Alemão** 🇩🇪 | Imersão — o aluno lê instruções em DE |
+| `cloze.instruction` | **Alemão** 🇩🇪 | Exercício em DE |
+| `comprehension.explanation` | **Alemão** ou **Português** | Ambos aceitáveis; DE se o aluno é B1+, PT se precisa clareza |
+| `dialogue_choice.context` | **Português** 🇧🇷 | Contextualiza a cena para o aluno |
+| `translate.explanation` | **Português** 🇧🇷 | Explica variações aceitas |
+| `guided_write.checkpoints` | **Português** 🇧🇷 | Auto-avaliação na língua nativa |
+| `guided_write.instruction` | **Alemão** 🇩🇪 | Instrução de produção em DE |
+| `vocab_recall.hint` | **Português** 🇧🇷 | Dica para recall |
+
+### 12.3 Armadilha do `reorder.correct`: espaços e pontuação
+
+Quando a pontuação é token separado no array `words`, o campo `correct` **DEVE ter espaço antes da pontuação**:
+
+```jsonc
+// ✅ CORRETO:
+"words": ["Mia", "hängt", "das Poster", "an", "die Wand", "."],
+"correct": "Mia hängt das Poster an die Wand ."
+//                                            ^ espaço antes do ponto
+
+// ❌ ERRADO (não vai funcionar):
+"correct": "Mia hängt das Poster an die Wand."
+```
+
+O validador faz `correct.split(" ")` e compara com `words[]`. Se não bater, falha silenciosamente na interface.
+
+**Tokens multi-palavra** são permitidos no `words[]` e devem aparecer intactos no `correct`:
+```jsonc
+"words": ["Sie mir sagen", "Könnten", ",", "wann", "das Frühstück", "beginnt", "?"],
+"correct": "Könnten Sie mir sagen , wann das Frühstück beginnt ?"
+// "Sie mir sagen" é UM token — aparece inteiro no correct
+```
+
+### 12.4 `error_correction.correctedWord` pode ser multi-palavra
+
+Quando o erro é de **posição do verbo** (muito comum em Nebensatz), o `correctedWord` precisa incluir o contexto rearranjado:
+
+```jsonc
+// Erro: verbo no lugar errado no Nebensatz
+"sentence": "Ich glaube, dass er kommt morgen zur Besprechung.",
+"errorWord": "kommt",
+"correctedWord": "morgen zur Besprechung kommt"
+// A interface destaca "kommt" e mostra a versão corrigida
+```
+
+A interface do componente `ErrorCorrectionStep` exibe a frase com `errorWord` destacado. O aluno deve identificar o erro e a `explanation` explica por quê. O `correctedWord` é a substituição — pode ser uma ou mais palavras.
+
+### 12.5 `culturalNote`: informações ACIONÁVEIS
+
+Não escreva banalidades genéricas. Inclua informações que uma pessoa morando na Alemanha usaria de verdade:
+
+| ❌ Vago/genérico | ✅ Acionável |
+|---|---|
+| "Na Alemanha, ir ao médico é importante." | "Na Alemanha, a Krankenversicherung é obrigatória. Ligue 116 117 para o ärztlicher Bereitschaftsdienst (plantão médico) fora do horário." |
+| "Os alemães gostam de viajar de trem." | "Com mais de 60 min de atraso, você tem direito a 25% de reembolso. Peça no DB-Schalter ou pelo app." |
+| "Entrevistas de emprego são formais." | "Chegue 5–10 min antes. Sieze o entrevistador sempre. Evite autoelogio exagerado — os alemães preferem exemplos concretos." |
+
+### 12.6 Leitura narrativa: a estrutura de 3 atos
+
+Os melhores `reading` chunks seguem esta arquitetura:
+
+| Chunk | Função narrativa | Gramática-alvo |
+|---|---|---|
+| **1 — Contexto** | Apresenta personagem, situação, local | 1–2 usos naturais |
+| **2 — Interação** | Diálogo ou ação central com conflito/decisão | 3–4 usos concentrados |
+| **3 — Resolução** | Desfecho, reflexão ou consequência | 1–2 usos de fechamento |
+
+**Total**: 200–300 palavras para B1/B1+. Cada chunk deve ter 3–5 entradas de `glossary` com termos que **realmente aparecem no texto** do chunk. Nunca adicione glossário de palavras que não estão no text.
+
+### 12.7 `comprehension`: perguntas de negação são poderosas
+
+Perguntas como "Welche Empfehlung gibt Dr. Klein NICHT?" forçam o aluno a verificar TODAS as opções contra o texto, em vez de achar uma resposta e parar. Isso exige compreensão global.
+
+**Padrões de pergunta do melhor para o pior:**
+1. 🟢 **Inferência causal**: "Warum entscheidet sich Anna für X?" (o aluno precisa conectar informações)
+2. 🟢 **Negação verificatória**: "Welchen Ratschlag gibt der Arzt NICHT?" (verifica todas opções)
+3. 🟡 **Resumo global**: "Was ist das Hauptproblem von Thomas?" (exige síntese)
+4. 🔴 **Busca literal**: "Wie heißt die Ärztin?" (qualquer um acha em 2 segundos — EVITE)
+
+### 12.8 `dialogue_choice`: 3 opções, não 4
+
+Diferente do `comprehension` (que exige 4 opções), o `dialogue_choice` funciona melhor com **3 opções**:
+- 1 correta (pragmaticamente ideal)
+- 1 gramaticalmente correta mas com registro inadequado (formal demais, informal demais, ou vaga)
+- 1 gramaticalmente correta mas pragmaticamente ruim (auto-elogio exagerado, resposta evasiva, tom inapropriado)
+
+**Nunca inclua uma opção absurda ou rude** — se um nativo jamais diria isso, não use como distrator.
+
+### 12.9 Eixos de variação frequentes no `translate.acceptedAnswers`
+
+Na prática, estes eixos de sinônimo aparecem na maioria das lições:
+
+| Eixo | Variantes comuns |
+|---|---|
+| **Substantivos de escritório** | Besprechung / Meeting / Sitzung |
+| **Substantivos de viagem** | Fahrkarte / Ticket / Fahrschein |
+| **Substantivos de empresa** | Firma / Unternehmen / Betrieb |
+| **Verbos de opinião** | glaube / denke / finde / meine |
+| **Verbos de início** | beginnen / anfangen / starten |
+| **Partículas** | gern / gerne |
+| **Pontuação final** | com ponto / sem ponto |
+| **Vírgula antes de conjunção** | com vírgula / sem vírgula (normalização remove) |
+| **Artigo após Mengenangabe** | ein Kilo Käse / ein Kilo von dem Käse (raro mas aceito) |
+| **Construção pessoal** | Ich hätte / Könnten Sie / Könnte ich |
+
+**Método prático de geração**:  
+Escreva a frase canônica → aplique cada eixo → gere todas combinações → elimine as antinaturais → mantenha ≥ 7.
+
+### 12.10 Cálculo de `xpReward`: cuidado com os campos diferentes
+
+O XP não usa o mesmo campo em todos os steps:
+
+| Tipo | Campo de XP correto | Valor típico |
+|---|---|---|
+| `grammar_note` | `xp` | 5 |
+| `reading` | `xp` | 10 |
+| `comprehension` | `xpCorrect` | 20 |
+| `cloze` | `xpCorrect` | 20 |
+| `match_pairs` | `xpCorrect` | 25 |
+| `dialogue_choice` | `xpCorrect` | 22 |
+| `error_correction` | `xpCorrect` | 25 |
+| `multi_cloze` | `xpCorrect` | 30 |
+| `translate` | `xpCorrect` | 28 |
+| `vocab_recall` | `xpCorrect` | 20 |
+| `reorder` | `xpCorrect` | 25 |
+| `guided_write` | `xp` | 20 |
+
+**Fórmula**: `xpReward = 5 + 10 + 20 + 25 + 20 + 22 + 25 + 30 + 28 + 20 + 25 + 20 = 250`
+(com 12 steps usando os valores típicos acima)
+
+Se usar os 12 tipos com valores típicos, `xpReward = 250` é o padrão. Ajuste se repetir tipos ou usar valores diferentes.
+
+### 12.11 SRS: distribua 6–8 seeds, não apenas 4
+
+O mínimo é 4, mas na prática os melhores resultados vêm de **colocar SRS em todo step que suporta** (todos exceto `reading` e `comprehension`). Isso gera 8–10 cards por lição, o que alimenta o sistema de repetição espaçada de forma muito mais eficaz.
+
+**Steps que DEVEM ter SRS** (pela ordem de prioridade):
+1. `translate` — produção de frase completa → card mais valioso
+2. `error_correction` — consciência de erro → retenção alta
+3. `cloze` — paradigma gramatical → core do SRS
+4. `vocab_recall` — vocabulário → recall direto
+5. `reorder` — estrutura frasal → sintaxe
+6. `guided_write` — produção livre → card de referência
+
+**Steps onde SRS é opcional mas recomendado:**
+- `match_pairs` — um par representativo
+- `multi_cloze` — a lacuna mais difícil
+
+### 12.12 Família "Verb am Ende" — planeje a progressão
+
+Muitos tópicos gramaticais B1–B2 compartilham a regra "verbo conjugado vai para o final do Nebensatz". Ao planejar lições, saiba que o aluno vai encontrar esse padrão repetidamente, e o que muda é o **conector**:
+
+| Conector | Função | Exemplo |
+|---|---|---|
+| **weil** | Motivo (porque) | …weil er müde **ist**. |
+| **obwohl** | Contradição (embora) | …obwohl es teuer **ist**. |
+| **dass** | Fato/opinião (que) | …dass er morgen **kommt**. |
+| **damit** | Finalidade (para que) | …damit alle es **wissen**. |
+| **ob** | Pergunta indireta sim/não (se) | …ob er morgen **kommt**. |
+| **W-Wort** | Pergunta indireta (quando/onde/como) | …wann er **kommt**. |
+| **der/die/das** | Relativsatz (que/o qual) | …die ich **kenne**. |
+
+Use isso a seu favor: se o aluno já fez uma lição com `weil`, na lição de `dass` você pode referenciar a similaridade ("Assim como no weil-Satz, o verbo vai para o final"). Isso acelera o aprendizado.
+
+### 12.13 `topics.json` — verifique antes de criar
+
+Os tópicos atuais são:
+```json
+{ "Alltag": {"icon":"🏠"}, "Reisen": {"icon":"🚆"}, "Gesundheit": {"icon":"🏥"}, "Arbeit": {"icon":"💼"} }
+```
+
+Se precisar de um novo tópico, adicione em `content/topics.json` ANTES de criar a lição. O campo `topic` na lição deve bater exatamente (case-sensitive). Sugestões de tópicos futuros: Wohnung 🏘️, Behörden 🏛️, Studium 🎓, Freizeit ⚽, Essen 🍽️.
+
+### 12.14 Numeração de IDs: convenção
+
+IDs seguem o padrão `topico-nn` onde `nn` é sequencial a partir de `01`:
+- `alltag-01`, `alltag-02`, `alltag-03`…
+- `reisen-01`, `reisen-02`…
+
+Antes de criar, consulte os arquivos existentes em `content/lessons/` para saber o próximo número. Nunca reutilize um ID.
+
+### 12.15 Glossário: cada termo vem do texto
+
+Todo item de `glossary` em um chunk **deve ser uma palavra ou expressão que aparece literalmente no `text` desse chunk**. O componente `GlossaryCard` destaca o termo no parágrafo — se ele não existir no texto, o highlight silenciosamente falha.
+
+```jsonc
+// ✅ "Wochenmarkt" aparece no text do chunk
+"text": "Sophie geht auf den Wochenmarkt…",
+"glossary": [{ "term": "Wochenmarkt", "de": "…", "pt": "…" }]
+
+// ❌ "Supermarkt" NÃO aparece no text
+"glossary": [{ "term": "Supermarkt", "de": "…", "pt": "…" }]  // Não faça isso
+```
+
+### 12.16 Gramáticas já cobertas nas lições existentes
+
+Antes de criar uma nova lição, consulte o que já foi ensinado para evitar repetição e planejar pré-requisitos:
+
+| Lição | Gramática | Nível |
+|---|---|---|
+| alltag-01 | Wechselpräpositionen (Akk/Dat) | B1 |
+| alltag-02 | Konjunktiv II (hätte/würde/könnte) | B1 |
+| arbeit-01 | dass-Sätze + damit | B1+ |
+| arbeit-02 | Relativsätze (der/die/das) | B1+ |
+| gesundheit-01 | Modalverben Prät. + Konj. II | B1+ |
+| reisen-01 | weil/obwohl-Nebensätze | B1 |
+| reisen-02 | Indirekte Fragen (ob/W-Wort) | B1 |
+
+**Lacunas gramaticais importantes ainda não cobertas:**
+- Passiv (wird gemacht)
+- Adjektivdeklination
+- Perfekt vs. Präteritum (quando usar qual)
+- Reflexivverben (sich interessieren, sich bewerben)
+- Konjunktiv I (indirekte Rede)
+- Plusquamperfekt
+- Partizipialattribute (B2+)
+- Nominalisierung (B2+)
+
+> **Atualize esta tabela** sempre que criar uma nova lição!

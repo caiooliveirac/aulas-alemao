@@ -13,7 +13,7 @@ type IndexedWord = { idx: number; word: string };
 function shuffleWords(words: string[]): IndexedWord[] {
   const items: IndexedWord[] = words.map((word, idx) => ({ idx, word }));
   if (items.length < 2) return items;
-  let arr = [...items];
+  const arr = [...items];
   const isIdentical = () => arr.every((it, i) => it.idx === i);
   do {
     for (let i = arr.length - 1; i > 0; i--) {
