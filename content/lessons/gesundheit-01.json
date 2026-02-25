@@ -1,33 +1,81 @@
 {
   "id": "gesundheit-01",
-  "title": "Beim Hausarzt",
+  "title": "Beim Hausarzt: Symptome beschreiben und Ratschläge verstehen",
   "topic": "Gesundheit",
   "level": "B1+",
-  "grammarFocus": "Modalverben im Präteritum + Konjunktiv II (könnte, sollte)",
-  "lexicalFocus": "Arztbesuch, Symptome, Ratschläge",
-  "estimatedMinutes": 12,
-  "xpReward": 150,
-  "keywords": ["konnte", "musste", "sollten", "könnten", "Ratschlag"],
-  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "grammarFocus": "Modalverben im Präteritum (konnte, musste, durfte, sollte) + Konjunktiv II für Ratschläge (sollte, könnte, müsste)",
+  "lexicalFocus": "Arztbesuch, Symptome, Körperteile, Medikamente, Ratschläge",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["Modalverben", "Präteritum", "Konjunktiv II", "Arzt", "Symptome", "Ratschlag", "sollte", "könnte"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Modalverben im Präteritum korrekt verwenden (konnte, musste, durfte, sollte)",
+    "Konjunktiv II für höfliche Ratschläge einsetzen (sollte, könnte, müsste)",
+    "Symptome beim Arzt beschreiben und Fragen des Arztes verstehen",
+    "Medizinisches Alltagsvokabular aktiv anwenden"
+  ],
+  "prerequisites": [],
+  "culturalNote": "In Deutschland braucht man eine Krankenversicherung (gesetzlich oder privat) — sie ist Pflicht. Beim Hausarzt zeigt man seine Versichertenkarte vor. Das System der Überweisung ist wichtig: Der Hausarzt entscheidet, ob man zum Facharzt (Spezialist) muss. Termine bekommt man oft erst nach Wochen — bei akuten Problemen geht man in die Notaufnahme oder ruft den ärztlichen Bereitschaftsdienst an (Telefon: 116 117).",
   "steps": [
     {
+      "type": "grammar_note",
+      "title": "Modalverben: Präteritum vs. Konjunktiv II",
+      "explanation": "Os Modalverben têm duas formas importantes além do presente: o Präteritum (passado real: 'ich konnte' = eu conseguia/pude) e o Konjunktiv II (hipotético/conselho: 'ich könnte' = eu poderia). No consultório médico, o Präteritum descreve o que aconteceu ('Ich konnte nicht schlafen') e o Konjunktiv II dá conselhos educados ('Sie sollten mehr Wasser trinken'). A diferença visual é sutil — geralmente um Umlaut: konnte → könnte, musste → müsste, sollte → sollte (igual!).",
+      "examples": [
+        {
+          "de": "Ich konnte seit drei Tagen nicht richtig schlafen.",
+          "pt": "Eu não conseguia dormir direito há três dias. (Präteritum — fato)",
+          "highlight": "konnte"
+        },
+        {
+          "de": "Sie sollten weniger Kaffee trinken.",
+          "pt": "O senhor deveria beber menos café. (Konjunktiv II — conselho)",
+          "highlight": "sollten"
+        },
+        {
+          "de": "Er musste gestern früher nach Hause gehen.",
+          "pt": "Ele teve que ir para casa mais cedo ontem. (Präteritum — fato)",
+          "highlight": "musste"
+        },
+        {
+          "de": "Sie könnten auch Kräutertee ausprobieren.",
+          "pt": "O senhor poderia experimentar chá de ervas também. (Konjunktiv II — sugestão)",
+          "highlight": "könnten"
+        }
+      ],
+      "ruleFormula": "Präteritum (fato): konnte, musste, durfte, sollte | Konjunktiv II (conselho): könnte, müsste, dürfte, sollte",
+      "commonMistake": "Häufiger Fehler: 'Sie konnten mehr Sport machen.' — Falsch als Ratschlag! 'konnten' ist Präteritum Plural (= sie konnten, Vergangenheit). Für einen Ratschlag: 'Sie könnten mehr Sport machen' (Konjunktiv II).",
+      "xp": 5
+    },
+    {
       "type": "reading",
-      "instruction": "Leia em blocos. Note Präteritum e Konjunktiv II.",
+      "instruction": "Lies die Szene beim Arzt aufmerksam. Achte auf Präteritum und Konjunktiv II der Modalverben.",
       "chunks": [
         {
-          "text": "Seit einer Woche hat Thomas starke Kopfschmerzen. Er konnte letzte Nacht nicht gut schlafen und musste heute früher von der Arbeit nach Hause gehen.",
+          "text": "Seit einer Woche hat Thomas starke Kopfschmerzen. Er konnte die letzten drei Nächte kaum schlafen und musste gestern sogar früher von der Arbeit nach Hause gehen. Sein Nacken ist verspannt, und manchmal wird ihm schwindelig. Heute Morgen hat er endlich einen Termin beim Hausarzt bekommen.",
           "glossary": [
-            { "term": "Kopfschmerzen", "de": "Schmerzen im Kopf", "pt": "dor de cabeça" },
-            { "term": "konnte", "de": "Präteritum von ‚können‘", "pt": "podia / conseguia" },
-            { "term": "musste", "de": "Präteritum von ‚müssen‘", "pt": "teve que / precisou" }
+            { "term": "die Kopfschmerzen", "de": "Schmerzen im Kopf", "pt": "dor de cabeça" },
+            { "term": "verspannt", "de": "Muskeln sind hart und schmerzhaft, weil man sich nicht genug bewegt hat", "pt": "tenso / com tensão muscular" },
+            { "term": "schwindelig", "de": "Gefühl, dass sich alles dreht; man fühlt sich unsicher", "pt": "tonto" },
+            { "term": "der Termin", "de": "verabredete Zeit für einen Besuch (beim Arzt, im Büro usw.)", "pt": "consulta / compromisso" }
           ]
         },
         {
-          "text": "Er geht zum Hausarzt. Die Ärztin fragt: „Seit wann haben Sie die Beschwerden?“ Thomas antwortet: „Seit ungefähr einer Woche. Ich sollte vielleicht weniger am Computer arbeiten.“",
+          "text": "Im Sprechzimmer fragt die Ärztin, Frau Dr. Klein: \u201EGuten Tag, Herr Bauer. Was kann ich für Sie tun?\u201C Thomas antwortet: \u201EIch habe seit einer Woche starke Kopfschmerzen. Ich konnte nachts nicht schlafen und musste Schmerztabletten nehmen, aber sie haben nicht richtig geholfen. Außerdem durfte ich bei der Arbeit nicht am Computer sitzen, weil mir schwindelig wurde.\u201C",
           "glossary": [
-            { "term": "Hausarzt", "de": "Arzt für Allgemeinmedizin", "pt": "clínico geral" },
-            { "term": "Beschwerden", "de": "gesundheitliche Probleme, die man fühlt", "pt": "queixas / sintomas" },
-            { "term": "ungefähr", "de": "circa, nicht genau", "pt": "aproximadamente" }
+            { "term": "das Sprechzimmer", "de": "Raum, in dem der Arzt die Patienten untersucht", "pt": "consultório" },
+            { "term": "die Schmerztablette", "de": "Medikament gegen Schmerzen (z.B. Ibuprofen)", "pt": "analgésico / comprimido para dor" },
+            { "term": "untersuchen", "de": "als Arzt den Körper des Patienten prüfen", "pt": "examinar" }
+          ]
+        },
+        {
+          "text": "Frau Dr. Klein untersucht Thomas gründlich und sagt dann: \u201EIhr Nacken ist sehr verspannt. Das könnte die Ursache für die Kopfschmerzen sein. Sie sollten unbedingt weniger am Computer arbeiten und regelmäßig Pausen machen. Sie könnten auch Dehnübungen für den Nacken machen — ich gebe Ihnen ein Blatt mit Übungen. Und Sie müssten eigentlich mehr Wasser trinken, mindestens zwei Liter pro Tag.\u201C Thomas bedankt sich und nimmt das Rezept mit.",
+          "glossary": [
+            { "term": "gründlich", "de": "sehr genau und sorgfältig", "pt": "minuciosamente" },
+            { "term": "die Ursache", "de": "der Grund, warum etwas passiert", "pt": "causa" },
+            { "term": "die Dehnübung", "de": "Übung, bei der man Muskeln langsam streckt", "pt": "exercício de alongamento" },
+            { "term": "das Rezept", "de": "Papier vom Arzt, mit dem man Medikamente in der Apotheke kauft", "pt": "receita médica" }
           ]
         }
       ],
@@ -35,52 +83,208 @@
     },
     {
       "type": "comprehension",
-      "question": "Warum geht Thomas zum Arzt?",
-      "options": ["Er hat Bauchschmerzen", "Er hat seit einer Woche Kopfschmerzen", "Er hatte einen Unfall", "Er braucht ein Rezept"],
-      "correctIndex": 1,
-      "explanation": "Thomas hat seit einer Woche starke Kopfschmerzen und konnte nicht gut schlafen.",
+      "question": "Welche Empfehlung gibt Frau Dr. Klein NICHT?",
+      "options": [
+        "Weniger am Computer arbeiten und Pausen machen.",
+        "Dehnübungen für den Nacken machen.",
+        "Einen Termin beim Facharzt vereinbaren.",
+        "Mehr Wasser trinken — mindestens zwei Liter pro Tag."
+      ],
+      "correctIndex": 2,
+      "explanation": "Frau Dr. Klein empfiehlt drei Dinge: weniger Computer + Pausen, Dehnübungen für den Nacken, und mehr Wasser trinken. Einen Termin beim Facharzt erwähnt sie NICHT.",
+      "distractorExplanations": [
+        "Doch — sie sagt: 'Sie sollten weniger am Computer arbeiten und regelmäßig Pausen machen.'",
+        "Doch — sie sagt: 'Sie könnten auch Dehnübungen für den Nacken machen.'",
+        "Das ist die richtige Antwort — sie empfiehlt keinen Facharzt.",
+        "Doch — sie sagt: 'Sie müssten eigentlich mehr Wasser trinken, mindestens zwei Liter pro Tag.'"
+      ],
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Modalverb im Präteritum — können → ?",
-      "sentence": "Er {___} letzte Nacht nicht gut schlafen.",
-      "options": ["kann", "konnte", "könnte", "gekonnt"],
-      "correct": "konnte",
-      "explanation": "Präteritum von ‚können‘ = konnte.",
-      "srs": {
-        "front": "Er ___ letzte Nacht nicht schlafen. (können, Präteritum)",
-        "back": "konnte",
-        "kind": "cloze",
-        "tags": ["modalverb", "präteritum"]
-      },
-      "xpCorrect": 20,
-      "xpWrong": 6
+      "type": "match_pairs",
+      "instruction": "Verbinde die Modalverben mit der richtigen Funktion im medizinischen Kontext.",
+      "pairs": [
+        { "left": "konnte nicht (Prät.)", "right": "beschreibt, was der Patient nicht geschafft hat" },
+        { "left": "musste (Prät.)", "right": "beschreibt eine vergangene Notwendigkeit" },
+        { "left": "sollten (Konj. II)", "right": "dringender ärztlicher Ratschlag" },
+        { "left": "könnten (Konj. II)", "right": "freundlicher Vorschlag / Möglichkeit" },
+        { "left": "müssten (Konj. II)", "right": "starke Empfehlung (eigentlich nötig)" }
+      ],
+      "xpCorrect": 25,
+      "xpWrong": 10
     },
     {
       "type": "cloze",
-      "instruction": "Konjunktiv II — höflicher Ratschlag (Sie-formal)",
-      "sentence": "Sie {___} weniger Kaffee trinken und mehr Wasser.",
-      "options": ["sollte", "sollten", "musste", "soll"],
+      "instruction": "Ratschlag oder Vergangenheit? Wähle die richtige Modalverbform.",
+      "sentence": "Sie {___} unbedingt regelmäßig Pausen machen — das ist sehr wichtig.",
+      "options": ["sollten", "sollte", "konnten", "mussten"],
       "correct": "sollten",
-      "explanation": "Konjunktiv II von ‚sollen‘: Sie (formal) → sollten.",
+      "explanation": "'Sie sollten' (Konjunktiv II, Höflichkeitsform) ist hier ein dringender Ratschlag der Ärztin. 'sollte' wäre Singular (er/sie sollte), passt aber nicht zur Sie-Form. 'konnten/mussten' sind Präteritum und beschreiben Vergangenheit, keinen Ratschlag.",
+      "grammarRule": "Ratschlag mit 'sollen' im Konjunktiv II: ich sollte, du solltest, er/sie sollte, wir/sie/Sie sollten",
       "srs": {
-        "front": "Sie ___ weniger Kaffee trinken. (sollen, Konj. II, formal)",
-        "back": "sollten",
+        "front": "Sie ___ unbedingt Pausen machen. (ärztlicher Ratschlag, Sie-Form)",
+        "back": "sollten (Konjunktiv II von sollen: Ratschlag/Empfehlung)",
         "kind": "cloze",
-        "tags": ["konjunktiv-ii", "ratschlag"]
+        "tags": ["modalverben", "konjunktiv-ii", "ratschlag"]
       },
       "xpCorrect": 20,
       "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die angemessenste Antwort im Arztgespräch.",
+      "context": "Du bist beim Arzt. Die Ärztin hat dich untersucht und gibt dir jetzt einen Ratschlag.",
+      "lines": [
+        { "speaker": "Ärztin", "text": "Sie sollten weniger Kaffee trinken und abends keinen Bildschirm mehr benutzen." },
+        { "speaker": "Du", "text": "(Du möchtest nachfragen, was du stattdessen tun könntest…)" }
+      ],
+      "choicePrompt": "Was sagst du?",
+      "options": [
+        "Könnte ich stattdessen abends Kräutertee trinken? Würde das helfen?",
+        "Das ist mir egal. Ich trinke Kaffee, wann ich will.",
+        "Ich habe das schon versucht, aber es hat leider gar nichts gebracht."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A ist höflich, verwendet Konjunktiv II ('Könnte ich…? Würde das…?') und zeigt Interesse am Ratschlag. Option B ist unhöflich und ignoriert die Ärztin. Option C ist zwar höflich, antwortet aber nicht auf die Frage — der Patient fragt nach einer Alternative, nicht nach Erfahrungen.",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler im Modalverb und korrigiere ihn.",
+      "sentence": "Sie konnten auch Dehnübungen für den Nacken ausprobieren.",
+      "errorWord": "konnten",
+      "correctedWord": "könnten",
+      "explanation": "'konnten' ist Präteritum (Vergangenheit): 'Sie konnten' = Sie waren in der Lage. Aber hier gibt die Ärztin einen Vorschlag → Konjunktiv II: 'Sie könnten' = Sie wären in der Lage / Sie hätten die Möglichkeit. Der Umlaut (o → ö) macht den Unterschied zwischen Fakt und Vorschlag!",
+      "srs": {
+        "front": "Korrigiere: 'Sie ___ auch Dehnübungen ausprobieren.' (Vorschlag, nicht Vergangenheit)",
+        "back": "könnten (Konj. II) — nicht 'konnten' (Präteritum)!",
+        "kind": "error_correction",
+        "tags": ["modalverben", "konjunktiv-ii", "präteritum"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze die Modalverben — Präteritum (Vergangenheit) oder Konjunktiv II (Ratschlag)?",
+      "text": "Patient: Ich {___0} letzte Nacht nicht schlafen. Ich {___1} dreimal aufstehen.\nÄrztin: Sie {___2} abends auf Koffein verzichten — das hilft oft sehr.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["konnte", "könnte", "kann", "konnt"],
+          "correct": "konnte",
+          "explanation": "Vergangenheit (letzte Nacht) → Präteritum: ich konnte."
+        },
+        {
+          "id": 1,
+          "options": ["musste", "müsste", "muss", "müsst"],
+          "correct": "musste",
+          "explanation": "Vergangenheit (was passiert ist) → Präteritum: ich musste."
+        },
+        {
+          "id": 2,
+          "options": ["sollten", "sollte", "sollen", "sollt"],
+          "correct": "sollten",
+          "explanation": "Ratschlag der Ärztin → Konjunktiv II, Sie-Form: Sie sollten."
+        }
+      ],
+      "srs": {
+        "front": "konnte vs. könnte — Wann verwende ich welche Form?",
+        "back": "konnte = Präteritum (Vergangenheit, Fakt) | könnte = Konjunktiv II (Möglichkeit, Vorschlag)",
+        "kind": "cloze",
+        "tags": ["modalverben", "präteritum", "konjunktiv-ii"]
+      },
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze den ärztlichen Ratschlag ins Deutsche. Verwende den Konjunktiv II.",
+      "direction": "pt_to_de",
+      "source": "O senhor deveria beber menos café e dormir mais.",
+      "acceptedAnswers": [
+        "Sie sollten weniger Kaffee trinken und mehr schlafen.",
+        "Sie sollten weniger Kaffee trinken und mehr schlafen",
+        "Sie sollten weniger Kaffee trinken und länger schlafen.",
+        "Sie müssten weniger Kaffee trinken und mehr schlafen.",
+        "Sie könnten weniger Kaffee trinken und mehr schlafen.",
+        "Sie sollten nicht so viel Kaffee trinken und mehr schlafen.",
+        "Sie sollten weniger Kaffee trinken und besser schlafen."
+      ],
+      "hint": "deveria = sollten (Konj. II, Sie-Form); menos café = weniger Kaffee; dormir mais = mehr schlafen",
+      "explanation": "O conselho médico usa 'Sie sollten' (Konjunktiv II). 'Mehr schlafen' ou 'länger schlafen' são variantes aceitas para 'dormir mais'. 'Müssten' e 'könnten' também transmitem conselho, com nuances diferentes.",
+      "srs": {
+        "front": "O senhor deveria beber menos café e dormir mais.",
+        "back": "Sie sollten weniger Kaffee trinken und mehr schlafen.",
+        "kind": "translate",
+        "tags": ["modalverben", "konjunktiv-ii", "ratschlag", "gesundheit"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "receita médica (papel que o médico dá para comprar remédio na farmácia)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Rezept",
+        "das Rezept",
+        "Das Rezept",
+        "Arztrezept",
+        "das Arztrezept"
+      ],
+      "hint": "Neutro (das …), começa com R. Também pode significar 'receita culinária'.",
+      "srs": {
+        "front": "receita médica → ?",
+        "back": "das Rezept",
+        "kind": "vocab_recall",
+        "tags": ["gesundheit", "arzt", "vokabular"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
+    },
+    {
+      "type": "reorder",
+      "instruction": "Bilde einen ärztlichen Ratschlag mit Konjunktiv II.",
+      "words": ["trinken", "weniger Kaffee", "sollten", "Sie", "."],
+      "correct": "Sie sollten weniger Kaffee trinken .",
+      "hint": "Konjunktiv II: 'sollten' steht an zweiter Position. Das Vollverb (trinken) geht ans Ende.",
+      "srs": {
+        "front": "Ordne: Sie / sollten / weniger Kaffee / trinken / .",
+        "back": "Sie sollten weniger Kaffee trinken.",
+        "kind": "reorder",
+        "tags": ["modalverben", "konjunktiv-ii", "wortstellung"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
     },
     {
       "type": "guided_write",
-      "instruction": "Schreib 1–2 Sätze: Gib einem Freund einen höflichen Ratschlag (könnte/sollte).",
-      "starters": ["Du könntest...", "Du solltest...", "Vielleicht solltest du..."],
-      "keywords": ["könnte", "sollte", "weniger", "mehr", "Pausen", "Wasser"],
-      "exampleAnswer": "Du könntest mehr Wasser trinken. Vielleicht solltest du öfter Pausen machen.",
-      "xp": 15
+      "instruction": "Du bist Arzt/Ärztin. Ein Patient hat Rückenschmerzen und Schlafprobleme. Schreibe 3–4 Sätze: Beschreibe zuerst, was der Patient dir erzählt hat (Präteritum), und gib dann 2 Ratschläge (Konjunktiv II).",
+      "starters": [
+        "Der Patient konnte…",
+        "Er musste…",
+        "Ich empfehle: Sie sollten…",
+        "Sie könnten auch…"
+      ],
+      "keywords": ["konnte", "musste", "sollten", "könnten", "Schmerzen", "schlafen", "Übungen"],
+      "exampleAnswer": "Der Patient konnte seit einer Woche nicht richtig schlafen. Er musste mehrmals nachts aufstehen, weil er Rückenschmerzen hatte. Ich empfehle: Sie sollten regelmäßig Rückenübungen machen und weniger am Schreibtisch sitzen. Sie könnten auch mit Wärme behandeln — zum Beispiel mit einer Wärmflasche.",
+      "checkpoints": [
+        "Usou pelo menos um Modalverb no Präteritum (konnte/musste/durfte) para descrever o problema?",
+        "Usou pelo menos um Modalverb no Konjunktiv II (sollten/könnten/müssten) para dar conselho?",
+        "Os conselhos são realistas e fazem sentido para dor nas costas?",
+        "Usou vocabulário médico da lição (Schmerzen, Übungen, etc.)?"
+      ],
+      "srs": {
+        "front": "Gib als Arzt 2 Ratschläge für Rückenschmerzen. Verwende sollten und könnten.",
+        "back": "Sie sollten regelmäßig Rückenübungen machen. Sie könnten auch Wärme verwenden.",
+        "kind": "guided_write",
+        "tags": ["produktion", "modalverben", "konjunktiv-ii", "gesundheit"]
+      },
+      "xp": 20
     }
   ]
 }

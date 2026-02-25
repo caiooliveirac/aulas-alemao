@@ -1,32 +1,82 @@
 {
   "id": "reisen-02",
-  "title": "Am Bahnhof: Ticket, Gleis und Anschluss",
+  "title": "Im Hotel: Einchecken und höflich nachfragen",
   "topic": "Reisen",
   "level": "B1",
-  "grammarFocus": "Fragen im Servicekontext + weil/dass",
-  "lexicalFocus": "Bahnhof, Ticket, Gleis, Verspätung",
-  "estimatedMinutes": 13,
-  "xpReward": 155,
-  "keywords": ["reisen", "bahnhof", "ticket", "gleis", "anschluss", "verspaetung"],
-  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "grammarFocus": "Indirekte Fragen mit ob und W-Wort (Verb am Ende)",
+  "lexicalFocus": "Hotel, Rezeption, Zimmer, Frühstück, Buchung",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["indirekte Frage", "ob", "wann", "wo", "Verb am Ende", "Hotel", "Rezeption", "Buchung"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Indirekte Fragen mit 'ob' (Ja/Nein-Fragen) und W-Wörtern (wann, wo, wie) korrekt bilden",
+    "Die Verbposition in indirekten Fragen sicher anwenden (Verb am Ende)",
+    "Höfliche Nachfragen an der Hotelrezeption formulieren",
+    "Hotelvokabular aktiv im Gespräch verwenden"
+  ],
+  "prerequisites": ["reisen-01"],
+  "culturalNote": "In Deutschland ist die Hotelrezeption oft formell — man siezt das Personal und wird gesiezt. Frühstück ist häufig im Preis enthalten (besonders in kleineren Hotels und Pensionen) und besteht typischerweise aus Brötchen, Aufschnitt, Käse, Marmelade, Eiern und Kaffee. Bei der Abreise sagt man oft 'Könnten Sie mir bitte die Rechnung geben?' — ein gutes Beispiel für höfliche indirekte Kommunikation.",
   "steps": [
     {
+      "type": "grammar_note",
+      "title": "Indirekte Fragen: höflich fragen mit ob und W-Wort",
+      "explanation": "Indirekte Fragen sind höflichere Versionen von direkten Fragen. Statt 'Wann beginnt das Frühstück?' (direkt) sagt man 'Könnten Sie mir sagen, wann das Frühstück beginnt?' (indirekt). Die Regel: das Verb geht ans ENDE. Bei Ja/Nein-Fragen benutzt man 'ob': 'Ist WLAN verfügbar?' → 'Ich möchte wissen, ob WLAN verfügbar ist.' Bei W-Fragen bleibt das W-Wort: 'Wo ist der Aufzug?' → 'Können Sie mir sagen, wo der Aufzug ist?'",
+      "examples": [
+        {
+          "de": "Können Sie mir sagen, wann das Frühstück beginnt?",
+          "pt": "O senhor pode me dizer quando o café da manhã começa?",
+          "highlight": "wann das Frühstück beginnt"
+        },
+        {
+          "de": "Ich möchte wissen, ob das Zimmer einen Balkon hat.",
+          "pt": "Eu gostaria de saber se o quarto tem varanda.",
+          "highlight": "ob das Zimmer einen Balkon hat"
+        },
+        {
+          "de": "Könnten Sie mir sagen, wo ich mein Auto parken kann?",
+          "pt": "O senhor poderia me dizer onde posso estacionar meu carro?",
+          "highlight": "wo ich mein Auto parken kann"
+        },
+        {
+          "de": "Wissen Sie, wie viel eine Nacht kostet?",
+          "pt": "O senhor sabe quanto custa uma diária?",
+          "highlight": "wie viel eine Nacht kostet"
+        }
+      ],
+      "ruleFormula": "Höfliche Einleitung + , ob / W-Wort + Subjekt + … + VERB (am Ende)",
+      "commonMistake": "Häufiger Fehler: 'Können Sie mir sagen, wann beginnt das Frühstück?' — Falsch! In der indirekten Frage steht das Verb am Ende: '…wann das Frühstück beginnt.' Die Inversion (beginnt das) passiert nur in der direkten Frage.",
+      "xp": 5
+    },
+    {
       "type": "reading",
-      "instruction": "Lies die Situation am Bahnhof.",
+      "instruction": "Lies die Szene an der Hotelrezeption. Achte auf die indirekten Fragen.",
       "chunks": [
         {
-          "text": "Marta fährt heute nach Hamburg. Am Bahnhof sieht sie auf der Anzeigetafel, dass ihr Zug zehn Minuten Verspätung hat.",
+          "text": "Nach einer langen Zugfahrt kommt Julia am Abend in Dresden an. Sie hat online ein Zimmer im Hotel Elbblick reserviert. An der Rezeption steht ein freundlicher Mitarbeiter, Herr Vogel. Julia sagt: \u201EGuten Abend! Ich habe eine Reservierung auf den Namen Julia Meier.\u201C Herr Vogel prüft den Computer: \u201EWillkommen, Frau Meier! Ich sehe Ihre Buchung — ein Einzelzimmer für drei Nächte, richtig?\u201C",
           "glossary": [
-            { "term": "die Anzeigetafel", "de": "Tafel mit Reiseinformationen", "pt": "painel de informações" },
-            { "term": "die Verspätung", "de": "später als geplant", "pt": "atraso" }
+            { "term": "die Rezeption", "de": "Empfangsbereich im Hotel, wo man ein- und auscheckt", "pt": "recepção" },
+            { "term": "die Reservierung", "de": "ein Zimmer vorher buchen, damit es sicher verfügbar ist", "pt": "reserva" },
+            { "term": "die Buchung", "de": "die Bestätigung, dass man etwas reserviert hat", "pt": "reserva confirmada" },
+            { "term": "das Einzelzimmer", "de": "Hotelzimmer für eine Person", "pt": "quarto individual" }
           ]
         },
         {
-          "text": "Sie ist nervös, weil sie in Hannover nur wenig Zeit zum Umsteigen hat. Deshalb geht sie zum Informationsschalter.",
+          "text": "Julia fragt höflich: \u201EKönnten Sie mir sagen, wann das Frühstück beginnt? Und ich möchte gerne wissen, ob das WLAN im Preis enthalten ist.\u201C Herr Vogel antwortet: \u201EDas Frühstück gibt es von 7 bis 10 Uhr im Erdgeschoss. Und ja, das WLAN ist kostenlos — das Passwort steht auf der Zimmerkarte.\u201C Julia fragt noch: \u201EWissen Sie, wo ich in der Nähe gut essen kann? Ich kenne Dresden noch nicht so gut.\u201C",
           "glossary": [
-            { "term": "nervös", "de": "angespannt, nicht ruhig", "pt": "nervosa" },
-            { "term": "umsteigen", "de": "von einem Zug in einen anderen wechseln", "pt": "fazer baldeação" },
-            { "term": "der Informationsschalter", "de": "Servicepunkt am Bahnhof", "pt": "guichê de informações" }
+            { "term": "das Frühstück", "de": "die erste Mahlzeit am Morgen", "pt": "café da manhã" },
+            { "term": "das Erdgeschoss", "de": "die unterste Etage eines Gebäudes (nicht der Keller)", "pt": "térreo / andar térreo" },
+            { "term": "die Zimmerkarte", "de": "Plastikkarte, die gleichzeitig als Schlüssel dient", "pt": "cartão-chave do quarto" },
+            { "term": "in der Nähe", "de": "nicht weit weg, in kurzer Entfernung", "pt": "nas proximidades / perto" }
+          ]
+        },
+        {
+          "text": "Herr Vogel empfiehlt: \u201EEs gibt ein schönes Restaurant um die Ecke, das Augustiner heißt. Darf ich fragen, ob Sie vegetarisch essen? Dann würde ich Ihnen ein anderes Restaurant empfehlen.\u201C Julia antwortet: \u201ENein, ich esse alles. Vielen Dank für den Tipp! Eine letzte Frage: Können Sie mir sagen, wie spät der Check-out ist?\u201C — \u201EBis 11 Uhr. Ich wünsche Ihnen einen schönen Aufenthalt!\u201C",
+          "glossary": [
+            { "term": "um die Ecke", "de": "sehr nah, gleich nebenan (an der nächsten Straßenecke)", "pt": "na esquina / ali perto" },
+            { "term": "der Tipp", "de": "ein hilfreicher Ratschlag oder eine Empfehlung", "pt": "dica" },
+            { "term": "der Check-out", "de": "Zeitpunkt, bis zu dem man das Hotel verlassen muss", "pt": "check-out / hora de saída" },
+            { "term": "der Aufenthalt", "de": "die Zeit, die man an einem Ort verbringt", "pt": "estadia" }
           ]
         }
       ],
@@ -34,116 +84,215 @@
     },
     {
       "type": "comprehension",
-      "question": "Warum geht Marta zum Informationsschalter?",
+      "question": "Warum fragt Herr Vogel, ob Julia vegetarisch isst?",
       "options": [
-        "Weil sie ein neues Ticket kaufen möchte.",
-        "Weil sie Angst hat, den Anschluss zu verpassen.",
-        "Weil sie ihr Gepäck verloren hat."
+        "Weil er selbst Vegetarier ist und nach Gleichgesinnten sucht.",
+        "Weil das Restaurant Augustiner keine vegetarischen Gerichte hat.",
+        "Weil er ihr ein besser passendes Restaurant empfehlen könnte.",
+        "Weil das Frühstücksbuffet im Hotel nur vegetarische Optionen hat."
       ],
-      "correctIndex": 1,
-      "explanation": "Sie hat wenig Zeit zum Umsteigen und ihr Zug hat Verspätung.",
+      "correctIndex": 2,
+      "explanation": "Herr Vogel sagt: 'Dann würde ich Ihnen ein anderes Restaurant empfehlen.' Er fragt nach, um eine passendere Empfehlung geben zu können — falls sie vegetarisch isst, wäre das Augustiner vielleicht nicht ideal.",
+      "distractorExplanations": [
+        "Der Text sagt nichts über Herrn Vogels persönliche Essgewohnheiten — das ist reine Spekulation.",
+        "Das wird im Text nicht gesagt. Herr Vogel sagt nur, er 'würde ein anderes empfehlen' — nicht, dass Augustiner keine vegetarischen Gerichte hat.",
+        "Herr Vogel möchte eine personalisierte Restaurant-Empfehlung geben.",
+        "Das Hotelfrühstück wird nicht als rein vegetarisch beschrieben — das ist eine falsche Schlussfolgerung."
+      ],
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Wähle die passende Präposition/Struktur.",
-      "sentence": "Sie hat wenig Zeit {___} Umsteigen.",
-      "options": ["zum", "bei", "mit dem"],
-      "correct": "zum",
-      "explanation": "Im Text steht die feste Verbindung: 'Zeit zum Umsteigen'.",
+      "type": "match_pairs",
+      "instruction": "Verbinde die direkte Frage mit der indirekten Version.",
+      "pairs": [
+        { "left": "Wann beginnt das Frühstück?", "right": "…wann das Frühstück beginnt?" },
+        { "left": "Ist WLAN kostenlos?", "right": "…ob WLAN kostenlos ist?" },
+        { "left": "Wo ist der Aufzug?", "right": "…wo der Aufzug ist?" },
+        { "left": "Wie viel kostet ein Zimmer?", "right": "…wie viel ein Zimmer kostet?" },
+        { "left": "Gibt es einen Parkplatz?", "right": "…ob es einen Parkplatz gibt?" }
+      ],
       "srs": {
-        "front": "Sie hat wenig Zeit ___ Umsteigen.",
-        "back": "zum",
+        "front": "Direkte Frage → Indirekte Frage: 'Ist WLAN kostenlos?'",
+        "back": "…ob WLAN kostenlos ist? (Ja/Nein → ob + Verb am Ende)",
+        "kind": "match",
+        "tags": ["indirekte-frage", "ob", "w-wort"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 10
+    },
+    {
+      "type": "cloze",
+      "instruction": "Indirekte Ja/Nein-Frage: Welches Wort leitet sie ein?",
+      "sentence": "Ich möchte wissen, {___} das Zimmer einen Balkon hat.",
+      "options": ["ob", "dass", "weil", "wenn"],
+      "correct": "ob",
+      "explanation": "Bei indirekten Ja/Nein-Fragen verwendet man 'ob' (se). 'dass' leitet Fakten ein, 'weil' gibt Gründe, 'wenn' drückt Bedingungen/Zeit aus. Die Originalfrage war: 'Hat das Zimmer einen Balkon?' (Ja/Nein) → '…ob das Zimmer einen Balkon hat.'",
+      "grammarRule": "Direkte Ja/Nein-Frage → Indirekte Frage mit 'ob' + Verb am Ende",
+      "srs": {
+        "front": "Ich möchte wissen, ___ das Zimmer einen Balkon hat. (Ja/Nein-Frage → ?)",
+        "back": "ob (indirekte Ja/Nein-Frage: se tem varanda)",
         "kind": "cloze",
-        "tags": ["wortverbindung", "reisen"]
+        "tags": ["indirekte-frage", "ob", "hotel"]
       },
       "xpCorrect": 20,
       "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die höflichste Formulierung an der Hotelrezeption.",
+      "context": "Du bist an der Rezeption und möchtest wissen, wann and wo das Frühstück stattfindet.",
+      "lines": [
+        { "speaker": "Du", "text": "(Du möchtest höflich nach dem Frühstück fragen…)" }
+      ],
+      "choicePrompt": "Wie fragst du?",
+      "options": [
+        "Könnten Sie mir sagen, wann und wo das Frühstück ist?",
+        "Wann gibt es Frühstück? Und wo?",
+        "Sagen Sie mir mal, wo ich morgens essen kann."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A nutzt eine indirekte Frage mit 'Könnten Sie mir sagen…' — das ist die höflichste und professionellste Form im Hotelkontext. Option B ist korrekt aber direkt und knapp — akzeptabel unter Freunden, aber nicht ideal an der Rezeption. Option C klingt fast wie ein Befehl ('Sagen Sie mir mal') und ist zu informell.",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler in der indirekten Frage und korrigiere die Wortstellung.",
+      "sentence": "Können Sie mir sagen, wann beginnt das Frühstück?",
+      "errorWord": "beginnt",
+      "correctedWord": "das Frühstück beginnt",
+      "explanation": "In der indirekten Frage steht das Verb am ENDE — genau wie bei 'dass', 'weil' und 'obwohl'. Falsch: '…wann beginnt das Frühstück?' (das ist die direkte Frage!). Richtig: '…wann das Frühstück beginnt?' Der typische B1-Fehler: die Inversion der direkten Frage beibehalten.",
+      "srs": {
+        "front": "Korrigiere: '…wann beginnt das Frühstück?' — Wo muss 'beginnt' stehen?",
+        "back": "…wann das Frühstück beginnt? (Verb am Ende in indirekter Frage!)",
+        "kind": "error_correction",
+        "tags": ["indirekte-frage", "wortstellung", "fehlerkorrektur"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze die indirekten Fragen: 'ob' oder W-Wort + richtiges Verb am Ende.",
+      "text": "Gast: Können Sie mir sagen, {___0} der Check-out {___1}? Und ich möchte wissen, {___2} ich mein Gepäck an der Rezeption lassen kann.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["wann", "ob", "dass", "weil"],
+          "correct": "wann",
+          "explanation": "Die Originalfrage war 'Wann ist der Check-out?' — eine W-Frage → bleibt 'wann'."
+        },
+        {
+          "id": 1,
+          "options": ["ist", "sein", "wäre", "sind"],
+          "correct": "ist",
+          "explanation": "Verb am Ende: '…wann der Check-out ist.' Präsens, da es um eine allgemeine Information geht."
+        },
+        {
+          "id": 2,
+          "options": ["ob", "wann", "dass", "weil"],
+          "correct": "ob",
+          "explanation": "Die Originalfrage war 'Kann ich mein Gepäck lassen?' — eine Ja/Nein-Frage → 'ob'."
+        }
+      ],
+      "srs": {
+        "front": "W-Frage vs. Ja/Nein-Frage: Wann → ___ / Kann ich…? → ___",
+        "back": "W-Frage → W-Wort bleibt (wann) | Ja/Nein → ob",
+        "kind": "cloze",
+        "tags": ["indirekte-frage", "ob", "w-wort"]
+      },
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze ins Deutsche. Formuliere eine höfliche indirekte Frage.",
+      "direction": "pt_to_de",
+      "source": "O senhor poderia me dizer onde fica o restaurante?",
+      "acceptedAnswers": [
+        "Könnten Sie mir sagen, wo das Restaurant ist?",
+        "Könnten Sie mir sagen, wo das Restaurant ist",
+        "Könnten Sie mir sagen wo das Restaurant ist?",
+        "Können Sie mir sagen, wo das Restaurant ist?",
+        "Können Sie mir sagen wo das Restaurant ist?",
+        "Könnten Sie mir bitte sagen, wo das Restaurant ist?",
+        "Können Sie mir bitte sagen, wo das Restaurant ist?",
+        "Wissen Sie, wo das Restaurant ist?",
+        "Könnten Sie mir sagen, wo sich das Restaurant befindet?"
+      ],
+      "hint": "Indirekte Frage: 'Könnten Sie mir sagen, wo…?' + Verb am Ende. Restaurante = das Restaurant.",
+      "explanation": "'O senhor poderia' = 'Könnten Sie' (Konj. II). 'Onde fica' = 'wo … ist' (Verb am Ende!). Variantes: Könnten/Können, mit/ohne bitte, ist/sich befindet.",
+      "srs": {
+        "front": "O senhor poderia me dizer onde fica o restaurante?",
+        "back": "Könnten Sie mir sagen, wo das Restaurant ist?",
+        "kind": "translate",
+        "tags": ["indirekte-frage", "hotel", "tradução"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "recepção do hotel (lugar onde se faz check-in e check-out)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Rezeption",
+        "die Rezeption",
+        "Die Rezeption",
+        "Hotelrezeption",
+        "die Hotelrezeption"
+      ],
+      "hint": "Feminino (die …), começa com R. Vem do latim 'receptio'.",
+      "srs": {
+        "front": "recepção do hotel → ?",
+        "back": "die Rezeption",
+        "kind": "vocab_recall",
+        "tags": ["hotel", "reisen", "vokabular"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
     },
     {
       "type": "reorder",
-      "instruction": "Ordne die Frage am Schalter.",
-      "words": ["Entschuldigung,", "von", "welchem", "Gleis", "fährt", "der", "Zug", "nach", "Hannover", "?"],
-      "correct": "Entschuldigung, von welchem Gleis fährt der Zug nach Hannover ?",
-      "hint": "Verb in Hauptsatz-Frage steht früh: 'fährt'.",
+      "instruction": "Bilde eine höfliche indirekte Frage an der Rezeption.",
+      "words": ["das Frühstück", "Sie mir sagen", "beginnt", "Könnten", ",", "wann", "?"],
+      "correct": "Könnten Sie mir sagen , wann das Frühstück beginnt ?",
+      "hint": "Indirekte Frage: Einleitung (Könnten Sie mir sagen) + Komma + W-Wort + Subjekt + … + Verb am Ende.",
       "srs": {
-        "front": "Ordne die Frage zum Gleis.",
-        "back": "Entschuldigung, von welchem Gleis fährt der Zug nach Hannover ?",
+        "front": "Ordne: Könnten / Sie mir sagen / , / wann / das Frühstück / beginnt / ?",
+        "back": "Könnten Sie mir sagen, wann das Frühstück beginnt?",
         "kind": "reorder",
-        "tags": ["frage", "bahnhof"]
+        "tags": ["indirekte-frage", "wortstellung", "hotel"]
       },
-      "xpCorrect": 22,
-      "xpWrong": 7
-    },
-    {
-      "type": "reading",
-      "instruction": "Lies das Gespräch weiter.",
-      "chunks": [
-        {
-          "text": "Der Mitarbeiter sagt, dass der Anschlusszug meistens wartet, wenn die Verspätung kurz ist. Er empfiehlt Marta trotzdem, schnell zum Gleis 7 zu gehen.",
-          "glossary": [
-            { "term": "der Mitarbeiter", "de": "Person, die dort arbeitet", "pt": "funcionário" },
-            { "term": "der Anschlusszug", "de": "Zug für die Weiterfahrt", "pt": "trem de conexão" },
-            { "term": "empfehlen", "de": "einen Rat geben", "pt": "recomendar" }
-          ]
-        },
-        {
-          "text": "Marta bedankt sich und fragt noch, ob sie im Zug etwas essen kann. Der Mitarbeiter zeigt ihr den Bordbistro-Wagen auf dem Plan.",
-          "glossary": [
-            { "term": "sich bedanken", "de": "Danke sagen", "pt": "agradecer" },
-            { "term": "das Bordbistro", "de": "kleines Restaurant im Zug", "pt": "bistrô do trem" },
-            { "term": "der Wagen", "de": "Teil des Zugs", "pt": "vagão" }
-          ]
-        }
-      ],
-      "xp": 10
-    },
-    {
-      "type": "comprehension",
-      "question": "Was empfiehlt der Mitarbeiter?",
-      "options": [
-        "Marta soll einen späteren Zug nehmen.",
-        "Marta soll sofort zum Gleis 7 gehen.",
-        "Marta soll im Bahnhof bleiben und warten."
-      ],
-      "correctIndex": 1,
-      "explanation": "Er empfiehlt ihr, schnell zum Gleis 7 zu gehen.",
-      "xpCorrect": 18,
-      "xpWrong": 6
-    },
-    {
-      "type": "cloze",
-      "instruction": "Ergänze den passenden Konnektor.",
-      "sentence": "Der Anschlusszug wartet oft, {___} die Verspätung kurz ist.",
-      "options": ["weil", "deshalb", "trotzdem"],
-      "correct": "weil",
-      "explanation": "Es geht um den Grund: kurze Verspätung -> Zug wartet oft.",
-      "srs": {
-        "front": "Der Anschlusszug wartet oft, ___ die Verspätung kurz ist.",
-        "back": "weil",
-        "kind": "cloze",
-        "tags": ["konnektor", "grund"]
-      },
-      "xpCorrect": 20,
-      "xpWrong": 6
+      "xpCorrect": 25,
+      "xpWrong": 8
     },
     {
       "type": "guided_write",
-      "instruction": "Schreibe 1–2 Sätze: Frage am Bahnhof + Grund.",
+      "instruction": "Du bist an der Hotelrezeption. Schreibe 3–4 höfliche indirekte Fragen: Frage nach dem Frühstück, WLAN, Check-out und einem Restaurant in der Nähe. Benutze 'ob' und W-Wörter.",
       "starters": [
-        "Entschuldigung, ich möchte wissen, ...",
-        "Ich frage, weil ..."
+        "Könnten Sie mir sagen, wann…",
+        "Ich möchte gerne wissen, ob…",
+        "Wissen Sie, wo…"
       ],
-      "keywords": ["Gleis", "Verspätung", "Anschluss", "weil"],
-      "exampleAnswer": "Entschuldigung, ich möchte wissen, von welchem Gleis mein Zug fährt. Ich frage, weil ich einen wichtigen Anschluss habe.",
+      "keywords": ["ob", "wann", "wo", "wie", "Könnten Sie", "Ich möchte wissen", "Frühstück", "WLAN", "Restaurant"],
+      "exampleAnswer": "Könnten Sie mir sagen, wann das Frühstück beginnt? Ich möchte gerne wissen, ob das WLAN im Preis enthalten ist. Wissen Sie, wo ich in der Nähe ein gutes Restaurant finde? Und können Sie mir sagen, wie spät der Check-out ist?",
+      "checkpoints": [
+        "Usou pelo menos uma indirekte Frage com 'ob' (Ja/Nein)?",
+        "Usou pelo menos uma indirekte Frage com W-Wort (wann, wo, wie)?",
+        "O verbo está no final de todas as perguntas indiretas?",
+        "Usou formulações educadas (Könnten Sie, Ich möchte wissen, Wissen Sie)?",
+        "As perguntas são realistas para uma situação de hotel?"
+      ],
       "srs": {
-        "front": "Formuliere eine höfliche Frage am Bahnhof + 'weil'.",
-        "back": "Nutze: Entschuldigung ... / Ich frage, weil ...",
+        "front": "Schreibe 2 indirekte Fragen an der Rezeption: eine mit 'ob' und eine mit W-Wort.",
+        "back": "Könnten Sie mir sagen, wann das Frühstück beginnt? Ich möchte wissen, ob WLAN kostenlos ist.",
         "kind": "guided_write",
-        "tags": ["reisen", "service", "fragen"]
+        "tags": ["produktion", "indirekte-frage", "hotel"]
       },
-      "xp": 18
+      "xp": 20
     }
   ]
 }

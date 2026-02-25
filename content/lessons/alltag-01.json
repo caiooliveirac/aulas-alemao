@@ -1,39 +1,80 @@
 {
   "id": "alltag-01",
-  "title": "Ein neuer Mitbewohner",
+  "title": "Umzug in die neue WG: Wohin kommt das Regal?",
   "topic": "Alltag",
   "level": "B1",
-  "grammarFocus": "Wechselpräpositionen (Akkusativ/Dativ)",
-  "lexicalFocus": "Wohnung, Möbel, Umzug",
-  "estimatedMinutes": 10,
-  "xpReward": 120,
-  "keywords": ["Wohin", "Wo", "an", "auf", "in", "Dativ", "Akkusativ"],
-  "skillTags": ["reading", "vocab", "grammar", "writing", "srs"],
+  "grammarFocus": "Wechselpräpositionen (Akkusativ für Richtung / Dativ für Ort)",
+  "lexicalFocus": "Wohnung, Möbel, Umzug, Zimmer",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["Wechselpräposition", "Akkusativ", "Dativ", "wohin", "wo", "stellen", "stehen", "Möbel"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Wechselpräpositionen (an, auf, in, unter, über, neben, vor, hinter, zwischen) korrekt verwenden",
+    "Den Unterschied zwischen Akkusativ (Wohin? → Bewegung) und Dativ (Wo? → Position) anwenden",
+    "Verben der Bewegung (stellen, legen, hängen) vs. Position (stehen, liegen, hängen) unterscheiden",
+    "Wohnungs- und Möbelvokabular aktiv nutzen"
+  ],
+  "prerequisites": [],
+  "culturalNote": "In Deutschland sind WGs (Wohngemeinschaften) extrem verbreitet — nicht nur unter Studenten, sondern auch bei Berufstätigen. In Städten wie Berlin, München oder Hamburg sind Wohnungen so teuer, dass viele Erwachsene in WGs leben. Beim Einzug hilft man sich gegenseitig — und diskutiert ausführlich, wohin die Möbel kommen!",
   "steps": [
     {
+      "type": "grammar_note",
+      "title": "Wechselpräpositionen: Wohin (Akk.) oder Wo (Dat.)?",
+      "explanation": "As 9 Wechselpräpositionen (an, auf, in, unter, über, neben, vor, hinter, zwischen) mudam de caso dependendo da pergunta: WOHIN? (para onde? → Akkusativ, movimento) ou WO? (onde? → Dativ, posição fixa). Em português não temos essa distinção — dizemos 'na mesa' para ambos. Em alemão: 'auf den Tisch' (Akk, estou colocando algo lá) vs. 'auf dem Tisch' (Dat, algo já está lá). Dica: verbos como stellen/legen/hängen (transitivos) pedem Akk; stehen/liegen/hängen (intransitivos) pedem Dativ.",
+      "examples": [
+        {
+          "de": "Ich stelle die Lampe auf den Tisch.",
+          "pt": "Eu coloco o abajur sobre a mesa. (movimento → Akk)",
+          "highlight": "auf den Tisch"
+        },
+        {
+          "de": "Die Lampe steht auf dem Tisch.",
+          "pt": "O abajur está sobre a mesa. (posição → Dat)",
+          "highlight": "auf dem Tisch"
+        },
+        {
+          "de": "Er hängt das Bild an die Wand.",
+          "pt": "Ele pendura o quadro na parede. (movimento → Akk)",
+          "highlight": "an die Wand"
+        },
+        {
+          "de": "Das Bild hängt an der Wand.",
+          "pt": "O quadro está pendurado na parede. (posição → Dat)",
+          "highlight": "an der Wand"
+        }
+      ],
+      "ruleFormula": "WOHIN? → Akkusativ (stellen, legen, hängen) | WO? → Dativ (stehen, liegen, hängen)",
+      "commonMistake": "Häufiger Fehler: 'Ich stelle das Regal in dem Zimmer.' — Falsch! 'stellen' = Bewegung → Akkusativ: 'in das Zimmer' (oder: 'ins Zimmer').",
+      "xp": 5
+    },
+    {
       "type": "reading",
-      "instruction": "Leia em blocos. Toque nas palavras do glossário.",
+      "instruction": "Lies die Szene aufmerksam. Achte auf die Wechselpräpositionen mit Akkusativ und Dativ.",
       "chunks": [
         {
-          "text": "Lukas zieht heute in eine neue Wohngemeinschaft. Er stellt seine Kisten auf den Boden im Flur.",
+          "text": "Heute ist ein großer Tag für Mia: Sie zieht in eine neue WG in Berlin-Neukölln. Ihr neues Zimmer ist klein, aber gemütlich — etwa 14 Quadratmeter mit einem großen Fenster. Tim, ihr neuer Mitbewohner, hilft ihr beim Einzug. Zusammen tragen sie Kisten und Möbel die Treppe hoch.",
           "glossary": [
-            { "term": "Wohngemeinschaft", "de": "wenn mehrere Personen zusammen in einer Wohnung leben", "pt": "república / moradia compartilhada" },
-            { "term": "Kisten", "de": "große Boxen, in die man Sachen packt", "pt": "caixas" },
-            { "term": "Flur", "de": "der Gang in einer Wohnung zwischen den Zimmern", "pt": "corredor" }
+            { "term": "die WG", "de": "Wohngemeinschaft — mehrere Personen teilen eine Wohnung", "pt": "república / apartamento compartilhado" },
+            { "term": "der Einzug", "de": "das Einziehen in eine neue Wohnung", "pt": "mudança (para dentro)" },
+            { "term": "die Kiste", "de": "großer Karton zum Transportieren von Sachen", "pt": "caixa" },
+            { "term": "die Treppe", "de": "Stufen, über die man nach oben oder unten geht", "pt": "escada" }
           ]
         },
         {
-          "text": "Seine neue Mitbewohnerin heißt Anna. Sie zeigt ihm die Küche und sagt: „Du kannst deine Sachen in den Schrank stellen.“",
+          "text": "Tim fragt: \u201EWohin soll das Regal?\u201C Mia überlegt: \u201EStell es bitte an die Wand neben dem Fenster.\u201C Tim stellt das Regal an die Wand, und Mia legt ihre Bücher auf das Regal. \u201EUnd der Schreibtisch?\u201C, fragt Tim. \u201EDen stellen wir vor das Fenster — da ist das Licht am besten.\u201C",
           "glossary": [
-            { "term": "Mitbewohnerin", "de": "eine Person, die mit dir zusammen wohnt", "pt": "colega de apartamento" },
-            { "term": "Schrank", "de": "ein Möbelstück mit Türen, wo man Sachen aufbewahrt", "pt": "armário" }
+            { "term": "das Regal", "de": "Möbelstück mit Brettern für Bücher, Ordner usw.", "pt": "estante / prateleira" },
+            { "term": "der Schreibtisch", "de": "Tisch zum Arbeiten oder Lernen", "pt": "escrivaninha" },
+            { "term": "das Licht", "de": "Helligkeit, die durch das Fenster kommt", "pt": "luz" }
           ]
         },
         {
-          "text": "Lukas geht in sein Zimmer. Das Bett steht schon an der Wand. Er legt seinen Laptop auf den Schreibtisch und hängt ein Poster an die Wand über dem Bett.",
+          "text": "Nachdem alles an seinem Platz steht, hängt Mia ein Poster über den Schreibtisch. Tim sagt: \u201EDas Poster hängt jetzt über dem Schreibtisch — sieht gut aus!\u201C Unter dem Schreibtisch steht eine kleine Kiste mit Kabeln. \u201EPerfekt\u201C, sagt Mia. \u201EJetzt muss ich nur noch die Lampe auf den Nachttisch stellen, dann bin ich fertig.\u201C",
           "glossary": [
-            { "term": "Wand", "de": "die vertikale Fläche in einem Zimmer", "pt": "parede" },
-            { "term": "Schreibtisch", "de": "ein Tisch, an dem man arbeitet oder lernt", "pt": "escrivaninha" }
+            { "term": "das Poster", "de": "großes Bild oder Plakat an der Wand", "pt": "pôster" },
+            { "term": "der Nachttisch", "de": "kleiner Tisch neben dem Bett", "pt": "mesa de cabeceira" },
+            { "term": "die Kabel", "de": "elektrische Leitungen für Computer, Lampe usw.", "pt": "cabos" }
           ]
         }
       ],
@@ -41,73 +82,214 @@
     },
     {
       "type": "comprehension",
-      "question": "Wohin stellt Lukas seine Kisten?",
-      "options": ["In die Küche", "Auf den Boden im Flur", "In sein Zimmer", "Auf den Tisch"],
+      "question": "Warum stellt Mia den Schreibtisch vor das Fenster?",
+      "options": [
+        "Weil Tim es so vorgeschlagen hat und sie einverstanden war.",
+        "Weil dort das beste Licht zum Arbeiten ist.",
+        "Weil das Zimmer nur eine Wand hat, die frei ist.",
+        "Weil der Schreibtisch zu groß für andere Positionen war."
+      ],
       "correctIndex": 1,
-      "explanation": "Im Text steht: „Er stellt seine Kisten auf den Boden im Flur.“ — Wohin? → Akkusativ.",
+      "explanation": "Mia sagt explizit: 'Den stellen wir vor das Fenster — da ist das Licht am besten.' Ihr Grund ist die gute Beleuchtung.",
+      "distractorExplanations": [
+        "Tim hat nur gefragt 'Und der Schreibtisch?' — er hat keinen konkreten Platz vorgeschlagen.",
+        "Mia sagt klar: 'da ist das Licht am besten' als Begründung.",
+        "Der Text sagt nichts darüber, wie viele Wände frei sind — das ist Spekulation.",
+        "Die Größe des Schreibtischs wird im Text nicht erwähnt."
+      ],
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Wechselpräpositionen: Wo? → Dativ",
-      "sentence": "Das Bett steht schon an {___} Wand.",
-      "options": ["der", "die", "dem", "den"],
-      "correct": "der",
-      "explanation": "Wo steht das Bett? → Dativ. Die Wand (fem.) → an DER Wand.",
+      "type": "match_pairs",
+      "instruction": "Verbinde die Verben mit ihrer Bedeutung (Bewegung oder Position?).",
+      "pairs": [
+        { "left": "stellen (+ Akk.)", "right": "etwas aufrecht irgendwohin tun" },
+        { "left": "stehen (+ Dat.)", "right": "aufrecht an einem Ort sein" },
+        { "left": "legen (+ Akk.)", "right": "etwas flach irgendwohin tun" },
+        { "left": "liegen (+ Dat.)", "right": "flach an einem Ort sein" },
+        { "left": "hängen (+ Akk.)", "right": "etwas an eine Wand/Decke befestigen" }
+      ],
       "srs": {
-        "front": "Das Bett steht an ___ Wand. (Wo? feminin)",
-        "back": "der (Dativ feminin)",
-        "kind": "cloze",
-        "tags": ["wechselpräposition", "dativ"]
+        "front": "stellen vs. stehen — Was ist der Unterschied?",
+        "back": "stellen (+ Akk.) = aufrecht hinstellen (Bewegung) | stehen (+ Dat.) = aufrecht dastehen (Position)",
+        "kind": "match",
+        "tags": ["wechselpräposition", "verben", "position"]
       },
-      "xpCorrect": 20,
-      "xpWrong": 6
+      "xpCorrect": 25,
+      "xpWrong": 10
     },
     {
       "type": "cloze",
-      "instruction": "Wechselpräpositionen: Wohin? → Akkusativ",
-      "sentence": "Er legt seinen Laptop auf {___} Schreibtisch.",
-      "options": ["dem", "den", "der", "das"],
+      "instruction": "Wechselpräposition: Akkusativ oder Dativ? Mia stellt etwas hin (Bewegung!).",
+      "sentence": "Mia stellt die Lampe auf {___} Nachttisch.",
+      "options": ["den", "dem", "der", "das"],
       "correct": "den",
-      "explanation": "Wohin? → Akkusativ. Der Schreibtisch (mask.) → auf DEN Schreibtisch.",
+      "explanation": "'stellen' = Bewegung (Wohin?) → Akkusativ. 'Nachttisch' ist maskulin (der Nachttisch). Maskulin + Akkusativ = 'den'. Wäre es 'Die Lampe steht' (Position), dann Dativ: 'auf dem Nachttisch'.",
+      "grammarRule": "Wohin? + stellen → Akkusativ: der → den, die → die, das → das",
       "srs": {
-        "front": "Er legt den Laptop auf ___ Schreibtisch. (Wohin? maskulin)",
-        "back": "den (Akkusativ maskulin)",
+        "front": "Mia stellt die Lampe auf ___ Nachttisch. (maskulin, Bewegung → ?)",
+        "back": "den (Wohin? → Akkusativ: der → den)",
         "kind": "cloze",
-        "tags": ["wechselpräposition", "akkusativ"]
+        "tags": ["wechselpräposition", "akkusativ", "stellen"]
       },
       "xpCorrect": 20,
       "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die grammatisch korrekte und natürliche Antwort.",
+      "context": "Mia und Tim richten das Zimmer ein. Tim fragt, wohin eine Pflanze soll.",
+      "lines": [
+        { "speaker": "Tim", "text": "Wo soll ich die Pflanze hinstellen?" },
+        { "speaker": "Mia", "text": "(überlegt kurz…)" }
+      ],
+      "choicePrompt": "Was sagt Mia?",
+      "options": [
+        "Stell sie auf das Regal neben dem Fenster.",
+        "Stell sie auf dem Regal neben das Fenster.",
+        "Stell sie auf den Regal neben dem Fenster."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A ist korrekt: 'stellen' = Bewegung → Akkusativ: 'auf das Regal' (Neutrum). 'neben dem Fenster' ist Dativ (Position — das Regal IST neben dem Fenster). Option B verwechselt die Kasus. Option C hat den falschen Artikel ('den' statt 'das' — Regal ist Neutrum).",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler in der Wechselpräposition und korrigiere den Artikel.",
+      "sentence": "Tim hängt das Poster über dem Schreibtisch.",
+      "errorWord": "dem",
+      "correctedWord": "den",
+      "explanation": "'hängen' (transitiv: er hängt etwas) = Bewegung → Wohin? → Akkusativ. 'Schreibtisch' ist maskulin → 'über den Schreibtisch'. 'Über dem Schreibtisch' (Dativ) wäre nur korrekt bei Position: 'Das Poster hängt über dem Schreibtisch' (intransitiv).",
+      "srs": {
+        "front": "Korrigiere: 'Tim hängt das Poster über ___ Schreibtisch.' (Bewegung → ?)",
+        "back": "den (hängen + Akk. bei Bewegung: der → den)",
+        "kind": "error_correction",
+        "tags": ["wechselpräposition", "akkusativ", "hängen"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Akkusativ oder Dativ? Achte auf Bewegung (Wohin?) vs. Position (Wo?).",
+      "text": "Mia legt die Bücher auf {___0} Regal. Jetzt liegen die Bücher auf {___1} Regal. Tim stellt die Kiste unter {___2} Schreibtisch.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["das", "dem", "den", "der"],
+          "correct": "das",
+          "explanation": "'legen' = Bewegung → Akkusativ. 'Regal' ist Neutrum (das Regal). Neutrum Akkusativ = das."
+        },
+        {
+          "id": 1,
+          "options": ["dem", "das", "den", "der"],
+          "correct": "dem",
+          "explanation": "'liegen' = Position → Dativ. 'Regal' ist Neutrum. Neutrum Dativ = dem."
+        },
+        {
+          "id": 2,
+          "options": ["den", "dem", "das", "der"],
+          "correct": "den",
+          "explanation": "'stellen' = Bewegung → Akkusativ. 'Schreibtisch' ist maskulin (der). Maskulin Akkusativ = den."
+        }
+      ],
+      "srs": {
+        "front": "legen (Bewegung) vs. liegen (Position): Bücher auf ___ Regal (Akk) / auf ___ Regal (Dat) — Neutrum",
+        "back": "auf das Regal (Akk.) / auf dem Regal (Dat.)",
+        "kind": "cloze",
+        "tags": ["wechselpräposition", "akkusativ", "dativ", "neutrum"]
+      },
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze ins Deutsche. Achte auf die Wechselpräposition (Bewegung = Akkusativ!).",
+      "direction": "pt_to_de",
+      "source": "Eu coloco o abajur sobre a mesa de cabeceira.",
+      "acceptedAnswers": [
+        "Ich stelle die Lampe auf den Nachttisch.",
+        "Ich stelle die Lampe auf den Nachttisch",
+        "Ich stelle eine Lampe auf den Nachttisch.",
+        "Ich stelle die Lampe auf den Nachttisch hin.",
+        "Die Lampe stelle ich auf den Nachttisch.",
+        "Ich stell die Lampe auf den Nachttisch.",
+        "Ich stelle die Lampe auf den Nachttisch drauf."
+      ],
+      "hint": "colocar (em pé) = stellen; mesa de cabeceira = der Nachttisch (maskulin!); Bewegung → Akkusativ: der → den",
+      "explanation": "'Colocar' algo em pé = 'stellen'. Como é movimento (Wohin?), usamos Akkusativ: 'auf den Nachttisch' (der Nachttisch → den). Não aceitar 'auf dem' (Dativ) porque 'stellen' indica movimento.",
+      "srs": {
+        "front": "Eu coloco o abajur sobre a mesa de cabeceira.",
+        "back": "Ich stelle die Lampe auf den Nachttisch.",
+        "kind": "translate",
+        "tags": ["wechselpräposition", "stellen", "akkusativ"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "estante / prateleira (móvel com tábuas para guardar livros)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Regal",
+        "das Regal",
+        "Das Regal",
+        "Bücherregal",
+        "das Bücherregal"
+      ],
+      "hint": "Neutro (das …), começa com R. Tem 5 letras.",
+      "srs": {
+        "front": "estante / prateleira → ?",
+        "back": "das Regal",
+        "kind": "vocab_recall",
+        "tags": ["möbel", "wohnung", "vokabular"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
     },
     {
       "type": "reorder",
-      "instruction": "Ordne den Satz richtig:",
-      "words": ["er", "ein Poster", "hängt", "an die Wand"],
-      "correct": "Er hängt ein Poster an die Wand",
-      "hint": "Verb auf Position 2!",
+      "instruction": "Bilde einen korrekten Satz. Achte auf Akkusativ (Wohin?) oder Dativ (Wo?).",
+      "words": ["das Poster", "die Wand", "Mia", "an", "hängt", "."],
+      "correct": "Mia hängt das Poster an die Wand .",
+      "hint": "'hängen' (transitiv: jemand hängt etwas) = Bewegung → Wohin? → Akkusativ. 'Wand' ist feminin: die → die (Akk. ändert sich bei Femininum nicht).",
       "srs": {
-        "front": "Ordne: er / ein Poster / hängt / an die Wand",
-        "back": "Er hängt ein Poster an die Wand.",
+        "front": "Ordne: Mia / hängt / das Poster / an / die Wand / .",
+        "back": "Mia hängt das Poster an die Wand.",
         "kind": "reorder",
-        "tags": ["wortstellung"]
+        "tags": ["wechselpräposition", "wortstellung", "hängen"]
       },
       "xpCorrect": 25,
       "xpWrong": 8
     },
     {
       "type": "guided_write",
-      "instruction": "Schreib 1–2 Sätze über dein Zimmer. Benutze Wo/Wohin (Dativ/Akkusativ).",
-      "starters": ["In meinem Zimmer steht...", "Mein Bett steht an...", "Auf dem Schreibtisch liegt..."],
-      "keywords": ["steht", "liegt", "hängt", "an der Wand", "auf dem", "neben dem"],
-      "exampleAnswer": "In meinem Zimmer steht das Bett an der Wand. Auf dem Schreibtisch liegt mein Laptop.",
+      "instruction": "Beschreibe dein Zimmer: Wo stehen die Möbel? Wohin hast du etwas gestellt oder gehängt? Schreibe 3–4 Sätze mit mindestens zwei Wechselpräpositionen (eine mit Akkusativ, eine mit Dativ).",
+      "starters": [
+        "Mein Schreibtisch steht…",
+        "Ich habe ein Poster an…",
+        "Neben dem Bett…"
+      ],
+      "keywords": ["auf", "an", "in", "neben", "unter", "über", "stellen", "stehen", "hängen", "Akkusativ", "Dativ"],
+      "exampleAnswer": "Mein Schreibtisch steht vor dem Fenster. Ich habe ein Poster an die Wand gehängt. Neben dem Bett steht ein kleiner Nachttisch, und auf dem Nachttisch liegt ein Buch.",
+      "checkpoints": [
+        "Usou pelo menos uma Wechselpräposition com Akkusativ (Wohin?, Bewegung)?",
+        "Usou pelo menos uma Wechselpräposition com Dativ (Wo?, Position)?",
+        "Os artigos estão corretos (den/dem/das/der conforme caso e gênero)?",
+        "Usou vocabulário de móveis da lição (Regal, Schreibtisch, Nachttisch, etc.)?",
+        "As frases descrevem um cenário realista de quarto?"
+      ],
       "srs": {
-        "front": "Schreibe 1 Satz: Wo/Wohin mit an/auf/in (Dativ/Akkusativ).",
-        "back": "Nutze z.B.: an der Wand (Wo), auf den Tisch (Wohin).",
+        "front": "Beschreibe dein Zimmer mit Wechselpräpositionen: Wo steht der Schreibtisch? Was hängt an der Wand?",
+        "back": "Mein Schreibtisch steht vor dem Fenster (Dat.). Ich habe ein Poster an die Wand (Akk.) gehängt.",
         "kind": "guided_write",
-        "tags": ["produktion", "wechselpräposition"]
+        "tags": ["wechselpräposition", "produktion", "zimmer"]
       },
-      "xp": 15
+      "xp": 20
     }
   ]
 }

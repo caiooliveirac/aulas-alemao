@@ -1,33 +1,81 @@
 {
   "id": "arbeit-01",
-  "title": "Im Büro: Termine und Prioritäten",
+  "title": "Im Büro: Termine, Prioritäten und dass-Sätze",
   "topic": "Arbeit",
   "level": "B1+",
-  "grammarFocus": "dass-Sätze + Prioritäten ausdrücken",
-  "lexicalFocus": "Besprechung, Frist, Aufgabe, Priorität",
-  "estimatedMinutes": 14,
-  "xpReward": 165,
-  "keywords": ["arbeit", "buero", "termin", "frist", "prioritaet", "besprechung"],
-  "skillTags": ["reading", "grammar", "vocab", "writing", "srs"],
+  "grammarFocus": "Nebensätze mit dass und damit (Verb am Ende)",
+  "lexicalFocus": "Büro, Besprechung, Frist, Aufgabe, Priorität",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["dass-Satz", "damit", "Nebensatz", "Verb am Ende", "Besprechung", "Frist", "Priorität", "Aufgabe"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Nebensätze mit 'dass' korrekt bilden (Verb am Ende)",
+    "Den Unterschied zwischen 'dass' (Tatsache) und 'damit' (Zweck) verstehen",
+    "Berufliches Vokabular für Besprechungen und Aufgabenverteilung verwenden",
+    "Prioritäten und Meinungen im Bürokontext formulieren"
+  ],
+  "prerequisites": [],
+  "culturalNote": "In deutschen Büros herrscht eine ausgeprägte Besprechungskultur. Meetings beginnen pünktlich und haben oft eine feste Tagesordnung. Man drückt Meinungen sachlich aus — 'Ich finde, dass…' oder 'Ich schlage vor, dass…' sind typische Formulierungen. Kritik wird direkt aber konstruktiv formuliert, und es wird erwartet, dass man Fristen einhält.",
   "steps": [
     {
+      "type": "grammar_note",
+      "title": "Nebensätze mit 'dass' und 'damit': Verb am Ende!",
+      "explanation": "Em alemão, orações com 'dass' (que) e 'damit' (para que) seguem uma regra fundamental: o verbo conjugado vai para o FINAL da frase. 'dass' introduz um fato ou opinião: 'Ich glaube, dass er kommt.' (Acredito que ele vem). 'damit' expressa uma finalidade: 'Ich arbeite schneller, damit ich pünktlich fertig bin.' (Trabalho mais rápido para terminar no horário). A diferença: 'dass' = o quê (fato); 'damit' = para quê (objetivo).",
+      "examples": [
+        {
+          "de": "Ich glaube, dass die Besprechung um 14 Uhr beginnt.",
+          "pt": "Acredito que a reunião começa às 14h.",
+          "highlight": "dass die Besprechung um 14 Uhr beginnt"
+        },
+        {
+          "de": "Er sagt, dass er den Bericht bis Freitag fertig hat.",
+          "pt": "Ele diz que terá o relatório pronto até sexta.",
+          "highlight": "dass er den Bericht bis Freitag fertig hat"
+        },
+        {
+          "de": "Wir planen das Meeting, damit alle informiert sind.",
+          "pt": "Planejamos a reunião para que todos estejam informados.",
+          "highlight": "damit alle informiert sind"
+        },
+        {
+          "de": "Sie schreibt alles auf, damit sie nichts vergisst.",
+          "pt": "Ela anota tudo para não esquecer de nada.",
+          "highlight": "damit sie nichts vergisst"
+        }
+      ],
+      "ruleFormula": "Hauptsatz + , dass/damit + Subjekt + … + VERB (am Ende)",
+      "commonMistake": "Häufiger Fehler: 'Ich denke, dass er kommt morgen.' — Falsch! Im Nebensatz steht das Verb am ENDE: 'Ich denke, dass er morgen kommt.'",
+      "xp": 5
+    },
+    {
       "type": "reading",
-      "instruction": "Lies den Büroalltag von Lena.",
+      "instruction": "Lies die Büro-Szene. Achte auf die dass- und damit-Sätze und das Berufsvokabular.",
       "chunks": [
         {
-          "text": "Lena beginnt ihren Arbeitstag mit einem Blick in den Kalender. Sie sieht drei Besprechungen und zwei dringende Aufgaben.",
+          "text": "Es ist Montagmorgen in einer Marketingagentur in Frankfurt. Die Teamleiterin, Frau Schuster, beginnt die Wochenbesprechung: \u201EGuten Morgen zusammen. Ich möchte, dass wir heute die Prioritäten für diese Woche besprechen. Wir haben drei wichtige Projekte, und ich finde, dass wir besser planen müssen.\u201C",
           "glossary": [
-            { "term": "der Kalender", "de": "Plan mit Terminen", "pt": "calendário/agenda" },
-            { "term": "die Besprechung", "de": "Treffen zum Arbeiten", "pt": "reunião" },
-            { "term": "dringend", "de": "muss schnell gemacht werden", "pt": "urgente" }
+            { "term": "die Besprechung", "de": "geplantes Treffen im Büro, um Themen zu diskutieren", "pt": "reunião" },
+            { "term": "die Teamleiterin", "de": "Frau, die ein Arbeitsteam führt und organisiert", "pt": "líder de equipe" },
+            { "term": "die Priorität", "de": "das Wichtigste, was zuerst erledigt werden muss", "pt": "prioridade" }
           ]
         },
         {
-          "text": "Zuerst beantwortet sie wichtige E-Mails. Danach ruft ihr Chef an und sagt, dass ein Bericht heute noch fertig sein muss.",
+          "text": "Der Kollege Marco antwortet: \u201EIch denke, dass der Social-Media-Bericht die höchste Priorität hat. Die Frist ist Mittwoch, und der Kunde erwartet, dass wir pünktlich liefern.\u201C Frau Schuster nickt: \u201EEinverstanden. Ich schlage vor, dass Marco den Bericht bis Dienstagabend fertigstellt, damit wir ihn am Mittwochmorgen noch einmal prüfen können.\u201C",
           "glossary": [
-            { "term": "beantworten", "de": "eine Antwort geben", "pt": "responder" },
-            { "term": "der Bericht", "de": "schriftlicher Text über Ergebnisse", "pt": "relatório" },
-            { "term": "fertig sein", "de": "abgeschlossen sein", "pt": "estar pronto" }
+            { "term": "die Frist", "de": "der letzte Termin, bis wann etwas fertig sein muss (Deadline)", "pt": "prazo" },
+            { "term": "der Bericht", "de": "schriftliche Zusammenfassung von Informationen oder Ergebnissen", "pt": "relatório" },
+            { "term": "pünktlich liefern", "de": "etwas rechtzeitig fertig machen und abgeben", "pt": "entregar pontualmente" },
+            { "term": "prüfen", "de": "etwas genau ansehen und kontrollieren", "pt": "revisar / verificar" }
+          ]
+        },
+        {
+          "text": "Die Kollegin Sarah sagt: \u201EIch bin dafür, dass wir auch die Kundenpräsentation vorbereiten. Ich habe gehört, dass der Termin auf Donnerstag vorverlegt wurde. Ich arbeite heute intensiv daran, damit alles rechtzeitig steht.\u201C Frau Schuster fasst zusammen: \u201EGut. Es ist wichtig, dass jeder seine Aufgaben kennt. Ich schicke eine Zusammenfassung per E-Mail, damit nichts vergessen wird.\u201C",
+          "glossary": [
+            { "term": "die Kundenpräsentation", "de": "Vortrag oder Vorstellung eines Projekts für den Kunden", "pt": "apresentação para o cliente" },
+            { "term": "vorverlegen", "de": "einen Termin auf einen früheren Zeitpunkt ändern", "pt": "antecipar (uma data)" },
+            { "term": "die Zusammenfassung", "de": "kurzer Text, der die wichtigsten Punkte enthält", "pt": "resumo" },
+            { "term": "die Aufgabe", "de": "etwas, das man erledigen muss; eine Arbeit", "pt": "tarefa" }
           ]
         }
       ],
@@ -35,116 +83,210 @@
     },
     {
       "type": "comprehension",
-      "question": "Was erfährt Lena durch den Anruf ihres Chefs?",
+      "question": "Warum schlägt Frau Schuster vor, den Bericht bis Dienstagabend fertigzustellen?",
       "options": [
-        "Eine Besprechung wurde abgesagt.",
-        "Ein Bericht muss heute fertig sein.",
-        "Sie soll früher nach Hause gehen."
+        "Weil der Kunde den Bericht am Dienstag sehen möchte.",
+        "Damit das Team ihn am Mittwochmorgen noch einmal prüfen kann.",
+        "Weil Marco am Mittwoch Urlaub hat und nicht arbeiten kann.",
+        "Damit Sarah die Kundenpräsentation gleichzeitig vorbereiten kann."
       ],
       "correctIndex": 1,
-      "explanation": "Der Chef sagt, dass ein Bericht heute noch fertig sein muss.",
+      "explanation": "Frau Schuster sagt explizit: '…damit wir ihn am Mittwochmorgen noch einmal prüfen können.' Der Grund ist die finale Überprüfung vor der Frist.",
+      "distractorExplanations": [
+        "Der Kunde erwartet den Bericht am Mittwoch (die Frist ist Mittwoch), nicht am Dienstag.",
+        "Das Team soll den Bericht am Mittwochmorgen prüfen — deshalb muss er am Dienstagabend fertig sein.",
+        "Der Text erwähnt keinen Urlaub. Marco arbeitet an dem Bericht.",
+        "Sarahs Präsentation und Marcos Bericht sind unabhängige Aufgaben — der Text verbindet sie nicht."
+      ],
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Ergänze die richtige Struktur.",
-      "sentence": "Der Chef sagt, {___} ein Bericht heute fertig sein muss.",
-      "options": ["dass", "weil", "deshalb"],
-      "correct": "dass",
-      "explanation": "Nach 'sagen' folgt hier ein dass-Satz.",
+      "type": "match_pairs",
+      "instruction": "Verbinde die Büroausdrücke mit den passenden Bedeutungen.",
+      "pairs": [
+        { "left": "die Frist einhalten", "right": "eine Aufgabe rechtzeitig abgeben" },
+        { "left": "Prioritäten setzen", "right": "entscheiden, was am wichtigsten ist" },
+        { "left": "einen Bericht erstellen", "right": "eine schriftliche Zusammenfassung schreiben" },
+        { "left": "einen Termin vorverlegen", "right": "das Datum auf einen früheren Tag ändern" },
+        { "left": "Feedback geben", "right": "jemandem Rückmeldung zu seiner Arbeit geben" }
+      ],
       "srs": {
-        "front": "Der Chef sagt, ___ ein Bericht heute fertig sein muss.",
-        "back": "dass",
+        "front": "die Frist einhalten = ?",
+        "back": "eine Aufgabe rechtzeitig abgeben (cumprir o prazo)",
+        "kind": "match",
+        "tags": ["arbeit", "büro", "vokabular"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 10
+    },
+    {
+      "type": "cloze",
+      "instruction": "'dass' oder 'damit'? Wähle die richtige Konjunktion.",
+      "sentence": "Sie schickt eine E-Mail, {___} nichts vergessen wird.",
+      "options": ["damit", "dass", "weil", "ob"],
+      "correct": "damit",
+      "explanation": "Hier geht es um einen ZWECK (para que nada seja esquecido) — deshalb 'damit'. 'dass' würde nur eine Tatsache einleiten, nicht einen Zweck. 'weil' gibt einen Grund. 'ob' leitet indirekte Fragen ein.",
+      "grammarRule": "damit = Zweck/Ziel (para que) | dass = Tatsache/Meinung (que) — beide mit Verb am Ende",
+      "srs": {
+        "front": "Sie schickt eine E-Mail, ___ nichts vergessen wird. (Zweck → ?)",
+        "back": "damit (Zweck/Ziel: para que nada seja esquecido)",
         "kind": "cloze",
-        "tags": ["dass-satz", "arbeit"]
+        "tags": ["nebensatz", "damit", "dass"]
       },
       "xpCorrect": 20,
       "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die professionellste Formulierung für eine Besprechung.",
+      "context": "Du bist in einer Teambesprechung. Die Chefin fragt nach deiner Meinung zu einem Projekt.",
+      "lines": [
+        { "speaker": "Chefin", "text": "Was meinen Sie — schaffen wir die Frist bis Freitag?" },
+        { "speaker": "Du", "text": "(Du möchtest sachlich antworten…)" }
+      ],
+      "choicePrompt": "Was sagst du?",
+      "options": [
+        "Ich denke, dass wir die Frist schaffen können, wenn wir die Aufgaben klar verteilen.",
+        "Na klar, kein Problem. Das machen wir locker bis Freitag, easy.",
+        "Ich bin nicht sicher, ob das klappt. Vielleicht, mal sehen."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A nutzt einen dass-Satz ('Ich denke, dass…'), ist sachlich und macht einen konkreten Vorschlag (Aufgaben verteilen). Option B klingt zu locker und unprofessionell für eine formelle Besprechung. Option C ist zu vage — in deutschen Meetings wird Klarheit erwartet, nicht 'mal sehen'.",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler in der Wortstellung des Nebensatzes.",
+      "sentence": "Ich glaube, dass er kommt morgen zur Besprechung.",
+      "errorWord": "kommt",
+      "correctedWord": "morgen zur Besprechung kommt",
+      "explanation": "Im Nebensatz mit 'dass' steht das konjugierte Verb am ENDE. Falsch: '…dass er kommt morgen zur Besprechung.' Richtig: '…dass er morgen zur Besprechung kommt.' Der Fehler ist typisch für B1-Lernende, die die Hauptsatz-Wortstellung in den Nebensatz übertragen.",
+      "srs": {
+        "front": "Korrigiere: 'Ich glaube, dass er kommt morgen.' — Wo muss das Verb stehen?",
+        "back": "…dass er morgen kommt. (Verb am Ende im Nebensatz!)",
+        "kind": "error_correction",
+        "tags": ["nebensatz", "wortstellung", "dass"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze die Nebensätze: 'dass' oder 'damit' + richtiges Verb am Ende.",
+      "text": "Frau Schuster sagt, {___0} die Frist sehr wichtig {___1}. Sie schickt eine E-Mail, {___2} alle die Aufgaben kennen.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["dass", "damit", "weil", "ob"],
+          "correct": "dass",
+          "explanation": "Hier wird eine Tatsache mitgeteilt (die Frist ist wichtig) → 'dass'."
+        },
+        {
+          "id": 1,
+          "options": ["ist", "sein", "wäre", "sind"],
+          "correct": "ist",
+          "explanation": "Das Verb im Nebensatz steht am Ende. 'die Frist' ist Singular → 'ist'."
+        },
+        {
+          "id": 2,
+          "options": ["damit", "dass", "weil", "ob"],
+          "correct": "damit",
+          "explanation": "Hier geht es um den Zweck der E-Mail (para que todos saibam) → 'damit'."
+        }
+      ],
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze ins Deutsche. Benutze einen 'dass'-Satz.",
+      "direction": "pt_to_de",
+      "source": "Eu acho que a reunião começa às 14 horas.",
+      "acceptedAnswers": [
+        "Ich glaube, dass die Besprechung um 14 Uhr beginnt.",
+        "Ich glaube, dass die Besprechung um 14 Uhr anfängt.",
+        "Ich denke, dass die Besprechung um 14 Uhr beginnt.",
+        "Ich denke, dass die Besprechung um 14 Uhr anfängt.",
+        "Ich finde, dass die Besprechung um 14 Uhr beginnt.",
+        "Ich glaube dass die Besprechung um 14 Uhr beginnt.",
+        "Ich denke dass die Besprechung um 14 Uhr beginnt.",
+        "Ich glaube, dass das Meeting um 14 Uhr beginnt.",
+        "Ich denke, dass das Meeting um 14 Uhr anfängt."
+      ],
+      "hint": "eu acho = ich glaube/denke; reunião = die Besprechung / das Meeting; começar = beginnen/anfangen; verbo no FINAL do Nebensatz!",
+      "explanation": "'Eu acho que' = 'Ich glaube/denke, dass…'. O verbo 'beginnt/anfängt' vai para o final do Nebensatz. Variantes aceitas: glaube/denke/finde, Besprechung/Meeting, beginnt/anfängt.",
+      "srs": {
+        "front": "Eu acho que a reunião começa às 14h.",
+        "back": "Ich glaube, dass die Besprechung um 14 Uhr beginnt.",
+        "kind": "translate",
+        "tags": ["nebensatz", "dass", "arbeit", "tradução"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "prazo / deadline (data limite para entregar algo)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Frist",
+        "die Frist",
+        "Die Frist",
+        "Deadline",
+        "die Deadline"
+      ],
+      "hint": "Feminino (die …), começa com F. Tem 5 letras. Sinônimo inglês: deadline.",
+      "srs": {
+        "front": "prazo / deadline → ?",
+        "back": "die Frist",
+        "kind": "vocab_recall",
+        "tags": ["arbeit", "büro", "vokabular"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
     },
     {
       "type": "reorder",
-      "instruction": "Ordne den Satz mit 'dass'.",
-      "words": ["Lena", "merkt,", "dass", "sie", "ihre", "Prioritäten", "ändern", "muss"],
-      "correct": "Lena merkt, dass sie ihre Prioritäten ändern muss",
-      "hint": "Im dass-Satz steht das Verb am Ende.",
+      "instruction": "Bilde einen dass-Satz. Achte auf die Verbposition!",
+      "words": ["die Frist", "dass", "ist", "Ich denke", "wichtig", ",", "."],
+      "correct": "Ich denke , dass die Frist wichtig ist .",
+      "hint": "Im Nebensatz mit 'dass' steht das Verb (ist) am ENDE. Komma vor 'dass'!",
       "srs": {
-        "front": "Ordne: Lena / merkt, / dass / sie / ihre / Prioritäten / ändern / muss",
-        "back": "Lena merkt, dass sie ihre Prioritäten ändern muss",
+        "front": "Ordne: Ich denke / , / dass / die Frist / wichtig / ist / .",
+        "back": "Ich denke, dass die Frist wichtig ist.",
         "kind": "reorder",
-        "tags": ["dass", "nebensatz"]
+        "tags": ["nebensatz", "dass", "wortstellung"]
       },
-      "xpCorrect": 22,
-      "xpWrong": 7
-    },
-    {
-      "type": "reading",
-      "instruction": "Wie organisiert sie den Tag?",
-      "chunks": [
-        {
-          "text": "Lena verschiebt eine weniger wichtige Aufgabe auf morgen. Sie informiert ihr Team kurz, damit alle den neuen Plan kennen.",
-          "glossary": [
-            { "term": "verschieben", "de": "auf einen späteren Zeitpunkt legen", "pt": "adiar" },
-            { "term": "weniger wichtig", "de": "nicht so prioritär", "pt": "menos importante" },
-            { "term": "informieren", "de": "jemandem Informationen geben", "pt": "informar" }
-          ]
-        },
-        {
-          "text": "Am Nachmittag arbeitet sie konzentriert am Bericht. Kurz vor Feierabend sendet sie die Datei und dokumentiert die nächsten Schritte.",
-          "glossary": [
-            { "term": "konzentriert", "de": "mit viel Aufmerksamkeit", "pt": "concentrada" },
-            { "term": "Feierabend", "de": "Ende des Arbeitstags", "pt": "fim do expediente" },
-            { "term": "dokumentieren", "de": "schriftlich festhalten", "pt": "documentar" }
-          ]
-        }
-      ],
-      "xp": 10
-    },
-    {
-      "type": "comprehension",
-      "question": "Warum informiert Lena ihr Team?",
-      "options": [
-        "Damit alle den neuen Plan kennen.",
-        "Weil sie eine Pause machen möchte.",
-        "Damit jemand anderes den Bericht schreibt."
-      ],
-      "correctIndex": 0,
-      "explanation": "Im Text steht genau dieser Zweck mit 'damit'.",
-      "xpCorrect": 18,
-      "xpWrong": 6
-    },
-    {
-      "type": "cloze",
-      "instruction": "Wähle die passende Option.",
-      "sentence": "Sie informiert das Team, {___} alle den neuen Plan kennen.",
-      "options": ["damit", "weil", "dass"],
-      "correct": "damit",
-      "explanation": "'damit' drückt hier den Zweck aus.",
-      "srs": {
-        "front": "Sie informiert das Team, ___ alle den neuen Plan kennen.",
-        "back": "damit",
-        "kind": "cloze",
-        "tags": ["zweck", "damit"]
-      },
-      "xpCorrect": 20,
-      "xpWrong": 6
+      "xpCorrect": 25,
+      "xpWrong": 8
     },
     {
       "type": "guided_write",
-      "instruction": "Schreibe 2 Sätze über einen stressigen Arbeitstag.",
+      "instruction": "Du bist in einer Besprechung. Schreibe 3–4 Sätze: Drücke deine Meinung mit 'dass' aus und nenne einen Zweck mit 'damit'. Benutze Bürovokabular.",
       "starters": [
-        "Heute musste ich meine Prioritäten ändern, weil ...",
-        "Ich habe meinem Team gesagt, dass ..."
+        "Ich finde, dass…",
+        "Ich schlage vor, dass…",
+        "…, damit…"
       ],
-      "keywords": ["Termin", "dringend", "Bericht", "dass", "weil"],
-      "exampleAnswer": "Heute musste ich meine Prioritäten ändern, weil ein dringender Termin dazugekommen ist. Ich habe meinem Team gesagt, dass ich den Bericht zuerst fertig machen muss.",
+      "keywords": ["dass", "damit", "Frist", "Bericht", "Aufgabe", "Priorität", "Besprechung"],
+      "exampleAnswer": "Ich finde, dass wir den Bericht bis Donnerstag fertigstellen sollten. Ich schlage vor, dass Marco den ersten Teil schreibt und Sarah den zweiten. Wir sollten uns am Mittwoch kurz treffen, damit wir den Fortschritt besprechen können.",
+      "checkpoints": [
+        "Usou pelo menos um Nebensatz com 'dass' (verbo no final)?",
+        "Usou pelo menos um 'damit'-Satz para expressar finalidade?",
+        "O verbo conjugado está no final dos Nebensätze?",
+        "Usou vocabulário de escritório da lição (Frist, Bericht, Aufgabe, etc.)?",
+        "As frases soam profissionais e adequadas para uma reunião?"
+      ],
       "srs": {
-        "front": "Schreibe 2 Sätze über Prioritäten bei der Arbeit mit 'weil' und 'dass'.",
-        "back": "Achte auf Verb-Endstellung im Nebensatz.",
+        "front": "Schreibe eine Meinung mit 'dass' und einen Zweck mit 'damit' im Bürokontext.",
+        "back": "Ich finde, dass wir die Frist einhalten müssen. Ich schicke eine E-Mail, damit alle informiert sind.",
         "kind": "guided_write",
-        "tags": ["arbeit", "produktion", "nebensatz"]
+        "tags": ["produktion", "nebensatz", "dass", "damit", "arbeit"]
       },
-      "xp": 18
+      "xp": 20
     }
   ]
 }

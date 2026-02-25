@@ -1,31 +1,82 @@
 {
   "id": "reisen-01",
-  "title": "Am Bahnhof in Bern",
+  "title": "Am Bahnhof: Zugtickets und Verbindungen",
   "topic": "Reisen",
   "level": "B1",
-  "grammarFocus": "Nebensätze mit weil, obwohl, dass",
-  "lexicalFocus": "Reisen, Bahnhof, Verkehr",
-  "estimatedMinutes": 12,
-  "xpReward": 140,
-  "keywords": ["weil", "obwohl", "dass", "Verb am Ende", "Verspätung"],
-  "skillTags": ["reading", "grammar", "writing", "srs"],
+  "grammarFocus": "Nebensätze mit weil und obwohl (Verb am Ende)",
+  "lexicalFocus": "Bahnhof, Fahrkarte, Verbindung, Verspätung, Gleis",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["weil", "obwohl", "Nebensatz", "Bahnhof", "Verspätung", "Gleis", "Fahrkarte", "umsteigen"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Nebensätze mit 'weil' (Grund) und 'obwohl' (Widerspruch) korrekt bilden",
+    "Die Verbposition im Nebensatz sicher anwenden (Verb am Ende)",
+    "Typische Situationen am Bahnhof sprachlich meistern",
+    "Bahnhofsvokabular aktiv im Gespräch verwenden"
+  ],
+  "prerequisites": [],
+  "culturalNote": "Die Deutsche Bahn (DB) ist das wichtigste Fernverkehrsmittel in Deutschland. Verspätungen sind leider häufig und ein beliebtes Gesprächsthema. Am Bahnhof findet man die Anzeigetafel (Abfahrt/Ankunft), Fahrkartenautomaten und den DB-Schalter. Wichtig: Mit einem ICE-Ticket darf man auch RE-Züge nehmen, aber nicht umgekehrt. Bei mehr als 60 Minuten Verspätung bekommt man 25% des Fahrpreises zurück.",
   "steps": [
     {
+      "type": "grammar_note",
+      "title": "Nebensätze mit 'weil' und 'obwohl': Verb am Ende!",
+      "explanation": "Em alemão, 'weil' (porque) e 'obwohl' (embora/apesar de) introduzem orações subordinadas — e isso significa: o verbo conjugado vai para o FINAL. 'weil' dá o motivo de algo: 'Ich nehme den ICE, weil er schneller ist.' (Pego o ICE porque ele é mais rápido.) 'obwohl' expressa contradição: 'Er nimmt den Zug, obwohl er teuer ist.' (Ele pega o trem, embora seja caro.) A estrutura é idêntica — muda só o significado lógico.",
+      "examples": [
+        {
+          "de": "Ich kaufe das Ticket online, weil es am Schalter teurer ist.",
+          "pt": "Compro a passagem online porque no guichê é mais caro.",
+          "highlight": "weil es am Schalter teurer ist"
+        },
+        {
+          "de": "Sie nimmt den Regionalzug, obwohl er langsamer ist.",
+          "pt": "Ela pega o trem regional, embora seja mais lento.",
+          "highlight": "obwohl er langsamer ist"
+        },
+        {
+          "de": "Wir müssen umsteigen, weil es keine direkte Verbindung gibt.",
+          "pt": "Temos que fazer baldeação porque não há conexão direta.",
+          "highlight": "weil es keine direkte Verbindung gibt"
+        },
+        {
+          "de": "Er wartet geduldig, obwohl der Zug schon 20 Minuten Verspätung hat.",
+          "pt": "Ele espera pacientemente, embora o trem já esteja 20 minutos atrasado.",
+          "highlight": "obwohl der Zug schon 20 Minuten Verspätung hat"
+        }
+      ],
+      "ruleFormula": "Hauptsatz + , weil/obwohl + Subjekt + … + VERB (am Ende)",
+      "commonMistake": "Häufiger Fehler: 'Ich nehme den ICE, weil er ist schneller.' — Falsch! 'ist' muss ans Ende: '…weil er schneller ist.' Viele Lernende benutzen versehentlich die Hauptsatz-Wortstellung nach 'weil'.",
+      "xp": 5
+    },
+    {
       "type": "reading",
-      "instruction": "Leia em blocos e observe a ordem do verbo nos Nebensätze.",
+      "instruction": "Lies die Szene am Bahnhof. Achte auf die weil- und obwohl-Sätze.",
       "chunks": [
         {
-          "text": "Maria steht am Bahnhof in Bern. Ihr Zug hat Verspätung, weil es auf der Strecke ein Problem gibt.",
+          "text": "Anna steht am Hauptbahnhof in Hamburg und schaut auf die große Anzeigetafel. Sie möchte nach Berlin fahren, weil sie dort ihre Schwester besucht. Der ICE um 10:15 Uhr hat leider 30 Minuten Verspätung. Anna ärgert sich, obwohl sie mit einer Verspätung gerechnet hat — das ist bei der Deutschen Bahn leider nicht ungewöhnlich.",
           "glossary": [
-            { "term": "Verspätung", "de": "wenn etwas später kommt als geplant", "pt": "atraso" },
-            { "term": "Strecke", "de": "der Weg, den der Zug fährt", "pt": "trecho / trajeto" }
+            { "term": "die Anzeigetafel", "de": "großer Bildschirm im Bahnhof mit Abfahrts- und Ankunftszeiten", "pt": "painel de informações" },
+            { "term": "die Verspätung", "de": "wenn ein Zug nicht pünktlich kommt, sondern später", "pt": "atraso" },
+            { "term": "sich ärgern", "de": "wütend oder unzufrieden sein", "pt": "ficar irritado / chateado" },
+            { "term": "rechnen mit", "de": "etwas erwarten, damit planen", "pt": "contar com / esperar" }
           ]
         },
         {
-          "text": "Sie ist ein bisschen nervös, weil sie einen wichtigen Termin in Zürich hat. Obwohl sie früh losgefahren ist, wird sie wahrscheinlich zu spät kommen.",
+          "text": "Am Informationsschalter fragt Anna: \u201EEntschuldigung, mein ICE nach Berlin hat Verspätung. Gibt es eine alternative Verbindung?\u201C Die Mitarbeiterin antwortet: \u201EEs gibt einen Regionalexpress um 10:30 Uhr, aber Sie müssen in Schwerin umsteigen. Die Gesamtfahrzeit ist länger, weil der RE an vielen Stationen hält.\u201C Anna überlegt, ob sie warten oder den RE nehmen soll.",
           "glossary": [
-            { "term": "Termin", "de": "ein geplantes Treffen zu einer bestimmten Zeit", "pt": "compromisso" },
-            { "term": "wahrscheinlich", "de": "es ist sehr möglich, dass es passiert", "pt": "provavelmente" }
+            { "term": "die Verbindung", "de": "Zugstrecke von einem Ort zu einem anderen (oft mit Umsteigen)", "pt": "conexão / trajeto" },
+            { "term": "umsteigen", "de": "aus einem Zug aussteigen und in einen anderen einsteigen", "pt": "fazer baldeação / trocar de trem" },
+            { "term": "die Gesamtfahrzeit", "de": "die komplette Reisezeit von Anfang bis Ende", "pt": "tempo total de viagem" },
+            { "term": "der Regionalexpress (RE)", "de": "schnellerer Nahverkehrszug, der nicht überall hält", "pt": "trem regional expresso" }
+          ]
+        },
+        {
+          "text": "Anna entscheidet sich für den ICE, obwohl sie noch 30 Minuten warten muss. Sie kauft sich einen Kaffee und setzt sich in den Wartebereich. \u201EDer ICE ist bequemer\u201C, denkt sie, \u201Eund ich komme direkt an, weil ich nicht umsteigen muss.\u201C Um 10:45 Uhr kommt der Zug endlich, und Anna steigt ein. \u201EGleis 7, Wagen 24\u201C — sie hat einen Fensterplatz reserviert.",
+          "glossary": [
+            { "term": "der Wartebereich", "de": "Platz im Bahnhof, wo Reisende auf ihren Zug warten", "pt": "área de espera" },
+            { "term": "bequem", "de": "komfortabel, angenehm zum Sitzen", "pt": "confortável" },
+            { "term": "das Gleis", "de": "Plattform, an der der Zug steht (z.B. Gleis 5)", "pt": "plataforma / trilho" },
+            { "term": "der Fensterplatz", "de": "Sitzplatz am Fenster im Zug", "pt": "assento na janela" }
           ]
         }
       ],
@@ -33,72 +84,208 @@
     },
     {
       "type": "comprehension",
-      "question": "Warum ist Maria nervös?",
+      "question": "Warum entscheidet sich Anna für den ICE statt den Regionalexpress?",
       "options": [
-        "Weil sie ihren Koffer verloren hat",
-        "Weil sie einen wichtigen Termin hat und der Zug Verspätung hat",
-        "Weil der Bahnhof geschlossen ist",
-        "Weil sie kein Ticket hat"
+        "Weil der RE keine Sitzplatzreservierung anbietet.",
+        "Weil der ICE bequemer ist und sie nicht umsteigen muss.",
+        "Weil der RE teurer ist als der ICE nach Berlin.",
+        "Weil die Mitarbeiterin ihr den ICE ausdrücklich empfohlen hat."
       ],
       "correctIndex": 1,
-      "explanation": "Sie hat einen Termin in Zürich und der Zug kommt zu spät.",
+      "explanation": "Anna denkt: 'Der ICE ist bequemer' und 'ich komme direkt an, weil ich nicht umsteigen muss.' Das sind ihre zwei Gründe für den ICE.",
+      "distractorExplanations": [
+        "Der Text erwähnt keine Sitzplatzreservierung im RE — Anna hat aber einen Fensterplatz im ICE reserviert.",
+        "Anna schätzt Komfort und die direkte Verbindung ohne Umsteigen.",
+        "Der Text sagt nichts über den Preis des RE — nur dass der ICE Verspätung hat.",
+        "Die Mitarbeiterin hat nur die RE-Alternative genannt, ohne eine Empfehlung auszusprechen."
+      ],
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Nebensatz mit ‚weil‘ — Verb am Ende",
-      "sentence": "Der Zug hat Verspätung, weil es ein Problem {___}.",
-      "options": ["gibt", "es gibt", "geben", "hat gegeben"],
-      "correct": "gibt",
-      "explanation": "Nach ‚weil‘ steht das konjugierte Verb am Ende: …weil es ein Problem GIBT.",
+      "type": "match_pairs",
+      "instruction": "Verbinde die Bahnhofsbegriffe mit ihren Definitionen.",
+      "pairs": [
+        { "left": "das Gleis", "right": "Plattform, an der Züge halten" },
+        { "left": "die Verspätung", "right": "wenn der Zug später kommt als geplant" },
+        { "left": "umsteigen", "right": "den Zug wechseln" },
+        { "left": "die Fahrkarte", "right": "Ticket für eine Zugfahrt" },
+        { "left": "die Anzeigetafel", "right": "Bildschirm mit Abfahrtszeiten" }
+      ],
       "srs": {
-        "front": "…weil es ein Problem ___. (Verb am Ende)",
-        "back": "gibt",
+        "front": "umsteigen = ?",
+        "back": "den Zug wechseln (fazer baldeação)",
+        "kind": "match",
+        "tags": ["reisen", "bahnhof", "vokabular"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 10
+    },
+    {
+      "type": "cloze",
+      "instruction": "'weil' oder 'obwohl'? Achte auf den logischen Zusammenhang (Grund oder Widerspruch?).",
+      "sentence": "Anna wartet am Bahnhof, {___} der Zug 30 Minuten Verspätung hat.",
+      "options": ["obwohl", "weil", "damit", "dass"],
+      "correct": "obwohl",
+      "explanation": "Hier liegt ein Widerspruch vor: Normalerweise würde man sich ärgern oder eine Alternative nehmen — aber Anna wartet trotzdem. 'obwohl' (embora) drückt diesen Gegensatz aus. Mit 'weil' wäre es unlogisch: Man wartet nicht WEIL ein Zug Verspätung hat, sondern OBWOHL.",
+      "grammarRule": "weil = Grund (porque) | obwohl = Widerspruch/Gegensatz (embora, apesar de)",
+      "srs": {
+        "front": "Anna wartet, ___ der Zug 30 Min. Verspätung hat. (Widerspruch → ?)",
+        "back": "obwohl (Widerspruch: sie wartet trotzdem)",
         "kind": "cloze",
-        "tags": ["nebensatz", "weil"]
+        "tags": ["nebensatz", "obwohl", "weil"]
       },
       "xpCorrect": 20,
       "xpWrong": 6
     },
     {
-      "type": "cloze",
-      "instruction": "Gegensatz — welcher Konnektor passt?",
-      "sentence": "{___} sie früh losgefahren ist, wird sie zu spät kommen.",
-      "options": ["Weil", "Obwohl", "Dass", "Deshalb"],
-      "correct": "Obwohl",
-      "explanation": "‚Obwohl‘ zeigt Gegensatz: früh losgefahren (gut), aber trotzdem zu spät.",
+      "type": "dialogue_choice",
+      "instruction": "Wähle die passendste Antwort am Informationsschalter.",
+      "context": "Du stehst am Bahnhof. Dein Zug hat Verspätung und du fragst am Schalter nach Alternativen.",
+      "lines": [
+        { "speaker": "Mitarbeiter", "text": "Der nächste IC nach München fährt um 12:30 ab Gleis 3, aber Sie müssen in Nürnberg umsteigen." },
+        { "speaker": "Du", "text": "(Du möchtest eine direkte Verbindung ohne Umsteigen…)" }
+      ],
+      "choicePrompt": "Was sagst du?",
+      "options": [
+        "Gibt es vielleicht eine direkte Verbindung, obwohl die etwas später fährt?",
+        "Das ist mir zu kompliziert. Ich fahre mit dem Auto.",
+        "Okay, dann nehme ich den IC, weil Nürnberg eine schöne Stadt ist."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A ist natürlich und passend: Der Reisende fragt höflich nach einer Alternative und verwendet 'obwohl' korrekt (er akzeptiert eine spätere Abfahrt als Kompromiss). Option B ist unrealistisch — man fährt nicht sofort mit dem Auto. Option C ist unlogisch — ob Nürnberg schön ist, ist kein Grund, dort umzusteigen.",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler in der Wortstellung des Nebensatzes.",
+      "sentence": "Ich nehme den ICE, weil er ist bequemer als der RE.",
+      "errorWord": "ist",
+      "correctedWord": "bequemer als der RE ist",
+      "explanation": "Im Nebensatz mit 'weil' muss das Verb am Ende stehen. Falsch: '…weil er ist bequemer.' Richtig: '…weil er bequemer als der RE ist.' Viele B1-Lernende verwechseln Hauptsatz- und Nebensatz-Wortstellung nach 'weil'.",
       "srs": {
-        "front": "___ sie früh los ist, kommt sie zu spät. (Gegensatz)",
-        "back": "Obwohl (= apesar de que)",
-        "kind": "cloze",
-        "tags": ["nebensatz", "obwohl"]
+        "front": "Korrigiere: '…weil er ist bequemer als der RE.' — Wo muss 'ist' stehen?",
+        "back": "…weil er bequemer als der RE ist. (Verb am Ende!)",
+        "kind": "error_correction",
+        "tags": ["nebensatz", "weil", "wortstellung"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze 'weil' oder 'obwohl' — und achte auf die Verbposition.",
+      "text": "Anna nimmt den ICE, {___0} er bequemer {___1}. Sie warten muss, {___2} der Zug Verspätung hat, stört sie nicht so sehr.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["weil", "obwohl", "damit", "dass"],
+          "correct": "weil",
+          "explanation": "Grund: Der ICE ist bequemer — das ist der Grund für Annas Entscheidung → 'weil'."
+        },
+        {
+          "id": 1,
+          "options": ["ist", "sein", "wäre", "war"],
+          "correct": "ist",
+          "explanation": "Verb am Ende des weil-Satzes: '…weil er bequemer ist.' Präsens, weil es eine aktuelle Eigenschaft ist."
+        },
+        {
+          "id": 2,
+          "options": ["obwohl", "weil", "damit", "dass"],
+          "correct": "obwohl",
+          "explanation": "Widerspruch: Dass sie warten muss, stört sie NICHT — obwohl man das erwarten würde → 'obwohl'."
+        }
+      ],
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze ins Deutsche. Benutze 'weil' oder 'obwohl' mit Verb am Ende.",
+      "direction": "pt_to_de",
+      "source": "Eu compro a passagem online porque no guichê é mais caro.",
+      "acceptedAnswers": [
+        "Ich kaufe die Fahrkarte online, weil es am Schalter teurer ist.",
+        "Ich kaufe das Ticket online, weil es am Schalter teurer ist.",
+        "Ich kaufe die Fahrkarte online weil es am Schalter teurer ist.",
+        "Ich kaufe das Ticket online weil es am Schalter teurer ist.",
+        "Ich kaufe mein Ticket online, weil es am Schalter teurer ist.",
+        "Ich kaufe meine Fahrkarte online, weil es am Schalter teurer ist.",
+        "Ich kaufe die Fahrkarte online, weil sie am Schalter teurer ist."
+      ],
+      "hint": "passagem = die Fahrkarte / das Ticket; guichê = der Schalter; 'weil' + Verb am Ende!",
+      "explanation": "Variantes aceitas: Fahrkarte/Ticket, die/das/mein/meine. O ponto central: 'weil es am Schalter teurer ist' — verbo 'ist' no final do Nebensatz.",
+      "srs": {
+        "front": "Eu compro a passagem online porque no guichê é mais caro.",
+        "back": "Ich kaufe die Fahrkarte online, weil es am Schalter teurer ist.",
+        "kind": "translate",
+        "tags": ["nebensatz", "weil", "reisen", "tradução"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "plataforma do trem (onde se embarca, ex.: plataforma 5)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Gleis",
+        "das Gleis",
+        "Das Gleis",
+        "Bahnsteig",
+        "der Bahnsteig"
+      ],
+      "hint": "Neutro (das …), começa com G. Na Alemanha diz-se 'Gleis 5' e não 'Plattform'.",
+      "srs": {
+        "front": "plataforma do trem (onde se embarca) → ?",
+        "back": "das Gleis (ou: der Bahnsteig)",
+        "kind": "vocab_recall",
+        "tags": ["reisen", "bahnhof", "vokabular"]
       },
       "xpCorrect": 20,
-      "xpWrong": 6
+      "xpWrong": 4
     },
     {
       "type": "reorder",
-      "instruction": "Bilde einen Satz mit ‚dass‘ (Verb am Ende):",
-      "words": ["Maria", "hofft,", "dass", "der Zug", "bald", "kommt"],
-      "correct": "Maria hofft, dass der Zug bald kommt",
-      "hint": "Im dass-Satz: Verb am Ende!",
+      "instruction": "Bilde einen Nebensatz mit 'weil'. Verb am Ende!",
+      "words": ["den ICE", "weil", ",", "nicht umsteigen muss", "Anna nimmt", "sie", "."],
+      "correct": "Anna nimmt den ICE , weil sie nicht umsteigen muss .",
+      "hint": "Im weil-Satz steht das Verb (muss) am Ende. Subjekt (sie) kommt direkt nach 'weil'.",
       "srs": {
-        "front": "Ordne: Maria / hofft, / dass / der Zug / bald / kommt",
-        "back": "Maria hofft, dass der Zug bald kommt.",
+        "front": "Ordne: Anna nimmt / den ICE / , / weil / sie / nicht umsteigen muss / .",
+        "back": "Anna nimmt den ICE, weil sie nicht umsteigen muss.",
         "kind": "reorder",
-        "tags": ["dass", "wortstellung"]
+        "tags": ["nebensatz", "weil", "wortstellung"]
       },
       "xpCorrect": 25,
       "xpWrong": 8
     },
     {
       "type": "guided_write",
-      "instruction": "Schreib 1–2 Sätze: Was machst du, wenn dein Zug/Bus Verspätung hat? Nutze weil/obwohl/dass.",
-      "starters": ["Wenn mein Zug Verspätung hat, ...", "Ich finde es schlimm, wenn...", "Obwohl ich pünktlich bin, ..."],
-      "keywords": ["weil", "obwohl", "dass", "Verspätung", "warten", "nervös"],
-      "exampleAnswer": "Wenn mein Zug Verspätung hat, werde ich nervös, weil ich pünktlich sein möchte. Obwohl ich immer früh losfahre, komme ich manchmal zu spät.",
-      "xp": 15
+      "instruction": "Du planst eine Zugreise. Schreibe 3–4 Sätze: Erkläre, warum du einen bestimmten Zug nimmst (weil) und was du trotz eines Problems akzeptierst (obwohl). Benutze Bahnhofsvokabular.",
+      "starters": [
+        "Ich nehme den ICE, weil…",
+        "Obwohl der Zug…",
+        "Ich muss in … umsteigen, weil…"
+      ],
+      "keywords": ["weil", "obwohl", "Verspätung", "umsteigen", "Gleis", "Fahrkarte", "Verbindung", "bequem"],
+      "exampleAnswer": "Ich nehme den ICE nach München, weil er schneller und bequemer ist. Obwohl der Zug 15 Minuten Verspätung hat, warte ich geduldig am Gleis 3. Ich habe meine Fahrkarte online gekauft, weil es am Schalter teurer war.",
+      "checkpoints": [
+        "Usou pelo menos um 'weil'-Satz com verbo no final?",
+        "Usou pelo menos um 'obwohl'-Satz com verbo no final?",
+        "O verbo conjugado está realmente no final dos Nebensätze?",
+        "Usou vocabulário de estação (Gleis, Verspätung, umsteigen, Fahrkarte)?",
+        "As frases fazem sentido logicamente (weil = motivo, obwohl = contradição)?"
+      ],
+      "srs": {
+        "front": "Erkläre eine Zugreise mit 'weil' (Grund) und 'obwohl' (trotzdem).",
+        "back": "Ich nehme den ICE, weil er bequemer ist. Obwohl er Verspätung hat, warte ich.",
+        "kind": "guided_write",
+        "tags": ["produktion", "nebensatz", "weil", "obwohl", "reisen"]
+      },
+      "xp": 20
     }
   ]
 }
