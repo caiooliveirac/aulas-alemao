@@ -3,7 +3,6 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 const COOKIE_NAME = "db_auth";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 async function expectedToken(): Promise<string> {
   const pin = process.env.AUTH_PIN || "changeme";
@@ -14,6 +13,7 @@ async function expectedToken(): Promise<string> {
 /**
  * Call at the top of any server page/component that requires authentication.
  * Redirects to /login if not authenticated.
+ * Note: Next.js automatically prepends basePath to redirect(), so we use bare "/login".
  */
 export async function requireAuth(): Promise<void> {
   const jar = await cookies();
@@ -21,7 +21,7 @@ export async function requireAuth(): Promise<void> {
   const expected = await expectedToken();
 
   if (token !== expected) {
-    redirect(`${basePath}/login`);
+    redirect("/login");
   }
 }
 
