@@ -1,0 +1,300 @@
+{
+  "id": "arbeit-02",
+  "title": "Das Vorstellungsgespräch: Sich professionell vorstellen",
+  "topic": "Arbeit",
+  "level": "B1+",
+  "grammarFocus": "Relativsätze (der/die/das + Verb am Ende)",
+  "lexicalFocus": "Vorstellungsgespräch, Bewerbung, Qualifikation, Berufserfahrung",
+  "estimatedMinutes": 20,
+  "xpReward": 250,
+  "keywords": ["Vorstellungsgespräch", "Bewerbung", "Relativsatz", "Berufserfahrung", "Qualifikation", "Lebenslauf", "Stelle"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Relativsätze (der/die/das/dem/den) korrekt bilden und anwenden",
+    "Sich professionell in einem Vorstellungsgespräch vorstellen",
+    "Berufsbezogenes Vokabular aktiv verwenden",
+    "Präpositionen mit Relativpronomen kombinieren (in der, mit dem, an denen)"
+  ],
+  "prerequisites": ["arbeit-01"],
+  "culturalNote": "In Deutschland sind Vorstellungsgespräche formeller als in vielen anderen Ländern. Man siezt den Interviewer immer, erscheint pünktlich (idealerweise 5–10 Minuten vorher) und trägt angemessene Kleidung. Direktheit wird geschätzt — aber immer höflich und sachlich formuliert. Übertriebenes Selbstlob wirkt unseriös; konkrete Beispiele aus der Berufserfahrung überzeugen mehr.",
+  "steps": [
+    {
+      "type": "grammar_note",
+      "title": "Relativsätze: Menschen und Dinge genauer beschreiben",
+      "explanation": "Relativsätze funktionieren wie ein Adjektiv für einen ganzen Satz — sie beschreiben ein Nomen genauer. Em português: 'A empresa que eu encontrei' → em alemão: 'Die Firma, die ich gefunden habe.' O pronome relativo (der/die/das) concorda em gênero e número com o substantivo, mas o CASO depende da função dentro da oração relativa. Regra de ouro: o verbo conjugado vai SEMPRE para o final do Relativsatz.",
+      "examples": [
+        {
+          "de": "Das ist die Stelle, die ich im Internet gefunden habe.",
+          "pt": "Essa é a vaga que eu encontrei na internet.",
+          "highlight": "die ich im Internet gefunden habe"
+        },
+        {
+          "de": "Der Kollege, mit dem ich zusammengearbeitet habe, war sehr kompetent.",
+          "pt": "O colega com quem eu trabalhei era muito competente.",
+          "highlight": "mit dem ich zusammengearbeitet habe"
+        },
+        {
+          "de": "Die Firma, in der ich drei Jahre gearbeitet habe, entwickelt Software.",
+          "pt": "A empresa na qual trabalhei por três anos desenvolve software.",
+          "highlight": "in der ich drei Jahre gearbeitet habe"
+        },
+        {
+          "de": "Der Bereich, für den ich mich interessiere, ist Datenanalyse.",
+          "pt": "A área pela qual me interesso é análise de dados.",
+          "highlight": "für den ich mich interessiere"
+        }
+      ],
+      "ruleFormula": "Nom: der/die/das/die (Pl.) | Akk: den/die/das/die | Dat: dem/der/dem/denen | + Verb am ENDE",
+      "commonMistake": "Häufiger Fehler: 'Die Firma, die ich habe gearbeitet in.' — Richtig: 'Die Firma, in der ich gearbeitet habe.' Bei Relativsätzen mit Präposition kommt die Präposition VOR das Relativpronomen, und das Verb steht am Ende.",
+      "xp": 5
+    },
+    {
+      "type": "reading",
+      "instruction": "Lies die Szene aufmerksam. Achte auf die Relativsätze und das Vokabular rund ums Vorstellungsgespräch.",
+      "chunks": [
+        {
+          "text": "Lukas hat letzte Woche eine Stellenanzeige gelesen, die ihn sofort interessiert hat. Eine mittelgroße IT-Firma in München sucht einen Softwareentwickler, der Erfahrung mit Datenbanken hat. Lukas hat sofort seinen Lebenslauf aktualisiert und ein ausführliches Anschreiben geschrieben, in dem er seine Motivation und seine bisherige Berufserfahrung erklärt. Zwei Tage später hat er eine E-Mail bekommen: Er ist zum Vorstellungsgespräch eingeladen.",
+          "glossary": [
+            { "term": "die Stellenanzeige", "de": "Jobangebot in einer Zeitung oder online", "pt": "anúncio de vaga" },
+            { "term": "der Lebenslauf", "de": "Dokument mit Ausbildung, Berufserfahrung und persönlichen Daten", "pt": "currículo" },
+            { "term": "das Anschreiben", "de": "Motivationsbrief zur Bewerbung", "pt": "carta de apresentação" },
+            { "term": "die Berufserfahrung", "de": "praktische Erfahrung aus früheren Jobs", "pt": "experiência profissional" }
+          ]
+        },
+        {
+          "text": "Am Dienstagmorgen kommt Lukas pünktlich an — zehn Minuten vor dem Termin, wie es in Deutschland üblich ist. Die Personalchefin, Frau Richter, begrüßt ihn im Empfangsbereich: \u201EHerr Wagner, schön, dass Sie da sind. Kommen Sie, wir gehen in den Besprechungsraum.\u201C Lukas setzt sich, legt seine Unterlagen auf den Tisch und wartet ruhig. Frau Richter beginnt: \u201EErzählen Sie mir bitte etwas über sich. Was ist der Bereich, in dem Sie die meiste Erfahrung haben?\u201C",
+          "glossary": [
+            { "term": "die Personalchefin", "de": "Leiterin der Personalabteilung, die neue Mitarbeiter aussucht", "pt": "chefe de RH" },
+            { "term": "der Empfangsbereich", "de": "Ort am Eingang einer Firma, wo Besucher begrüßt werden", "pt": "recepção" },
+            { "term": "die Unterlagen", "de": "wichtige Dokumente (Lebenslauf, Zeugnisse usw.)", "pt": "documentos" },
+            { "term": "der Besprechungsraum", "de": "Zimmer für Meetings und Gespräche", "pt": "sala de reuniões" }
+          ]
+        },
+        {
+          "text": "Lukas antwortet selbstbewusst: \u201EIch habe drei Jahre in einer Firma gearbeitet, die Cloud-Lösungen für Krankenhäuser entwickelt. Die Projekte, an denen ich beteiligt war, waren sehr anspruchsvoll. Sie haben mir gezeigt, dass ich gerne im Team arbeite und Verantwortung übernehme. Die Stelle, die Sie hier anbieten, passt sehr gut zu meinen Fähigkeiten und Interessen.\u201C Frau Richter nickt zufrieden: \u201EDas klingt überzeugend. Wir melden uns bis Ende der Woche bei Ihnen.\u201C",
+          "glossary": [
+            { "term": "selbstbewusst", "de": "mit Vertrauen in die eigenen Fähigkeiten", "pt": "confiante / seguro de si" },
+            { "term": "anspruchsvoll", "de": "schwierig und fordernd, aber interessant", "pt": "desafiador / exigente" },
+            { "term": "die Fähigkeiten", "de": "Kompetenzen, was man gut kann", "pt": "habilidades / competências" },
+            { "term": "sich melden", "de": "Kontakt aufnehmen, eine Antwort geben", "pt": "entrar em contato / dar retorno" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Warum glaubt Lukas, dass die Stelle gut zu ihm passt?",
+      "options": [
+        "Weil die Firma in München liegt und er München schon immer mochte.",
+        "Weil er Erfahrung in einem ähnlichen Bereich hat und gerne im Team arbeitet.",
+        "Weil Frau Richter ihm die Stelle sofort angeboten hat.",
+        "Weil er noch keine andere Bewerbung geschickt hat und diese Firma die einzige Option war."
+      ],
+      "correctIndex": 1,
+      "explanation": "Lukas nennt zwei Gründe: Er hat drei Jahre in einer ähnlichen Firma gearbeitet (Cloud-Lösungen, anspruchsvolle Projekte) und er arbeitet gerne im Team. Die Stelle passe zu seinen 'Fähigkeiten und Interessen'.",
+      "distractorExplanations": [
+        "Der Text erwähnt München, aber Lukas sagt nichts darüber, dass er dort wohnt oder München mag — das ist sein Grund nicht.",
+        "Lukas beschreibt konkret seine Erfahrung und Teamfähigkeit als Gründe.",
+        "Frau Richter hat die Stelle NICHT angeboten — sie sagte nur: 'Wir melden uns bis Ende der Woche.' Das ist noch keine Zusage.",
+        "Der Text sagt nichts darüber, ob Lukas andere Bewerbungen geschickt hat. Das ist reine Spekulation."
+      ],
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "match_pairs",
+      "instruction": "Verbinde die Begriffe aus dem Vorstellungsgespräch mit den passenden Definitionen.",
+      "pairs": [
+        { "left": "die Stellenanzeige", "right": "Jobangebot online oder in der Zeitung" },
+        { "left": "der Lebenslauf", "right": "Dokument mit Ausbildung und Erfahrung" },
+        { "left": "das Anschreiben", "right": "Brief mit Motivation für die Bewerbung" },
+        { "left": "die Personalchefin", "right": "Person, die neue Mitarbeiter auswählt" },
+        { "left": "die Fähigkeiten", "right": "Kompetenzen, die man mitbringt" }
+      ],
+      "srs": {
+        "front": "die Stellenanzeige = ?",
+        "back": "Jobangebot in einer Zeitung oder online (anúncio de vaga)",
+        "kind": "match",
+        "tags": ["arbeit", "bewerbung", "vokabular"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 10
+    },
+    {
+      "type": "cloze",
+      "instruction": "Relativpronomen — Wähle die richtige Form (Präposition + Dativ).",
+      "sentence": "Die Firma, in {___} ich drei Jahre gearbeitet habe, war sehr innovativ.",
+      "options": ["der", "die", "dem", "den"],
+      "correct": "der",
+      "explanation": "'Firma' ist feminin (die Firma). Die Präposition 'in' verlangt hier den Dativ (wo?). Feminin + Dativ = 'der'. Also: 'in der ich gearbeitet habe'. Viele Lernende wählen 'die' (Nominativ), aber nach Präposition + Dativ ändert sich die Form.",
+      "grammarRule": "Relativpronomen nach Präposition: Die Präposition bestimmt den Kasus. 'in' + Dativ (wo?) → die Firma → in der",
+      "srs": {
+        "front": "Die Firma, in ___ ich gearbeitet habe, war innovativ. (feminin + Dativ)",
+        "back": "der — 'in' + Dativ: die → der",
+        "kind": "cloze",
+        "tags": ["relativsatz", "dativ", "präposition"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die professionellste Antwort im Vorstellungsgespräch.",
+      "context": "Du bist im Vorstellungsgespräch bei einer deutschen Firma. Der Interviewer fragt nach deiner größten Stärke.",
+      "lines": [
+        { "speaker": "Interviewer", "text": "Was würden Sie als Ihre größte Stärke bezeichnen?" },
+        { "speaker": "Du", "text": "(Du überlegst kurz…)" }
+      ],
+      "choicePrompt": "Wie antwortest du?",
+      "options": [
+        "Ich bin jemand, der gut im Team arbeiten kann und der gerne Verantwortung für Projekte übernimmt.",
+        "Ich bin der Beste in allem, was ich mache. Niemand in meiner alten Firma war so gut wie ich.",
+        "Ich glaube, ich kann vieles ganz okay, aber ich bin mir nicht sicher, was genau meine Stärke ist."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A ist professionell, konkret und verwendet Relativsätze ('jemand, der…'). In deutschen Vorstellungsgesprächen überzeugt sachliche Selbstdarstellung mit konkreten Beispielen. Option B klingt arrogant — Übertreibungen wirken in Deutschland unseriös. Option C ist zu unsicher und vage — Selbstvertrauen zeigen ist wichtig.",
+      "xpCorrect": 22,
+      "xpWrong": 8
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler im Relativsatz und korrigiere ihn.",
+      "sentence": "Der Kollege, mit die ich zusammengearbeitet habe, war sehr hilfsbereit.",
+      "errorWord": "die",
+      "correctedWord": "dem",
+      "explanation": "'Kollege' ist maskulin (der Kollege). Die Präposition 'mit' verlangt IMMER den Dativ. Maskulin + Dativ = 'dem'. Also: 'mit dem ich zusammengearbeitet habe'. Der typische Fehler bei B1-Lernenden ist, das Relativpronomen im Nominativ ('der') oder Akkusativ ('den') zu lassen, statt den Dativ zu verwenden.",
+      "srs": {
+        "front": "Korrigiere: 'Der Kollege, mit ___ ich zusammengearbeitet habe…' (maskulin, mit + ?)",
+        "back": "dem — 'mit' verlangt Dativ: der Kollege → dem",
+        "kind": "error_correction",
+        "tags": ["relativsatz", "dativ", "präposition", "fehlerkorrektur"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze die Relativpronomen in Lukas' Bewerbungstext.",
+      "text": "Ich suche eine Stelle, {___0} zu meinen Qualifikationen passt. Der Bereich, in {___1} ich arbeiten möchte, ist Softwareentwicklung. Die Projekte, an {___2} ich bisher gearbeitet habe, waren sehr vielfältig.",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["die", "der", "das", "den"],
+          "correct": "die",
+          "explanation": "'Stelle' ist feminin. Das Relativpronomen ist hier Subjekt des Nebensatzes (Nominativ) → die."
+        },
+        {
+          "id": 1,
+          "options": ["dem", "den", "der", "das"],
+          "correct": "dem",
+          "explanation": "'Bereich' ist maskulin. 'in' + Dativ (wo? — er möchte dort arbeiten) → maskulin Dativ = dem."
+        },
+        {
+          "id": 2,
+          "options": ["denen", "den", "dem", "die"],
+          "correct": "denen",
+          "explanation": "'Projekte' ist Plural. 'an' + Dativ → Plural Dativ = denen. (Nicht 'den', das wäre Akkusativ Singular maskulin.)"
+        }
+      ],
+      "srs": {
+        "front": "Plural Dativ Relativpronomen nach 'an': Die Projekte, an ___ ich gearbeitet habe…",
+        "back": "denen (Plural + Dativ = denen)",
+        "kind": "cloze",
+        "tags": ["relativsatz", "plural", "dativ"]
+      },
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze ins Deutsche. Benutze einen Relativsatz.",
+      "direction": "pt_to_de",
+      "source": "A empresa na qual eu trabalhei desenvolve software.",
+      "acceptedAnswers": [
+        "Die Firma, in der ich gearbeitet habe, entwickelt Software.",
+        "Die Firma in der ich gearbeitet habe entwickelt Software.",
+        "Das Unternehmen, in dem ich gearbeitet habe, entwickelt Software.",
+        "Das Unternehmen in dem ich gearbeitet habe entwickelt Software.",
+        "Die Firma, bei der ich gearbeitet habe, entwickelt Software.",
+        "Das Unternehmen, bei dem ich gearbeitet habe, entwickelt Software.",
+        "Die Firma, für die ich gearbeitet habe, entwickelt Software.",
+        "Das Unternehmen, für das ich gearbeitet habe, entwickelt Software.",
+        "Die Firma, in der ich gearbeitet habe, entwickelt Software",
+        "Das Unternehmen, in dem ich gearbeitet habe, entwickelt Software"
+      ],
+      "hint": "Relativsatz: 'na qual' = 'in der' (Firma ist feminin + Dativ nach 'in'). Verb am Ende des Relativsatzes!",
+      "explanation": "Variantes aceitas: 'Die Firma, in der…' (feminin) ou 'Das Unternehmen, in dem…' (neutro). Também aceitas: 'bei der/dem' ou 'für die/das'. O verbo 'gearbeitet habe' vai sempre para o final do Relativsatz.",
+      "srs": {
+        "front": "A empresa na qual eu trabalhei desenvolve software.",
+        "back": "Die Firma, in der ich gearbeitet habe, entwickelt Software.",
+        "kind": "translate",
+        "tags": ["relativsatz", "arbeit", "tradução"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "entrevista de emprego (conversa formal para conseguir um trabalho)",
+      "direction": "pt_to_de",
+      "acceptedAnswers": [
+        "Vorstellungsgespräch",
+        "das Vorstellungsgespräch",
+        "Das Vorstellungsgespräch",
+        "Bewerbungsgespräch",
+        "das Bewerbungsgespräch"
+      ],
+      "hint": "Palavra composta: 'Vorstellung' (apresentação) + 'Gespräch' (conversa). Começa com V…",
+      "srs": {
+        "front": "entrevista de emprego → ?",
+        "back": "das Vorstellungsgespräch",
+        "kind": "vocab_recall",
+        "tags": ["arbeit", "bewerbung", "vokabular"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
+    },
+    {
+      "type": "reorder",
+      "instruction": "Bilde einen Relativsatz: Beschreibe eine Stelle, die zu dir passt.",
+      "words": ["zu meinen Fähigkeiten", "die", "passt", ",", "Ich suche", "eine Stelle", "."],
+      "correct": "Ich suche eine Stelle , die zu meinen Fähigkeiten passt .",
+      "hint": "Im Relativsatz steht das konjugierte Verb am Ende. Nach dem Komma kommt das Relativpronomen 'die'.",
+      "srs": {
+        "front": "Ordne: Ich suche / eine Stelle / , / die / zu meinen Fähigkeiten / passt / .",
+        "back": "Ich suche eine Stelle, die zu meinen Fähigkeiten passt.",
+        "kind": "reorder",
+        "tags": ["relativsatz", "wortstellung", "arbeit"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Du bist in einem Vorstellungsgespräch. Stelle dich vor: Beschreibe deine Erfahrung und Qualifikationen in 3–4 Sätzen. Benutze mindestens zwei Relativsätze (der/die/das + Verb am Ende).",
+      "starters": [
+        "Ich habe in einer Firma gearbeitet, die…",
+        "Der Bereich, in dem ich…",
+        "Ich bin jemand, der/die…"
+      ],
+      "keywords": ["Relativsatz", "Erfahrung", "gearbeitet", "die", "der", "Fähigkeiten", "Bereich"],
+      "exampleAnswer": "Ich habe drei Jahre in einer Firma gearbeitet, die Softwarelösungen entwickelt. Der Bereich, in dem ich am meisten Erfahrung habe, ist Datenbankverwaltung. Ich bin jemand, der gerne im Team arbeitet und neue Aufgaben übernimmt. Die Stelle, die Sie anbieten, interessiert mich sehr.",
+      "checkpoints": [
+        "Usou pelo menos dois Relativsätze (com 'der/die/das' + verbo no final)?",
+        "Mencionou experiência profissional ou qualificações concretas?",
+        "Os Relativsätze estão gramaticalmente corretos (verbo no final)?",
+        "Usou vocabulário da lição (Erfahrung, Bereich, Fähigkeiten, Stelle)?",
+        "O texto soa profissional e adequado para uma entrevista?"
+      ],
+      "srs": {
+        "front": "Stelle dich im Vorstellungsgespräch vor. Benutze 2 Relativsätze: einer mit 'die' und einer mit 'in dem'.",
+        "back": "Ich habe in einer Firma gearbeitet, die [X] entwickelt. Der Bereich, in dem ich Erfahrung habe, ist [Y].",
+        "kind": "guided_write",
+        "tags": ["produktion", "relativsatz", "vorstellungsgespräch"]
+      },
+      "xp": 20
+    }
+  ]
+}
