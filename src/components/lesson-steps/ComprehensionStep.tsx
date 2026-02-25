@@ -28,8 +28,11 @@ export default function ComprehensionStep({
 
   return (
     <div>
-      <div className="text-sm opacity-70">Compreensão</div>
-      <div className="mt-2 text-base font-semibold">{step.question}</div>
+      <div className="flex items-center gap-2">
+        <span className="text-lg">❓</span>
+        <div className="text-xs font-medium uppercase tracking-wider text-foreground/40">Compreensão</div>
+      </div>
+      <div className="mt-2 text-base font-bold">{step.question}</div>
 
       <div className="mt-4 space-y-2">
         {step.options.map((opt, idx) => {
@@ -41,10 +44,10 @@ export default function ComprehensionStep({
               type="button"
               onClick={() => (!submitted ? setPicked(idx) : null)}
               className={[
-                "w-full rounded-lg border px-3 py-2 text-left text-sm",
-                picked === idx ? "border-foreground" : "border-black/10 dark:border-white/15",
-                isCorrect ? "bg-black/5 dark:bg-white/10" : "",
-                isWrong ? "opacity-60" : "",
+                "w-full rounded-xl border px-3 py-2.5 text-left text-sm transition-all",
+                picked === idx ? "border-[var(--accent)] bg-[var(--accent)]/5" : "border-[var(--border)] hover:border-[var(--border-strong)]",
+                isCorrect ? "bg-[var(--success)]/10 border-[var(--success)]/30" : "",
+                isWrong ? "opacity-50 line-through" : "",
               ].join(" ")}
             >
               {opt}
@@ -54,18 +57,18 @@ export default function ComprehensionStep({
       </div>
 
       {submitted ? (
-        <div className="mt-4 rounded-lg border border-black/10 dark:border-white/15 p-3 text-sm opacity-80">
+        <div className="mt-4 rounded-xl bg-[var(--accent)]/5 border border-[var(--accent)]/15 p-3 text-sm text-foreground/80">
           {step.explanation ?? ""}
         </div>
       ) : null}
 
       <div className="mt-5 flex gap-2">
         {!submitted ? (
-          <Button fullWidth onClick={submit} type="button" disabled={picked === null}>
+          <Button fullWidth onClick={submit} type="button" disabled={picked === null} variant="accent">
             Confirmar
           </Button>
         ) : (
-          <Button fullWidth onClick={onNext} type="button">
+          <Button fullWidth onClick={onNext} type="button" variant="accent">
             Próximo
           </Button>
         )}

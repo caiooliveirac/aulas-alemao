@@ -12,7 +12,7 @@ function renderSentence(sentence: string) {
   return (
     <>
       {parts[0]}
-      <span className="mx-1 inline-block min-w-10 rounded-md border border-dashed border-black/20 dark:border-white/20 px-2 py-0.5 text-center">
+      <span className="mx-1 inline-block min-w-10 rounded-md border border-dashed border-[var(--accent)]/30 bg-[var(--accent)]/5 px-2 py-0.5 text-center">
         ___
       </span>
       {parts.slice(1).join("{___}")}
@@ -44,8 +44,11 @@ export default function ClozeStep({
 
   return (
     <div>
-      <div className="text-sm opacity-70">Cloze</div>
-      <div className="mt-2 text-sm opacity-80">{step.instruction}</div>
+      <div className="flex items-center gap-2">
+        <span className="text-lg">✒</span>
+        <div className="text-xs font-medium uppercase tracking-wider text-foreground/40">Cloze</div>
+      </div>
+      <div className="mt-2 text-sm text-foreground/60">{step.instruction}</div>
 
       <div className="mt-3 text-base leading-7">{renderSentence(step.sentence)}</div>
 
@@ -57,8 +60,8 @@ export default function ClozeStep({
             disabled={submitted}
             onClick={() => setPicked(opt)}
             className={[
-              "rounded-lg border px-3 py-2 text-sm",
-              picked === opt ? "border-foreground" : "border-black/10 dark:border-white/15",
+              "rounded-xl border px-3 py-2 text-sm transition-all",
+              picked === opt ? "border-[var(--accent)] bg-[var(--accent)]/5" : "border-[var(--border)] hover:border-[var(--border-strong)]",
             ].join(" ")}
           >
             {opt}
@@ -67,19 +70,19 @@ export default function ClozeStep({
       </div>
 
       {submitted ? (
-        <div className="mt-4 rounded-lg border border-black/10 dark:border-white/15 p-3 text-sm">
-          <div className="font-semibold">{ok ? "✅ Correto" : "❌ Quase"}</div>
-          {step.explanation ? <div className="mt-2 opacity-80">{step.explanation}</div> : null}
+        <div className="mt-4 rounded-xl p-3 text-sm" style={{ background: ok ? 'var(--success-bg, rgba(16,185,129,0.08))' : 'var(--error-bg, rgba(239,68,68,0.08))' }}>
+          <div className="font-bold">{ok ? "✅ Correto" : "❌ Quase"}</div>
+          {step.explanation ? <div className="mt-2 text-foreground/70">{step.explanation}</div> : null}
         </div>
       ) : null}
 
       <div className="mt-5 flex gap-2">
         {!submitted ? (
-          <Button fullWidth onClick={submit} type="button" disabled={!picked}>
+          <Button fullWidth onClick={submit} type="button" disabled={!picked} variant="accent">
             Confirmar
           </Button>
         ) : (
-          <Button fullWidth onClick={onNext} type="button">
+          <Button fullWidth onClick={onNext} type="button" variant="accent">
             Próximo
           </Button>
         )}

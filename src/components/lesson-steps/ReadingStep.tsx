@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { LessonStep, GlossaryEntry } from "@/content/schema";
 import { Button } from "@/components/ui/Button";
+import { Chip } from "@/components/ui/Chip";
 import GlossaryCard from "./GlossaryCard";
 
 type ReadingStep = Extract<LessonStep, { type: "reading" }>;
@@ -52,7 +53,10 @@ export default function ReadingStep({
 
   return (
     <div>
-      <div className="text-sm opacity-70">{step.instruction ?? "Leitura"}</div>
+      <div className="flex items-center gap-2">
+        <span className="text-lg">📖</span>
+        <div className="text-xs font-medium uppercase tracking-wider text-foreground/40">{step.instruction ?? "Leitura"}</div>
+      </div>
       <div className="mt-3 text-base leading-7">
         {tokens.map((t) => {
           if (!t.term) return <span key={t.key}>{t.text}</span>;
@@ -61,7 +65,7 @@ export default function ReadingStep({
               key={t.key}
               type="button"
               onClick={() => setActiveTerm((cur) => (cur === t.term ? null : t.term))}
-              className="underline decoration-black/30 dark:decoration-white/30 underline-offset-4 font-medium"
+              className="underline decoration-[var(--accent)]/40 underline-offset-4 font-semibold text-[var(--accent)] hover:decoration-[var(--accent)] cursor-pointer"
               title="Abrir glossário"
             >
               {t.text}
@@ -73,10 +77,10 @@ export default function ReadingStep({
       {entry ? <GlossaryCard entry={entry} /> : null}
 
       <div className="mt-5 flex items-center justify-between">
-        <div className="text-xs opacity-60">
+        <Chip variant="accent">
           bloco {chunkIdx + 1}/{step.chunks.length}
-        </div>
-        <Button onClick={nextChunkOrFinish} type="button">
+        </Chip>
+        <Button onClick={nextChunkOrFinish} type="button" variant="accent">
           {isLastChunk ? "Continuar" : "Próximo bloco"}
         </Button>
       </div>

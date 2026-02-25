@@ -1,0 +1,266 @@
+{
+  "id": "alltag-02",
+  "title": "Einkaufen auf dem Wochenmarkt",
+  "topic": "Alltag",
+  "level": "B1",
+  "grammarFocus": "Höfliche Bitten (Konjunktiv II: hätte, würde, könnte) + Mengenangaben",
+  "lexicalFocus": "Lebensmittel, Einkaufen, Mengen, Markt",
+  "estimatedMinutes": 18,
+  "xpReward": 220,
+  "keywords": ["einkaufen", "markt", "konjunktiv", "höflich", "lebensmittel", "menge"],
+  "skillTags": ["reading", "vocab", "grammar", "writing", "dialogue", "translation", "srs"],
+  "objectives": [
+    "Usar Konjunktiv II (hätte, würde, könnte) para pedidos educados",
+    "Vocabulário de alimentos e quantidades",
+    "Participar de um diálogo típico no mercado"
+  ],
+  "prerequisites": ["alltag-01"],
+  "culturalNote": "Na Alemanha, os Wochenmärkte (mercados semanais) são tradição. Cidades como Freiburg e Münster têm mercados ao ar livre onde produtores locais vendem diretamente. Diferente de supermercados, espera-se que você peça os produtos ao vendedor — e a forma educada (Konjunktiv II) é essencial.",
+  "steps": [
+    {
+      "type": "grammar_note",
+      "title": "Pedidos educados com Konjunktiv II",
+      "explanation": "Em alemão, para pedir algo de forma educada (como num mercado ou restaurante), usamos o Konjunktiv II. Isso soa muito mais gentil do que o imperativo ou indicativo. Os três verbos mais úteis são: hätte (teria), würde (faria/iria) e könnte (poderia).",
+      "examples": [
+        {
+          "de": "Ich hätte gern 200 Gramm Käse.",
+          "pt": "Eu gostaria de 200 gramas de queijo.",
+          "highlight": "hätte gern"
+        },
+        {
+          "de": "Könnten Sie mir bitte ein Kilo Äpfel geben?",
+          "pt": "O senhor poderia me dar um quilo de maçãs, por favor?",
+          "highlight": "Könnten"
+        },
+        {
+          "de": "Würden Sie das bitte einpacken?",
+          "pt": "O senhor poderia embalar isso, por favor?",
+          "highlight": "Würden"
+        }
+      ],
+      "ruleFormula": "hätte gern + [Menge] + [Produkt]  |  Könnten Sie + Infinitiv?  |  Würden Sie + Infinitiv?",
+      "commonMistake": "Erro comum: 'Ich will 200 Gramm Käse' — soa rude e direto demais. No mercado, sempre use 'Ich hätte gern…' ou 'Könnte ich bitte…'.",
+      "xp": 5
+    },
+    {
+      "type": "reading",
+      "instruction": "Lies die Szene auf dem Wochenmarkt.",
+      "chunks": [
+        {
+          "text": "Es ist Samstagmorgen. Sophie geht auf den Wochenmarkt, weil sie frisches Gemüse und Obst kaufen möchte. Der Markt ist bunt und lebendig — überall riecht es nach frischem Brot und Kräutern.",
+          "glossary": [
+            { "term": "Wochenmarkt", "de": "Markt, der einmal pro Woche stattfindet", "pt": "mercado semanal" },
+            { "term": "frisch", "de": "nicht alt, gerade geerntet oder gebacken", "pt": "fresco" },
+            { "term": "Kräuter", "de": "Pflanzen zum Kochen (Basilikum, Petersilie…)", "pt": "ervas" }
+          ]
+        },
+        {
+          "text": "Am Gemüsestand sagt Sophie: \u201EGuten Morgen! Ich hätte gern ein Kilo Tomaten und 500 Gramm Champignons.\u201C Der Verkäufer antwortet: \u201ESehr gern! Darf es sonst noch etwas sein?\u201C",
+          "glossary": [
+            { "term": "der Gemüsestand", "de": "Tisch/Platz auf dem Markt, wo Gemüse verkauft wird", "pt": "barraca de legumes" },
+            { "term": "Champignons", "de": "eine Art Pilz zum Essen", "pt": "cogumelos" },
+            { "term": "Darf es sonst noch etwas sein?", "de": "höfliche Frage: Möchten Sie noch mehr?", "pt": "Deseja mais alguma coisa?" }
+          ]
+        },
+        {
+          "text": "Sophie überlegt kurz: \u201EKönnten Sie mir noch ein Bund Petersilie geben?\u201C — \u201ENatürlich, hier bitte. Das macht zusammen 6,80 Euro.\u201C Sophie bezahlt und bedankt sich.",
+          "glossary": [
+            { "term": "ein Bund", "de": "mehrere Stängel zusammengebunden", "pt": "um maço" },
+            { "term": "Petersilie", "de": "grünes Kraut zum Kochen", "pt": "salsinha" },
+            { "term": "Das macht zusammen…", "de": "Gesamtbetrag an der Kasse", "pt": "Dá no total…" }
+          ]
+        }
+      ],
+      "xp": 10
+    },
+    {
+      "type": "comprehension",
+      "question": "Wie bestellt Sophie ihre Tomaten?",
+      "options": [
+        "Sie sagt: 'Geben Sie mir Tomaten!'",
+        "Sie sagt: 'Ich hätte gern ein Kilo Tomaten.'",
+        "Sie zeigt auf die Tomaten und sagt nichts.",
+        "Sie fragt: 'Haben Sie Tomaten?'"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sophie benutzt den Konjunktiv II: 'Ich hätte gern…' — die höfliche Standardform beim Einkaufen.",
+      "distractorExplanations": [
+        "Imperativ ('Geben Sie mir!') wäre unhöflich am Markt.",
+        "Die korrekte Antwort nutzt 'hätte gern'.",
+        "Am Markt muss man mit dem Verkäufer sprechen.",
+        "Das ist eine Frage, keine Bestellung."
+      ],
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "match_pairs",
+      "instruction": "Verbinde die Mengenangaben mit den passenden Lebensmitteln.",
+      "pairs": [
+        { "left": "ein Kilo", "right": "Tomaten" },
+        { "left": "500 Gramm", "right": "Champignons" },
+        { "left": "ein Bund", "right": "Petersilie" },
+        { "left": "ein Stück", "right": "Käse" },
+        { "left": "eine Flasche", "right": "Olivenöl" }
+      ],
+      "xpCorrect": 25,
+      "xpWrong": 10
+    },
+    {
+      "type": "cloze",
+      "instruction": "Höfliche Bitte — Konjunktiv II von 'haben'.",
+      "sentence": "Ich {___} gern 200 Gramm Schinken.",
+      "options": ["habe", "hätte", "hatte", "hat"],
+      "correct": "hätte",
+      "explanation": "'Ich hätte gern…' ist die höfliche Standardform. 'Ich habe gern' wäre Indikativ und klingt falsch in diesem Kontext.",
+      "grammarRule": "Konjunktiv II von ‚haben': ich hätte, du hättest, er/sie hätte, wir hätten, ihr hättet, sie/Sie hätten",
+      "srs": {
+        "front": "Ich ___ gern 200 Gramm Schinken. (höflich bestellen)",
+        "back": "hätte (Konjunktiv II von haben)",
+        "kind": "cloze",
+        "tags": ["konjunktiv-ii", "einkaufen", "höflichkeit"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 6
+    },
+    {
+      "type": "dialogue_choice",
+      "instruction": "Wähle die passende Antwort im Gespräch.",
+      "context": "Du bist am Obststand auf dem Wochenmarkt.",
+      "lines": [
+        { "speaker": "Verkäufer", "text": "Guten Morgen! Was darf es sein?" },
+        { "speaker": "Du", "text": "Ich hätte gern zwei Kilo Äpfel, bitte." },
+        { "speaker": "Verkäufer", "text": "Sehr gern. Darf es sonst noch etwas sein?" }
+      ],
+      "choicePrompt": "Was sagst du jetzt?",
+      "options": [
+        "Ja, ich hätte auch gern ein Pfund Erdbeeren.",
+        "Nein, du musst mir nichts mehr geben.",
+        "Ich will sofort bezahlen, schnell bitte."
+      ],
+      "correctIndex": 0,
+      "explanation": "Option A verwendet 'hätte gern' (höflich) und passt zum Kontext. Option B klingt unnatürlich und Option C ist unhöflich.",
+      "xpCorrect": 22,
+      "xpWrong": 6
+    },
+    {
+      "type": "error_correction",
+      "instruction": "Finde den Fehler in diesem Satz und korrigiere ihn.",
+      "sentence": "Ich will gern ein Kilo Kartoffeln.",
+      "errorWord": "will",
+      "correctedWord": "hätte",
+      "explanation": "'Ich will' klingt wie ein Befehl. Am Markt oder im Geschäft sagt man 'Ich hätte gern…' (Konjunktiv II) — viel höflicher!",
+      "srs": {
+        "front": "Korrigiere: 'Ich will gern ein Kilo Kartoffeln.' — Was ist falsch?",
+        "back": "will → hätte (Konjunktiv II ist höflicher beim Einkaufen)",
+        "kind": "error_correction",
+        "tags": ["konjunktiv-ii", "höflichkeit", "fehlerkorrektur"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 6
+    },
+    {
+      "type": "multi_cloze",
+      "instruction": "Ergänze den Dialog mit den richtigen Formen.",
+      "text": "Kundin: Guten Tag! Ich {___0} gern 300 Gramm Gouda.\nVerkäufer: Sehr gern. {___1} es sonst noch etwas sein?\nKundin: Ja, {___2} Sie mir bitte noch ein Glas Honig geben?",
+      "blanks": [
+        {
+          "id": 0,
+          "options": ["hätte", "habe", "will", "möchte"],
+          "correct": "hätte",
+          "explanation": "Konjunktiv II: 'Ich hätte gern' ist die höflichste Form."
+        },
+        {
+          "id": 1,
+          "options": ["Darf", "Muss", "Will", "Soll"],
+          "correct": "Darf",
+          "explanation": "'Darf es sonst noch etwas sein?' ist die Standardfrage im Geschäft."
+        },
+        {
+          "id": 2,
+          "options": ["könnten", "müssen", "wollen", "sollen"],
+          "correct": "könnten",
+          "explanation": "'Könnten Sie…?' mit Konjunktiv II (Höflichkeit)."
+        }
+      ],
+      "xpCorrect": 30,
+      "xpWrong": 8
+    },
+    {
+      "type": "translate",
+      "instruction": "Übersetze die höfliche Bitte ins Deutsche.",
+      "direction": "pt_to_de",
+      "source": "Eu gostaria de meio quilo de morangos, por favor.",
+      "acceptedAnswers": [
+        "Ich hätte gern ein Pfund Erdbeeren, bitte.",
+        "Ich hätte gern 500 Gramm Erdbeeren, bitte.",
+        "Ich hätte gerne ein Pfund Erdbeeren bitte.",
+        "Ich hätte gerne 500 Gramm Erdbeeren bitte."
+      ],
+      "hint": "höflich → hätte gern; meio quilo = ein Pfund oder 500 Gramm",
+      "explanation": "A forma educada em alemão usa 'Ich hätte gern(e)…'. Meio quilo = ein Pfund (500g).",
+      "srs": {
+        "front": "Traduza: 'Eu gostaria de meio quilo de morangos, por favor.'",
+        "back": "Ich hätte gern ein Pfund Erdbeeren, bitte.",
+        "kind": "translate",
+        "tags": ["tradução", "konjunktiv-ii", "einkaufen"]
+      },
+      "xpCorrect": 28,
+      "xpWrong": 6
+    },
+    {
+      "type": "vocab_recall",
+      "instruction": "Wie heißt das auf Deutsch?",
+      "prompt": "salsinha",
+      "direction": "pt_to_de",
+      "acceptedAnswers": ["Petersilie", "die Petersilie", "petersilie"],
+      "hint": "Começa com P…, é uma erva verde usada na culinária",
+      "srs": {
+        "front": "salsinha → ?",
+        "back": "die Petersilie",
+        "kind": "vocab_recall",
+        "tags": ["lebensmittel", "kräuter"]
+      },
+      "xpCorrect": 20,
+      "xpWrong": 4
+    },
+    {
+      "type": "reorder",
+      "instruction": "Bilde eine höfliche Frage mit 'könnten'.",
+      "words": ["Könnten", "Sie", "mir", "bitte", "eine Tüte", "geben", "?"],
+      "correct": "Könnten Sie mir bitte eine Tüte geben ?",
+      "hint": "Konjunktiv II Frage: Verb am Anfang → Könnten Sie…?",
+      "srs": {
+        "front": "Ordne: Könnten / Sie / mir / bitte / eine Tüte / geben / ?",
+        "back": "Könnten Sie mir bitte eine Tüte geben?",
+        "kind": "reorder",
+        "tags": ["konjunktiv-ii", "höfliche-frage"]
+      },
+      "xpCorrect": 25,
+      "xpWrong": 8
+    },
+    {
+      "type": "guided_write",
+      "instruction": "Du bist auf dem Wochenmarkt. Schreibe 2–3 Sätze: Bestelle 2 Produkte höflich und frage nach dem Preis.",
+      "starters": [
+        "Guten Morgen! Ich hätte gern…",
+        "Könnten Sie mir bitte auch…",
+        "Was kostet…?"
+      ],
+      "keywords": ["hätte gern", "könnten", "Kilo", "Gramm", "bitte", "kosten"],
+      "exampleAnswer": "Guten Morgen! Ich hätte gern ein Kilo Äpfel und 300 Gramm Oliven. Könnten Sie mir bitte auch eine Flasche Olivenöl geben? Was kostet das zusammen?",
+      "checkpoints": [
+        "Usou 'hätte gern' ou 'könnte' pelo menos uma vez?",
+        "Mencionou quantidades (Kilo, Gramm, Stück)?",
+        "Incluiu 'bitte' ou outra marca de cortesia?"
+      ],
+      "srs": {
+        "front": "Bestelle 2 Produkte höflich auf dem Markt (hätte gern / könnten).",
+        "back": "Ich hätte gern [Menge] [Produkt]. Könnten Sie mir bitte auch [Produkt] geben?",
+        "kind": "guided_write",
+        "tags": ["produktion", "einkaufen", "konjunktiv-ii"]
+      },
+      "xp": 20
+    }
+  ]
+}

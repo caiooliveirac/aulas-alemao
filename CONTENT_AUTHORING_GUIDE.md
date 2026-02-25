@@ -24,23 +24,48 @@ Isso evita os problemas reais já vistos:
    - `topic`, `level`, `grammarFocus`, `estimatedMinutes`, `xpReward`
    - `keywords[]` (para busca/organização futura)
    - `skillTags[]` (para filtros futuros)
-4) Edite `steps[]` (6–10 steps):
+4) Edite `steps[]` (8–15 steps, veja fluxo pedagógico abaixo):
+   - `grammar_note` (instrução explícita com exemplos)
    - `reading` (chunks + glossário)
-   - `comprehension` (pergunta + opções)
-   - `cloze` (lacuna `{___}`)
+   - `comprehension` (pergunta + opções + explicação de distratores)
+   - `match_pairs` (associação de pares)
+   - `cloze` (lacuna `{___}` + regra gramatical)
+   - `dialogue_choice` (diálogo interativo)
+   - `error_correction` (encontrar e corrigir erro)
+   - `multi_cloze` (múltiplas lacunas `{___0}`, `{___1}`…)
+   - `translate` (tradução PT↔DE com múltiplas respostas aceitas)
+   - `vocab_recall` (recall livre sem opções)
    - `reorder` (reordenar palavras)
-   - `guided_write` (produção guiada)
+   - `guided_write` (produção guiada com checkpoints)
 5) Valide:
 ```bash
 cd /home/ubuntu/deutschbruecke
 npm run validate-content
 ```
 
-## Convenções pedagógicas (B1 → B2)
+## Convenções pedagógicas (v2)
 - Microtarefas: cada step deve ser concluível em 20–90s.
-- Feedback imediato: sempre que houver “certo/errado”, inclua `explanation` curta.
-- Produção guiada: `guided_write` sempre com `starters` + `keywords` + `exampleAnswer`.
-- Repetição inteligente: adicione `srs` em 2–4 steps por lição.
+- **Ensine antes de testar**: comece com `grammar_note` antes dos exercícios.
+- Feedback imediato: inclua `explanation` + `distractorExplanations` quando possível.
+- **Gradação**: reconhecimento (match) → recall assistido (cloze) → recall livre (vocab_recall/translate) → produção (guided_write).
+- Produção guiada: `guided_write` com `starters` + `keywords` + `exampleAnswer` + `checkpoints`.
+- Repetição inteligente: adicione `srs` em 3–5 steps por lição.
+- **Contexto cultural**: use `culturalNote` nos metadados para situar o tema.
+- **Objetivos claros**: use `objectives` nos metadados para que o aluno saiba o que vai aprender.
+
+## Fluxo pedagógico recomendado
+1. `grammar_note` — Ensinar a regra
+2. `reading` — Contexto
+3. `comprehension` — Compreensão global
+4. `match_pairs` — Vocabulário (reconhecimento)
+5. `cloze` — Regra com apoio
+6. `dialogue_choice` — Contexto social
+7. `error_correction` — Consciência metalinguística
+8. `multi_cloze` — Desafio múltiplo
+9. `translate` — Produção semi-livre
+10. `vocab_recall` — Recall sem apoio
+11. `reorder` — Estrutura da frase
+12. `guided_write` — Produção livre
 
 ## Como escrever `reading` (chunked reading)
 - Prefira 2–4 chunks por step `reading`.
@@ -81,11 +106,26 @@ Formato:
 - Se usar aspas ASCII `"` dentro de strings JSON, lembre de escapar.
 - Se um texto ficar grande, divida em chunks em vez de uma string gigantesca.
 
+## Novos step types (v2) — resumo rápido
+
+| Tipo | Propósito | Dificuldade |
+|------|-----------|-------------|
+| `grammar_note` | Ensinar regra com exemplos e fórmula | — |
+| `match_pairs` | Associar pares (vocabulário) | ★☆☆ |
+| `dialogue_choice` | Escolher resposta num diálogo | ★★☆ |
+| `error_correction` | Encontrar e corrigir erro numa frase | ★★☆ |
+| `multi_cloze` | Preencher múltiplas lacunas num texto | ★★★ |
+| `translate` | Traduzir frase (PT↔DE) | ★★★ |
+| `vocab_recall` | Digitar palavra/tradução sem opções | ★★★ |
+
 ## Checklist final
 - `npm run validate-content` passa.
 - Sem texto grande em um único chunk.
-- Pelo menos 2 seeds de SRS (`cloze.srs`/`reorder.srs`/`guided_write.srs`).
-- Metadados completos (keywords e skillTags não vazios).
+- Pelo menos 3 seeds de SRS distribuídas na lição.
+- Metadados completos (keywords, skillTags, objectives).
+- Começa com `grammar_note` ou `reading` (não pular direto para exercícios).
+- Usa pelo menos 6 tipos de step diferentes por lição.
+- `culturalNote` preenchido quando o tema permite.
 
 ## O que `validate-content` garante (robustez extra)
 Além de verificar campos obrigatórios e tipos, ele falha cedo se detectar:
@@ -93,6 +133,8 @@ Além de verificar campos obrigatórios e tipos, ele falha cedo se detectar:
 - `cloze.sentence` sem o marcador `{___}`
 - `cloze.correct` que não está presente em `options`
 - `reorder.words` com termos duplicados
+- `multi_cloze.text` sem marcadores `{___N}` esperados
+- `multi_cloze.blanks[].correct` ausente de `options`
 
 Essas regras vivem no schema Zod em `src/content/schema.ts`.
 

@@ -20,6 +20,13 @@ import ComprehensionStep from "@/components/lesson-steps/ComprehensionStep";
 import ClozeStep from "@/components/lesson-steps/ClozeStep";
 import ReorderStep from "@/components/lesson-steps/ReorderStep";
 import GuidedWriteStep from "@/components/lesson-steps/GuidedWriteStep";
+import GrammarNoteStep from "@/components/lesson-steps/GrammarNoteStep";
+import MatchPairsStep from "@/components/lesson-steps/MatchPairsStep";
+import TranslateStep from "@/components/lesson-steps/TranslateStep";
+import ErrorCorrectionStep from "@/components/lesson-steps/ErrorCorrectionStep";
+import DialogueChoiceStep from "@/components/lesson-steps/DialogueChoiceStep";
+import VocabRecallStep from "@/components/lesson-steps/VocabRecallStep";
+import MultiClozeStep from "@/components/lesson-steps/MultiClozeStep";
 
 type Props = { lesson: Lesson };
 
@@ -85,16 +92,29 @@ export default function LessonSession({ lesson }: Props) {
 
   if (done) {
     const correct = results.filter((r) => r.ok).length;
+    const pct = results.length > 0 ? Math.round((correct / results.length) * 100) : 0;
     return (
-      <div className="rounded-xl border border-black/10 dark:border-white/15 p-4">
-        <div className="text-sm opacity-70">Resumo</div>
-        <div className="mt-1 text-base font-semibold">+{sessionXP} XP</div>
-        <div className="mt-2 text-sm opacity-80">
-          Acertos: {correct}/{results.length}
+      <div className="glass-card p-6 text-center animate-fade-up">
+        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--success)]/10 text-3xl">
+          {pct >= 80 ? "🎉" : pct >= 50 ? "👍" : "💪"}
         </div>
-        <div className="mt-4">
+        <h2 className="text-lg font-bold">Lição concluída!</h2>
+        <p className="mt-1 text-3xl font-extrabold gradient-text">+{sessionXP} XP</p>
+        <p className="mt-2 text-sm text-foreground/50">
+          Acertos: {correct}/{results.length} ({pct}%)
+        </p>
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[var(--border)]">
+          <div
+            className="h-full rounded-full transition-all duration-700"
+            style={{
+              width: `${pct}%`,
+              background: pct >= 80 ? "var(--success)" : pct >= 50 ? "var(--warning)" : "var(--error)",
+            }}
+          />
+        </div>
+        <div className="mt-5">
           <Link href="/">
-            <Button fullWidth>Voltar ao dashboard</Button>
+            <Button fullWidth variant="accent">Voltar ao dashboard</Button>
           </Link>
         </div>
       </div>
@@ -102,15 +122,18 @@ export default function LessonSession({ lesson }: Props) {
   }
 
   return (
-    <div className="rounded-xl border border-black/10 dark:border-white/15 p-4">
+    <div className="glass-card p-5 animate-fade-up">
       <div className="flex items-center justify-between gap-2">
-        <Chip>
+        <Chip variant="accent">
           passo {stepIndex + 1}/{lesson.steps.length}
         </Chip>
-        <div className="text-sm opacity-70">sess\u00e3o: {sessionXP} XP</div>
+        <div className="flex items-center gap-1.5 text-sm font-semibold">
+          <span className="text-[var(--accent)]">{sessionXP}</span>
+          <span className="text-foreground/40">XP</span>
+        </div>
       </div>
-      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/10 dark:bg-white/10">
-        <div className="h-2 bg-foreground" style={{ width: `${Math.round(progress)}%` }} />
+      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-[var(--border)]">
+        <div className="progress-bar h-full" style={{ width: `${Math.round(progress)}%` }} />
       </div>
 
       <div className="mt-4">
@@ -140,6 +163,20 @@ function StepRenderer({
       return <ReorderStep step={step} onNext={onNext} onComplete={onComplete} />;
     case "guided_write":
       return <GuidedWriteStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "grammar_note":
+      return <GrammarNoteStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "match_pairs":
+      return <MatchPairsStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "translate":
+      return <TranslateStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "error_correction":
+      return <ErrorCorrectionStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "dialogue_choice":
+      return <DialogueChoiceStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "vocab_recall":
+      return <VocabRecallStep step={step} onNext={onNext} onComplete={onComplete} />;
+    case "multi_cloze":
+      return <MultiClozeStep step={step} onNext={onNext} onComplete={onComplete} />;
     default:
       return null;
   }

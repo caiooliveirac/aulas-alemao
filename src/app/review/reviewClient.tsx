@@ -41,48 +41,58 @@ export default function ReviewClient() {
   };
 
   return (
-    <div className="mx-auto max-w-md px-4 py-6">
-      <header className="mb-5 flex items-center justify-between">
+    <div className="mx-auto max-w-lg px-4 py-8">
+      <header className="mb-6 flex items-center justify-between animate-fade-up">
         <div>
-          <div className="text-lg font-semibold">Revisão (SRS)</div>
-          <div className="text-sm opacity-70">itens pendentes: {due.length}</div>
+          <h1 className="text-xl font-bold tracking-tight">
+            <span className="gradient-text">Revisão SRS</span>
+          </h1>
+          <p className="mt-1 text-sm text-foreground/50">
+            {due.length > 0 ? `${due.length} ${due.length === 1 ? "item pendente" : "itens pendentes"}` : "Tudo em dia!"}
+          </p>
         </div>
         <Link href="/">
-          <Button variant="secondary">Voltar</Button>
+          <Button variant="ghost" size="sm">← Voltar</Button>
         </Link>
       </header>
 
       {due.length === 0 ? (
-        <div className="rounded-xl border border-black/10 dark:border-white/15 p-4">
-          <div className="text-sm opacity-80">Nenhum item pendente agora.</div>
+        <div className="glass-card p-8 text-center animate-fade-up" style={{ animationDelay: "60ms" }}>
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--success)]/10 text-2xl">✓</div>
+          <p className="font-semibold">Nenhum item pendente</p>
+          <p className="mt-1 text-sm text-foreground/50">Volte mais tarde para revisão.</p>
         </div>
       ) : active ? (
-        <div className="rounded-xl border border-black/10 dark:border-white/15 p-4">
-          <div className="flex items-center justify-between gap-2">
-            <Chip>{active.kind}</Chip>
+        <div className="glass-card p-5 animate-fade-up" style={{ animationDelay: "60ms" }}>
+          <div className="flex items-center gap-2">
+            <Chip variant="accent">{active.kind}</Chip>
             {active.tags?.slice(0, 2).map((t) => <Chip key={t}>{t}</Chip>)}
           </div>
 
-          <div className="mt-4 text-sm opacity-70">Pergunta</div>
-          <div className="mt-1 text-base font-semibold">{active.front}</div>
+          <div className="mt-5">
+            <p className="text-xs font-medium uppercase tracking-wider text-foreground/40">Pergunta</p>
+            <p className="mt-2 text-lg font-bold">{active.front}</p>
+          </div>
 
           {showBack ? (
             <>
-              <div className="mt-4 text-sm opacity-70">Resposta</div>
-              <div className="mt-1 text-base">{active.back}</div>
+              <div className="mt-5 rounded-xl bg-[var(--accent)]/5 p-4">
+                <p className="text-xs font-medium uppercase tracking-wider text-[var(--accent)]">Resposta</p>
+                <p className="mt-2 text-base font-semibold">{active.back}</p>
+              </div>
 
-              <div className="mt-5 flex gap-2">
+              <div className="mt-5 flex gap-3">
                 <Button fullWidth onClick={() => grade(false)} type="button" variant="secondary">
-                  Errei
+                  ✗ Errei
                 </Button>
-                <Button fullWidth onClick={() => grade(true)} type="button">
-                  Acertei
+                <Button fullWidth onClick={() => grade(true)} type="button" variant="accent">
+                  ✓ Acertei
                 </Button>
               </div>
             </>
           ) : (
-            <div className="mt-5">
-              <Button fullWidth onClick={() => setShowBack(true)} type="button">
+            <div className="mt-6">
+              <Button fullWidth onClick={() => setShowBack(true)} type="button" variant="accent">
                 Mostrar resposta
               </Button>
             </div>

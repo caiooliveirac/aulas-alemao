@@ -1,5 +1,6 @@
 {
   "Alltag": { "icon": "🏠" },
   "Reisen": { "icon": "🚆" },
-  "Gesundheit": { "icon": "🏥" }
+  "Gesundheit": { "icon": "🏥" },
+  "Arbeit": { "icon": "💼" }
 }

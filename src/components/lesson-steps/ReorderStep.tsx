@@ -48,12 +48,15 @@ export default function ReorderStep({
 
   return (
     <div>
-      <div className="text-sm opacity-70">Reordenação</div>
-      <div className="mt-2 text-sm opacity-80">{step.instruction}</div>
+      <div className="flex items-center gap-2">
+        <span className="text-lg">🔀</span>
+        <div className="text-xs font-medium uppercase tracking-wider text-foreground/40">Reordenação</div>
+      </div>
+      <div className="mt-2 text-sm text-foreground/60">{step.instruction}</div>
       {step.hint ? <div className="mt-2"><Chip>{step.hint}</Chip></div> : null}
 
-      <div className="mt-4 rounded-lg border border-black/10 dark:border-white/15 p-3">
-        <div className="text-xs opacity-60">Sua frase</div>
+      <div className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3">
+        <div className="text-xs text-foreground/40">Sua frase</div>
         <div className="mt-1 min-h-10 text-base">{answer || "…"}</div>
       </div>
 
@@ -64,7 +67,7 @@ export default function ReorderStep({
             type="button"
             onClick={() => place(w)}
             disabled={submitted}
-            className="rounded-lg border border-black/10 dark:border-white/15 px-3 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/10"
+            className="rounded-xl border border-[var(--border)] px-3 py-2 text-sm hover:border-[var(--border-strong)] hover:bg-[var(--surface-hover)] transition-all"
           >
             {w}
           </button>
@@ -72,9 +75,9 @@ export default function ReorderStep({
       </div>
 
       {submitted ? (
-        <div className="mt-4 rounded-lg border border-black/10 dark:border-white/15 p-3 text-sm">
-          <div className="font-semibold">{isOk ? "✅ Correto" : "❌ Correto seria"}</div>
-          {!isOk ? <div className="mt-2 opacity-80">{step.correct}</div> : null}
+        <div className="mt-4 rounded-xl p-3 text-sm" style={{ background: isOk ? 'rgba(16,185,129,0.08)' : 'rgba(239,68,68,0.08)' }}>
+          <div className="font-bold">{isOk ? "✅ Correto" : "❌ Correto seria"}</div>
+          {!isOk ? <div className="mt-2 text-foreground/70">{step.correct}</div> : null}
         </div>
       ) : null}
 
@@ -87,12 +90,12 @@ export default function ReorderStep({
             <Button variant="secondary" onClick={reset} type="button" disabled={picked.length === 0}>
               Reset
             </Button>
-            <Button fullWidth onClick={submit} type="button" disabled={picked.length === 0}>
+            <Button fullWidth onClick={submit} type="button" disabled={picked.length === 0} variant="accent">
               Checar
             </Button>
           </>
         ) : (
-          <Button fullWidth onClick={onNext} type="button">
+          <Button fullWidth onClick={onNext} type="button" variant="accent">
             Próximo
           </Button>
         )}
