@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import LessonSession from "./sessionClient";
 import { getLessonById } from "@/content/loadLessons";
+import { requireAuth } from "@/lib/auth";
 
 export default async function LessonPage({ params }: { params: Promise<{ id: string }> }) {
+  await requireAuth();
   const { id } = await params;
   const lesson = await getLessonById(id);
   if (!lesson) return notFound();

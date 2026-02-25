@@ -7,9 +7,16 @@ import { Chip } from "@/components/ui/Chip";
 import { defaultProgressState, type ProgressState, type SrsCard } from "@/lib/progress";
 import { getDueCards, scheduleNext } from "@/lib/srs";
 import { loadLocal, saveLocal } from "@/lib/storage";
+import { pullProgress, pushProgress } from "@/lib/sync";
+import { useEffect } from "react";
 
 export default function ReviewClient() {
   const [state, setState] = useState<ProgressState>(() => loadLocal("progress", defaultProgressState));
+
+  // Hydrate from server on mount
+  useEffect(() => {
+    pullProgress().then((s) => setState(s));
+  }, []);
   const [showBack, setShowBack] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -22,6 +29,7 @@ export default function ReviewClient() {
   const persist = (next: ProgressState) => {
     setState(next);
     saveLocal("progress", next);
+    pushProgress(next);
   };
 
   const grade = (correct: boolean) => {

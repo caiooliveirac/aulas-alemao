@@ -15,6 +15,7 @@ import {
 } from "@/lib/progress";
 import { scheduleFirstReview } from "@/lib/srs";
 import { loadLocal, saveLocal } from "@/lib/storage";
+import { pushProgress } from "@/lib/sync";
 import ReadingStep from "@/components/lesson-steps/ReadingStep";
 import ComprehensionStep from "@/components/lesson-steps/ComprehensionStep";
 import ClozeStep from "@/components/lesson-steps/ClozeStep";
@@ -52,6 +53,7 @@ export default function LessonSession({ lesson }: Props) {
 
   const persist = (next: ProgressState) => {
     saveLocal("progress", next);
+    pushProgress(next);
   };
 
   const addXP = (xp: number) => setSessionXP((p) => p + xp);

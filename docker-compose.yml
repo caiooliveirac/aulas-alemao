@@ -10,6 +10,7 @@ services:
     environment:
       - NODE_ENV=production
       - DB_DATA_DIR=/app/data
+      - AUTH_PIN=${AUTH_PIN:-changeme}
       # Mantém explícito qual basePath foi usado (útil para debug)
       - NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH:-/alemao}
     volumes:

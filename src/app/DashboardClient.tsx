@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { LessonMeta } from "@/content/schema";
 import type { TopicInfo } from "@/content/loadTopics";
 import { Button } from "@/components/ui/Button";
 import { Chip } from "@/components/ui/Chip";
 import { defaultProgressState, type ProgressState } from "@/lib/progress";
 import { loadLocal } from "@/lib/storage";
+import { pullProgress } from "@/lib/sync";
 import { getLevel, getNextLevel } from "@/lib/xp";
 import { getDueCards } from "@/lib/srs";
 
@@ -17,7 +18,12 @@ type Props = {
 };
 
 export default function DashboardClient({ lessons, topics }: Props) {
-  const [state] = useState<ProgressState>(() => loadLocal<ProgressState>("progress", defaultProgressState));
+  // Load from localStorage immediately, then hydrate from server
+  const [state, setState] = useState<ProgressState>(() => loadLocal<ProgressState>("progress", defaultProgressState));
+
+  useEffect(() => {
+    pullProgress().then((s) => setState(s));
+  }, []);
 
   const dueCount = useMemo(() => getDueCards(state.srsCards).length, [state.srsCards]);
   const level = useMemo(() => getLevel(state.profile.xp), [state.profile.xp]);

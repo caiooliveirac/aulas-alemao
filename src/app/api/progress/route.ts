@@ -1,18 +1,25 @@
 import { NextResponse } from "next/server";
 import { readProgress, writeProgress } from "@/server/progressStore";
 import { defaultProgressState, type ProgressState } from "@/lib/progress";
+import { isAuthenticated } from "@/lib/auth";
 
 function clientIdFrom(req: Request) {
   return req.headers.get("x-client-id") || "default";
 }
 
 export async function GET(req: Request) {
+  if (!(await isAuthenticated(req))) {
+    return NextResponse.json({ error: "UNAUTHORIZED" }, { status: 401 });
+  }
   const clientId = clientIdFrom(req);
   const state = await readProgress(clientId);
   return NextResponse.json({ state }, { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(req: Request) {
+  if (!(await isAuthenticated(req))) {
+    return NextResponse.json({ error: "UNAUTHORIZED" }, { status: 401 });
+  }
   const clientId = clientIdFrom(req);
   let body: unknown;
   try {

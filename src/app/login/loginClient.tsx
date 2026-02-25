@@ -1,0 +1,76 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/Button";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+export default function LoginForm() {
+  const [pin, setPin] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const submit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${BASE}/api/auth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pin }),
+      });
+
+      if (res.ok) {
+        router.push(`${BASE}/`);
+        router.refresh();
+      } else {
+        setError("PIN incorreto.");
+      }
+    } catch {
+      setError("Erro de conexão.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={submit} className="glass-card w-full max-w-sm p-6 animate-fade-up">
+      <div className="mb-5 text-center">
+        <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent)]/10 text-3xl">
+          🌉
+        </div>
+        <h1 className="text-xl font-bold tracking-tight">
+          <span className="gradient-text">DeutschBrücke</span>
+        </h1>
+        <p className="mt-1 text-sm text-foreground/50">Digite o PIN para acessar</p>
+      </div>
+
+      <label className="block">
+        <span className="text-xs font-medium uppercase tracking-wider text-foreground/40">PIN</span>
+        <input
+          type="password"
+          value={pin}
+          onChange={(e) => setPin(e.target.value)}
+          autoFocus
+          required
+          className="mt-1 w-full rounded-xl border border-[var(--border)] bg-[var(--card-bg)] px-4 py-3 text-base font-medium text-foreground placeholder:text-foreground/30 outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all"
+          placeholder="•••••••"
+        />
+      </label>
+
+      {error && (
+        <p className="mt-3 text-sm font-medium text-[var(--error)]">{error}</p>
+      )}
+
+      <div className="mt-5">
+        <Button type="submit" fullWidth variant="accent" disabled={loading || !pin}>
+          {loading ? "Entrando…" : "Entrar"}
+        </Button>
+      </div>
+    </form>
+  );
+}

@@ -37,7 +37,7 @@ COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/content ./content
 
-RUN mkdir -p /app/data && chown -R nextjs:nodejs /app
+RUN mkdir -p /app/data/progress && chown -R nextjs:nodejs /app
 
 USER nextjs
 
