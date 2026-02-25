@@ -7,6 +7,23 @@ import { Chip } from "@/components/ui/Chip";
 
 type Step = Extract<LessonStep, { type: "reorder" }>;
 
+type IndexedWord = { idx: number; word: string };
+
+/** Fisher-Yates shuffle, guaranteed not to stay fully in original order for len >= 2 */
+function shuffleWords(words: string[]): IndexedWord[] {
+  const items: IndexedWord[] = words.map((word, idx) => ({ idx, word }));
+  if (items.length < 2) return items;
+  let arr = [...items];
+  const isIdentical = () => arr.every((it, i) => it.idx === i);
+  do {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  } while (isIdentical());
+  return arr;
+}
+
 export default function ReorderStep({
   step,
   onNext,
@@ -16,30 +33,35 @@ export default function ReorderStep({
   onNext: () => void;
   onComplete: (ok: boolean, xp: number, kind: LessonStep["type"], seed?: SrsCardSeed) => void;
 }) {
-  const [picked, setPicked] = useState<string[]>([]);
+  const [shuffled] = useState<IndexedWord[]>(() => shuffleWords(step.words));
+  const [pickedIdxs, setPickedIdxs] = useState<number[]>([]);
   const [submitted, setSubmitted] = useState(false);
 
-  const remaining = useMemo(() => step.words.filter((w) => !picked.includes(w)), [step.words, picked]);
-  const answer = picked.join(" ").trim();
+  const remaining = useMemo(
+    () => shuffled.filter((it) => !pickedIdxs.includes(it.idx)),
+    [shuffled, pickedIdxs],
+  );
+
+  const answer = pickedIdxs.map((i) => step.words[i]).join(" ").trim();
   const isOk = submitted ? answer === step.correct : false;
 
-  const place = (w: string) => {
+  const place = (it: IndexedWord) => {
     if (submitted) return;
-    setPicked((p) => [...p, w]);
+    setPickedIdxs((p) => [...p, it.idx]);
   };
 
   const removeLast = () => {
     if (submitted) return;
-    setPicked((p) => p.slice(0, -1));
+    setPickedIdxs((p) => p.slice(0, -1));
   };
 
   const reset = () => {
     if (submitted) return;
-    setPicked([]);
+    setPickedIdxs([]);
   };
 
   const submit = () => {
-    if (picked.length === 0) return;
+    if (pickedIdxs.length === 0) return;
     const ok = answer === step.correct;
     const xp = ok ? step.xpCorrect ?? 25 : step.xpWrong ?? 8;
     onComplete(ok, xp, "reorder", step.srs);
@@ -61,15 +83,15 @@ export default function ReorderStep({
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {remaining.map((w) => (
+        {remaining.map((it) => (
           <button
-            key={w}
+            key={it.idx}
             type="button"
-            onClick={() => place(w)}
+            onClick={() => place(it)}
             disabled={submitted}
             className="rounded-xl border border-[var(--border)] px-3 py-2 text-sm hover:border-[var(--border-strong)] hover:bg-[var(--surface-hover)] transition-all"
           >
-            {w}
+            {it.word}
           </button>
         ))}
       </div>
@@ -84,13 +106,13 @@ export default function ReorderStep({
       <div className="mt-5 flex gap-2">
         {!submitted ? (
           <>
-            <Button variant="secondary" onClick={removeLast} type="button" disabled={picked.length === 0}>
+            <Button variant="secondary" onClick={removeLast} type="button" disabled={pickedIdxs.length === 0}>
               Desfazer
             </Button>
-            <Button variant="secondary" onClick={reset} type="button" disabled={picked.length === 0}>
+            <Button variant="secondary" onClick={reset} type="button" disabled={pickedIdxs.length === 0}>
               Reset
             </Button>
-            <Button fullWidth onClick={submit} type="button" disabled={picked.length === 0} variant="accent">
+            <Button fullWidth onClick={submit} type="button" disabled={pickedIdxs.length === 0} variant="accent">
               Checar
             </Button>
           </>
